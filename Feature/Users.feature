@@ -21,21 +21,31 @@ Feature: Users
   Users CRUD Features
 
  Scenario: Get All Users
-	 Given navigate and get all users data
-	 When user is added
-	 Then check if user is added
-	 
-Scenario: ViewOneUser
-	 Given navigate and get all users data
-	 When One created user is gotten
-	 Then Validate that created user is gotten
-	 #	 Given navigate and get one users data
+	 Given get all users endpoint
+	 When naviate to get all users endpoint
+	 Then check if All user data is returned
+
+ Scenario: Add user
+	 Given add user endpoint
+	 When pass data to the endpoint
+	 Then Validate that created user data is returned
 
 Scenario: UpdateOneUser
-	 Given navigate and get all users data
-	 When user data is updated
+	 Given update user endpoint
+	 When user update data is passed
 	 Then validate that the user data is updated
  
-#Scenario: Get One User, thats the just created user
-#	 When user is deleted
-#	 Then check if the user is infact deleted
+Scenario: Get One User, thats the just created user
+	 Given get On user endpoint
+	 When navigate to the endpoint
+	 Then check if the user data is returned
+
+Scenario: delete User
+	 Given delete user endpoint
+	 When navigate to the endpoint
+	 Then check if the user is successfully deleted
+
+
+
+
+
