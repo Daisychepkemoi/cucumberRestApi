@@ -36,14 +36,14 @@ public class TodosEndPoints {
 		    }
 		    else {
 		    	}
-		    return new RestResponse(TodosR.class, response, todoData);
+		    return new RestResponse(TodosR.class, response);
 			}
 	public Response getCreatedTodo() {
 		return endPoints.request.get(Routes.oneTodo(TODO_ID));
 	}
 	public IRestResponse<TodosR> updateTodo(TodosR updateTodos){
 		Response response = request.body(updateTodos).patch(Routes.oneTodo(TODO_ID));
-		return new RestResponse(TodosR.class,response, todoData);
+		return new RestResponse(TodosR.class,response);
 	}
 	public Response deleteTodo() {
 		return request.delete(Routes.oneTodo(TODO_ID));

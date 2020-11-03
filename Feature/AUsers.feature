@@ -22,28 +22,27 @@ Feature: Users
 
  Scenario: Get All Users
 	 Given get all users endpoint
-	 When naviate to get all users endpoint
-	 Then check if All user data is returned
-
- Scenario: Add user
-	 Given add user endpoint
+	 When navigate to get all users endpoint
+	 Then check if All user data is returned with response code 
+#
+# s
 	 When pass data to the endpoint
-	 Then Validate that created user data is returned
-
-Scenario: UpdateOneUser
-	 Given update user endpoint
+	 Then Validate that created user data is returned with response code 
+#
+#Scenario: UpdateOneUser
+#	 Given update user endpoint
 	 When user update data is passed
 	 Then validate that the user data is updated
- 
-Scenario: Get One User, thats the just created user
-	 Given get On user endpoint
-	 When navigate to the endpoint
+# 
+#Scenario: Get One User, thats the just created user
+#	 Given get One user endpoint
+	 When navigate to the getOne User endpoint
 	 Then check if the user data is returned
-
-Scenario: delete User
-	 Given delete user endpoint
-	 When navigate to the endpoint
-	 Then check if the user is successfully deleted
+#
+#Scenario: delete User
+#	 Given delete user endpoint
+#	 When navigate to the delete User endpoint
+#	 Then check if the user is successfully deleted
 
 
 

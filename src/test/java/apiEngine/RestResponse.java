@@ -1,10 +1,5 @@
 package apiEngine;
 
-import java.lang.reflect.InvocationTargetException;
-
-import org.json.JSONObject;
-
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class RestResponse <T> implements IRestResponse<T> {
@@ -12,12 +7,14 @@ public class RestResponse <T> implements IRestResponse<T> {
 	private Response response;
 	private Response Datas;
 	private Exception e;
-	@SuppressWarnings("deprecation")
-	public RestResponse(Class<T> t, Response response,Response datas) {
+//	@SuppressWarnings("deprecation")
+	public RestResponse(Class<T> t, Response response) {
 		this.response = response;
-		this.Datas = datas;
+//		this.Datas = datas;
+//		this.data = t.newInstance();
+		System.out.println("POJO DATA IS:" + response.asString());
 		try{
-			this.data = t.newInstance();
+//			this.data = t.newInstance();
 		}catch (Exception e){
 			throw new RuntimeException(e);
 		}

@@ -29,14 +29,16 @@ public class UsersEndPoints {
 	    Response response = request.body(createUser).post(Routes.users());
 	    JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
+	    System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
 	    if(code == 201 ) {
 	    USER_ID  =jsonPathEvaluator.get("data.id");
-//	    System.out.println("Hey    "+jsonPathEvaluator.get("data"));
+	    System.out.println("Hey    "+jsonPathEvaluator.get("data"));
 	    userData =response;
 	    }
 	    else {
 	    }
-	    return new RestResponse<UsersR>(UsersR.class, response,userData);
+	    
+	    return new RestResponse<UsersR>(UsersR.class, response);
 }	
 	public Response getOneUser() {
 		return request.get(Routes.oneUser(USER_ID));
@@ -51,7 +53,7 @@ public class UsersEndPoints {
 		    }
 		    else {
 		    }
-		return new RestResponse<UsersR>(UsersR.class, response, userData);
+		return new RestResponse<UsersR>(UsersR.class, response);
 	}
 	public Response deleteUser() {
 		return request.delete(Routes.oneUser(USER_ID));

@@ -37,7 +37,7 @@ public class CommentsEndPoints {
 		    }
 		    else {
 		    	}
-		    return new RestResponse(CommentsR.class, response, commentData);
+		    return new RestResponse(CommentsR.class, response);
 			}
 	public Response getCreatedComment() {
 		return postsEndpoints.request.get(Routes.oneComment(COMMENT_ID));
@@ -53,7 +53,7 @@ public class CommentsEndPoints {
 	    else {
 	    	}
 
-		return new RestResponse(CommentsR.class,response, commentData);
+		return new RestResponse(CommentsR.class,response);
 	}
 	public Response deleteComment() {
 		return request.delete(Routes.oneComment(COMMENT_ID));

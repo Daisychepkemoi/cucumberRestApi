@@ -39,7 +39,7 @@ public class PostsEndPoints {
 		    }
 		    else {
 		    	}
-		    return new RestResponse(PostsR.class, response, postData);
+		    return new RestResponse(PostsR.class, response);
 			}
 	public Response getCreatedPost() {
 		return request.get(Routes.onePost(POST_ID));
@@ -47,7 +47,7 @@ public class PostsEndPoints {
 	public IRestResponse<PostsR> updatePost(PostsR updatePost){
 		Response response = request.body(updatePost).patch(Routes.onePost(POST_ID));
 		postData = response;
-		return new RestResponse(PostsR.class,response, postData);
+		return new RestResponse(PostsR.class,response);
 	}
 	public Response deleteUserPosts() {
 		return request.delete(Routes.onePost(POST_ID));
