@@ -25,25 +25,18 @@ public class BPostsSteps {
 		postsEndPoints = new PostsEndPoints(DataAccess.getInstance().getBaseUrl(),DataAccess.getInstance().getToken());
 	}
 	
-	
 	@When("pass data to the Add Post endpoint")
 	public void sendAddPost() {
 		PostsR createPost = new PostsR(apiEngine.UsersEndPoints.USER_ID, "This is the title", "This is the Body");
 		IRestResponse<Posts> createnewPost = postsEndPoints.createPost(createPost);
 		response =createnewPost.getResponse();
 		Assert.assertTrue(createnewPost.isSuccessful());
-		System.out.println("RETURNED DATA ON ADD ::" + response.asString());
 	}
 	@Then("Validate that created post data is returned") 
 	public void verifyAddPost() {
-		System.out.println("RETURNED DATA 2222 ON ADD ::" + response.asString());
 		JsonPath jEvaluator = response.jsonPath();
-		System.out.println("RETURNED DATA 333 ON ADD ::" + response.asString());
 		int code  = jEvaluator.get("code");
 		int user_id  = jEvaluator.get("data.user_id");
-		System.out.println("RETURNED DATA 4444 ON ADD :" + jEvaluator.get("data[0].user_id"));
-		System.out.println("USER_ID ISS : " +apiEngine.UsersEndPoints.USER_ID );
-		System.out.println("Actual Userud ISS : "+response.asString() );
 		Assert.assertEquals(code,201);
 		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
 		
@@ -56,7 +49,10 @@ public class BPostsSteps {
 	public void verifyGetAllPostsResponse() {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");
+//		JSONObject obj = new JSONObject(response);
+		
 		Assert.assertEquals(code,200);
+//		Assert.assertTrue("response size is greater than 0",obj.length()>0);
 	}
 	@When("navigate to get posts per user endpoint")
 	public void sendGetPostPerUser() {
@@ -95,7 +91,7 @@ public class BPostsSteps {
 		
 	}
 	@Then("check if the post data is returned") 
-	public void verifyGetOneUser() {
+	public void verifyGetOnepost() {
 		JsonPath JEvaluator = response.jsonPath();
 		int code  = JEvaluator.get("code");
 		int id  = JEvaluator.get("data.id");

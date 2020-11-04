@@ -9,8 +9,6 @@ Feature: Comments
 
 # Scenario: Get all Comments per post
 #	 Given get comment per post endpoint
-	 
-
 # Scenario: Add comment
 #	 Given add comment endpoint
 	 When pass data to the createComment endpoint

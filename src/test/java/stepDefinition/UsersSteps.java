@@ -13,8 +13,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import pojos.UsersR;
 import model.Users;
+import pojos.UsersR;
 
 public class UsersSteps {
 	public UsersEndPoints endUserEndPoints;
@@ -25,12 +25,7 @@ public class UsersSteps {
 	@Given("get all users endpoint")
 	public void setGetUsersEndPoint() {
 		endUserEndPoints = new UsersEndPoints(DataAccess.getInstance().getBaseUrl(),DataAccess.getInstance().getToken());
-		response = endUserEndPoints.getUsers();
-		JsonPath jEvaluator = response.jsonPath();
-		System.out.println("THIS IS THE CODE"+ jEvaluator.get("code"));
-		Assert.assertEquals(jEvaluator.get("code"),200);
-		
-		
+	
 	}
 	@When("navigate to get all users endpoint")
 	public void sendGetUsers() {
@@ -41,6 +36,8 @@ public class UsersSteps {
 		JsonPath jEvaluator = response.jsonPath();
 		System.out.println("THIS IS THE CODE"+ jEvaluator.get("code"));
 		Assert.assertEquals(jEvaluator.get("code"),200);
+//		JSONObject obj = new JSONObject(response);
+//		Assert.assertTrue("response size is greater than 0",obj.length()>0);
 	}
 //	@Given("add user endpoint")
 	public void setAddUser() {
@@ -63,7 +60,7 @@ public class UsersSteps {
 	public void verifyAddUser() {
 		JsonPath jEvaluator = response.jsonPath();
 		Assert.assertEquals(jEvaluator.get("code"),201);
-//		throw new io.cucumber.java.PendingException();
+		Assert.assertEquals(jEvaluator.get("data.email"),email);
 	}
 //	@Given(" update user endpoint")
 	public void setUpdateUser() {
@@ -81,6 +78,7 @@ public class UsersSteps {
 	public void verifyUpdateUser() {
 		JsonPath jevaluator = response.jsonPath();
 		Assert.assertEquals(jevaluator.get("code"),200);
+		Assert.assertEquals(jevaluator.get("data.name"),"Jackie");
 	}
 //	@Given("get On user endpoint")
 	public void setGetOneUser() {
@@ -96,10 +94,11 @@ public class UsersSteps {
 	public void verifyGetOneUser() {
 		JsonPath jevaluator = response.jsonPath();
 		Assert.assertEquals(jevaluator.get("code"),200);
+//		JSONObject obj = new JSONObject(response);
+//		Assert.assertTrue("response size is greater than 0",obj.length()>0);
 	}
 //	@Given("delete user endpoint")
 	public void setDeleteUser() {
-		UsersR createUser = new UsersR("jack", "jacky@test.com", "Male", "Active") ; 
 		
 	}
 //	@When("navigate to the delete User endpoint")

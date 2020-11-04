@@ -1,5 +1,5 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
+#Author: dchepkemoi408@gmail.com
+#Keywords Summary : implementing Cucumber
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
 #Given: Some precondition step
