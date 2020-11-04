@@ -7,14 +7,13 @@ public class RestResponse <T> implements IRestResponse<T> {
 	private Response response;
 	private Response Datas;
 	private Exception e;
-//	@SuppressWarnings("deprecation")
-	public RestResponse(Class<T> t, Response response) {
+	@SuppressWarnings("deprecation")
+	public RestResponse(Class<T> t, Response response, Response datas) {
 		this.response = response;
-//		this.Datas = datas;
-//		this.data = t.newInstance();
+		this.Datas = datas;
 		System.out.println("POJO DATA IS:" + response.asString());
 		try{
-//			this.data = t.newInstance();
+			this.data = t.newInstance();
 		}catch (Exception e){
 			throw new RuntimeException(e);
 		}
@@ -44,6 +43,7 @@ public class RestResponse <T> implements IRestResponse<T> {
 	public Response getResponse() {
 		return response;
 	}
+	@SuppressWarnings("unchecked")
 	public T getBody() {
 		try {
 			data = (T) response.getBody().as(data.getClass());

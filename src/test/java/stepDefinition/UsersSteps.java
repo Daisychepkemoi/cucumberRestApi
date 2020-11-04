@@ -14,8 +14,9 @@ import io.cucumber.java.en.When;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import pojos.UsersR;
+import model.Users;
 
-public class AUsersSteps {
+public class UsersSteps {
 	public UsersEndPoints endUserEndPoints;
 	public Response response;
 	public static int USER_ID;
@@ -53,7 +54,7 @@ public class AUsersSteps {
 		rand = ThreadLocalRandom.current().nextInt(min, max + 1);
 		email = "smiley"+rand+"@test.com";
 		UsersR createUser = new UsersR("jack",email, "Male", "Active") ; 
-		IRestResponse<UsersR> restResponse =  endUserEndPoints.createUser(createUser);
+		IRestResponse<Users> restResponse =  endUserEndPoints.createUser(createUser);
 		System.out.println("HELLOO"  + restResponse);
 		
 		response = restResponse.getResponse();
@@ -72,7 +73,7 @@ public class AUsersSteps {
 	@When("user update data is passed")
 	public void sendUpdateUser() {
 		UsersR updateUser = new UsersR("Jackie", email, "Male", "Active");
-		IRestResponse<UsersR> restResponse = endUserEndPoints.updateUser(updateUser);
+		IRestResponse<Users> restResponse = endUserEndPoints.updateUser(updateUser);
 		response = restResponse.getResponse();
 		
 	}

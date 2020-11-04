@@ -6,7 +6,7 @@ public class UsersR {
 	public String gender;
 	public String status;
 
-	
+	public UsersR() {}
    public UsersR(String name,String email,String gender,String status) {
 	   this.name = name;
 	   this.email = email;

@@ -4,7 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import pojos.PostsR;	
+import pojos.PostsR;
+import model.Posts;
 public class PostsEndPoints {
 	
 	
@@ -14,6 +15,7 @@ public class PostsEndPoints {
 	public static RequestSpecification request;
 	public static String base_url;
 	public static String token;
+	
 	public PostsEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
 		request = RestAssured.given().log().all();
@@ -29,7 +31,7 @@ public class PostsEndPoints {
 	public Response getPostsPerUser() {
 		return request.get(Routes.oneUserPosts(UsersEndPoints.USER_ID));
 	}
-	public IRestResponse<PostsR> createPost(PostsR createPost){
+	public IRestResponse<Posts> createPost(PostsR createPost){
 		Response response = request.body(createPost).post(Routes.oneUserPosts(UsersEndPoints.USER_ID));
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		    int code = jsonPathEvaluator.get("code");
@@ -39,15 +41,15 @@ public class PostsEndPoints {
 		    }
 		    else {
 		    	}
-		    return new RestResponse(PostsR.class, response);
+		    return new RestResponse<Posts>(Posts.class, response,postData);
 			}
 	public Response getCreatedPost() {
 		return request.get(Routes.onePost(POST_ID));
 	}
-	public IRestResponse<PostsR> updatePost(PostsR updatePost){
+	public IRestResponse<Posts> updatePost(PostsR updatePost){
 		Response response = request.body(updatePost).patch(Routes.onePost(POST_ID));
 		postData = response;
-		return new RestResponse(PostsR.class,response);
+		return new RestResponse<Posts>(Posts.class,response,postData);
 	}
 	public Response deleteUserPosts() {
 		return request.delete(Routes.onePost(POST_ID));

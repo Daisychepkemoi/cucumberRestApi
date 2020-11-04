@@ -1,7 +1,5 @@
 package apiEngine;
 
-import org.json.JSONObject;
-
 import io.restassured.response.Response;
 
 public interface IRestResponse<T> {

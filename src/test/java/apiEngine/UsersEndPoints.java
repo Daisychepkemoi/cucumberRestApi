@@ -3,12 +3,8 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import model.Users;
 import pojos.UsersR;
-import apiEngine.Routes;
-//import model.Users;
-import java.util.HashMap;
-import java.util.Map;
-import org.json.JSONObject;
 
 public class UsersEndPoints {
 	public static int USER_ID;
@@ -25,7 +21,7 @@ public class UsersEndPoints {
 	public Response getUsers() {
 		return request.get(Routes.users());
 	}
-	public  IRestResponse<UsersR> createUser(UsersR createUser) {
+	public  IRestResponse<Users> createUser(UsersR createUser) {
 	    Response response = request.body(createUser).post(Routes.users());
 	    JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
@@ -38,13 +34,13 @@ public class UsersEndPoints {
 	    else {
 	    }
 	    
-	    return new RestResponse<UsersR>(UsersR.class, response);
+	    return new RestResponse<Users>(Users.class, response,userData);
 }	
 	public Response getOneUser() {
 		return request.get(Routes.oneUser(USER_ID));
 	}
-	public IRestResponse<UsersR> updateUser(UsersR UpdateUser){
-		Response response = request.body(UpdateUser).patch(Routes.oneUser(USER_ID));
+	public IRestResponse<Users> updateUser(UsersR updateUser){
+		Response response = request.body(updateUser).patch(Routes.oneUser(USER_ID));
 	    JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
 	    if(code == 201  ) {
@@ -53,7 +49,7 @@ public class UsersEndPoints {
 		    }
 		    else {
 		    }
-		return new RestResponse<UsersR>(UsersR.class, response);
+		return new RestResponse<Users>(Users.class, response,userData);
 	}
 	public Response deleteUser() {
 		return request.delete(Routes.oneUser(USER_ID));

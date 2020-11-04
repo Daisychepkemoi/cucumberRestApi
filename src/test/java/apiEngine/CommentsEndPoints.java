@@ -25,10 +25,10 @@ public class CommentsEndPoints {
 	}
 	
 	public Response getCommentsPerPost() {
-		return request.get(Routes.commentsPerPost(postsEndpoints.POST_ID));
+		return request.get(Routes.commentsPerPost(PostsEndPoints.POST_ID));
 	}
-	public IRestResponse<Comments> createComment(Comments createComment){
-		Response response = request.body(createComment).post(Routes.commentsPerPost(postsEndpoints.POST_ID));
+	public IRestResponse<Comments> createComment(CommentsR createComment){
+		Response response = request.body(createComment).post(Routes.commentsPerPost(PostsEndPoints.POST_ID));
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		    int code = jsonPathEvaluator.get("code");
 		    if(code == 201) {
@@ -37,12 +37,13 @@ public class CommentsEndPoints {
 		    }
 		    else {
 		    	}
-		    return new RestResponse(CommentsR.class, response);
+		    return new RestResponse<Comments>(Comments.class, response,commentData);
 			}
+	
 	public Response getCreatedComment() {
-		return postsEndpoints.request.get(Routes.oneComment(COMMENT_ID));
+		return PostsEndPoints.request.get(Routes.oneComment(COMMENT_ID));
 	}
-	public IRestResponse<Comments> updateComment(Comments updatePost){
+	public IRestResponse<Comments> updateComment(CommentsR updatePost){
 		Response response = request.body(updatePost).patch(Routes.oneComment(COMMENT_ID));
 		JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
@@ -53,7 +54,7 @@ public class CommentsEndPoints {
 	    else {
 	    	}
 
-		return new RestResponse(CommentsR.class,response);
+		return new RestResponse<Comments>(Comments.class,response,commentData);
 	}
 	public Response deleteComment() {
 		return request.delete(Routes.oneComment(COMMENT_ID));
