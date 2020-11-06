@@ -1,0 +1,57 @@
+
+@tag
+Scenario: Get All Users                                               [90m# src/test/resources/Feature/AUsers.feature:23[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                        [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mnavigate to get all users endpoint[0m                             [90m# stepDefinition.UsersSteps.sendGetUsers()[0m
+  [32mThen [0m[32mcheck if All user data is returned with response code[0m          [90m# stepDefinition.UsersSteps.verifyGetUsersResponse()[0m
+  [32mWhen [0m[32mpass data to the endpoint[0m                                      [90m# stepDefinition.UsersSteps.sendAddUser()[0m
+  [32mThen [0m[32mValidate that created user data is returned with response code[0m [90m# stepDefinition.UsersSteps.verifyAddUser()[0m
+  [32mWhen [0m[32muser update data is passed[0m                                     [90m# stepDefinition.UsersSteps.sendUpdateUser()[0m
+  [32mThen [0m[32mvalidate that the user data is updated[0m                         [90m# stepDefinition.UsersSteps.verifyUpdateUser()[0m
+  [32mWhen [0m[32mnavigate to the getOne User endpoint[0m                           [90m# stepDefinition.UsersSteps.sendGetOneUser()[0m
+  [32mThen [0m[32mcheck if the user data is returned[0m                             [90m# stepDefinition.UsersSteps.verifyGetOneUser()[0m
+
+@tag
+Scenario: Get All Posts                             [90m# src/test/resources/Feature/BPosts.feature:5[0m
+  [32mGiven [0m[32mget all posts endpoint[0m                      [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
+  [32mWhen [0m[32mnavigate to get all posts endpoint[0m           [90m# stepDefinition.BPostsSteps.sendGetAllPosts()[0m
+  [32mThen [0m[32mcheck if All post data is returned[0m           [90m# stepDefinition.BPostsSteps.verifyGetAllPostsResponse()[0m
+  [32mWhen [0m[32mpass data to the Add Post endpoint[0m           [90m# stepDefinition.BPostsSteps.sendAddPost()[0m
+  [32mThen [0m[32mValidate that created post data is returned[0m  [90m# stepDefinition.BPostsSteps.verifyAddPost()[0m
+  [32mWhen [0m[32mnavigate to get posts per user endpoint[0m      [90m# stepDefinition.BPostsSteps.sendGetPostPerUser()[0m
+  [32mThen [0m[32mcheck if get posts per user data is returned[0m [90m# stepDefinition.BPostsSteps.verifyGetPostPerUser()[0m
+  [32mWhen [0m[32mpost update data is passed[0m                   [90m# stepDefinition.BPostsSteps.sendUpdatePost()[0m
+  [32mThen [0m[32mvalidate that the post data is updated[0m       [90m# stepDefinition.BPostsSteps.verifyUpdateUser()[0m
+  [32mWhen [0m[32mnavigate to the onePost endpoint[0m             [90m# stepDefinition.BPostsSteps.sendGetOnePost()[0m
+  [33mThen [0m[33mcheck if the post data is returned[0m           [90m# null[0m
+
+@tag
+Scenario: Get All Comments                             [90m# src/test/resources/Feature/Comments.feature:5[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                      [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mnavigate to get all Comments endpoint[0m           [90m# stepDefinition.CommentsSteps.sendGetAllComments()[0m
+  [32mThen [0m[32mcheck if All comment data is returned[0m           [90m# stepDefinition.CommentsSteps.verifyGetAllComments()[0m
+  [32mWhen [0m[32mpass data to the createComment endpoint[0m         [90m# stepDefinition.CommentsSteps.sendAddComment()[0m
+  [32mThen [0m[32mValidate that created comment data is returned[0m  [90m# stepDefinition.CommentsSteps.verifyAddComment()[0m
+  [32mWhen [0m[32mnavigate to get Comments per post endpoint[0m      [90m# stepDefinition.CommentsSteps.sendCommentsPerPost()[0m
+  [32mThen [0m[32mcheck if get Comments per post data is returned[0m [90m# stepDefinition.CommentsSteps.verifyCommentsPerPost()[0m
+  [32mWhen [0m[32mcomment update data is passed[0m                   [90m# stepDefinition.CommentsSteps.sendUpdateComment()[0m
+  [32mThen [0m[32mvalidate that the comment data is updated[0m       [90m# stepDefinition.CommentsSteps.verifyUpdateComment()[0m
+  [32mWhen [0m[32mnavigate to the getOneComment endpoint[0m          [90m# stepDefinition.CommentsSteps.sendGetOneComment()[0m
+  [32mThen [0m[32mcheck if the comment data is returned[0m           [90m# stepDefinition.CommentsSteps.verifyGetOneComment()[0m
+  [32mWhen [0m[32mnavigate to the deleteComment endpoint[0m          [90m# stepDefinition.CommentsSteps.sendDeleteComment()[0m
+  [32mThen [0m[32mcheck if the comment is successfully deleted[0m    [90m# stepDefinition.CommentsSteps.verifyDeleteComment()[0m
+
+Scenario: Get All Todos                             [90m# src/test/resources/Feature/Todos.feature:4[0m
+  [32mGiven [0m[32mget all Todos endpoint[0m                      [90m# stepDefinition.TodosSteps.setGetAllTodos()[0m
+  [32mWhen [0m[32mnavigate to get all Todos endpoint[0m           [90m# stepDefinition.TodosSteps.sendGetAllTodos()[0m
+  [32mThen [0m[32mcheck if All todos data is returned[0m          [90m# stepDefinition.TodosSteps.verifyGetAllTodos()[0m
+  [32mWhen [0m[32mpass data to the createTodo endpoint[0m         [90m# stepDefinition.TodosSteps.sendAddodo()[0m
+  [32mThen [0m[32mValidate that created todo data is returned[0m  [90m# stepDefinition.TodosSteps.verifyAddTodo()[0m
+  [32mWhen [0m[32mnavigate to get Todos per user endpoint[0m      [90m# stepDefinition.TodosSteps.sendGetTodoPerUser()[0m
+  [32mThen [0m[32mcheck if get Todos per user data is returned[0m [90m# stepDefinition.TodosSteps.verifyGetTodoPerUser()[0m
+  [32mWhen [0m[32mtodo update data is passed[0m                   [90m# stepDefinition.TodosSteps.sendUpdateTodo()[0m
+  [32mThen [0m[32mvalidate that the todo data is updated[0m       [90m# stepDefinition.TodosSteps.VerifyUpdateTodo()[0m
+  [32mWhen [0m[32mnavigate to the getOntTodo endpoint[0m          [90m# stepDefinition.TodosSteps.sendGetOneTodo()[0m
+  [32mThen [0m[32mcheck if the todo data is returned[0m           [90m# stepDefinition.TodosSteps.VerifyGetOneTodo()[0m
+  [32mWhen [0m[32mnavigate to the delete Todo endpoint[0m         [90m# stepDefinition.TodosSteps.sendDeleteTodo()[0m
+  [32mThen [0m[32mcheck if the todo is successfully deleted[0m    [90m# stepDefinition.TodosSteps.verifyDeleeTodoResponse()[0m
