@@ -25,17 +25,18 @@ Feature: Users
 	 When navigate to get all users endpoint
 	 Then check if All user data is returned with response code 
 #
-# s
+Scenario: Add User
+	 Given get all users endpoint
 	 When pass data to the endpoint
 	 Then Validate that created user data is returned with response code 
 #
-#Scenario: UpdateOneUser
-#	 Given update user endpoint
+Scenario: UpdateOneUser
+  	 Given get all users endpoint
 	 When user update data is passed
 	 Then validate that the user data is updated
 # 
-#Scenario: Get One User, thats the just created user
-#	 Given get One user endpoint
+Scenario: Get One User, thats the just created user
+	 Given get all users endpoint
 	 When navigate to the getOne User endpoint
 	 Then check if the user data is returned
 #
