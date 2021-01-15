@@ -6,19 +6,43 @@ Scenario: Get All Users                                      [90m# src/test/res
   [32mThen [0m[32mcheck if All user data is returned with response code[0m [90m# stepDefinition.UsersSteps.verifyGetUsersResponse()[0m
 
 @tag
-Scenario: Add User                                                    [90m# src/test/resources/Feature/AUsers.feature:28[0m
-  [32mGiven [0m[32mget all users endpoint[0m                                        [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32mpass data to the endpoint[0m                                      [90m# stepDefinition.UsersSteps.sendAddUser()[0m
-  [32mThen [0m[32mValidate that created user data is returned with response code[0m [90m# stepDefinition.UsersSteps.verifyAddUser()[0m
+Scenario Outline: Add User                                               [90m# src/test/resources/Feature/AUsers.feature:36[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                           [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"correct3@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received[0m                                     [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
 
 @tag
-Scenario: UpdateOneUser                       [90m# src/test/resources/Feature/AUsers.feature:33[0m
-  [32mGiven [0m[32mget all users endpoint[0m                [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32muser update data is passed[0m             [90m# stepDefinition.UsersSteps.sendUpdateUser()[0m
-  [32mThen [0m[32mvalidate that the user data is updated[0m [90m# stepDefinition.UsersSteps.verifyUpdateUser()[0m
+Scenario Outline: Add User                                        [90m# src/test/resources/Feature/AUsers.feature:37[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                    [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"inavlidmail"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received[0m                              [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
 
 @tag
-Scenario: Get One User, thats the just created user [90m# src/test/resources/Feature/AUsers.feature:38[0m
+Scenario Outline: Add User                             [90m# src/test/resources/Feature/AUsers.feature:38[0m
+  [32mGiven [0m[32mget all users endpoint[0m                         [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m""[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received[0m                   [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
+
+@tag
+Scenario Outline: Add User                                                 [90m# src/test/resources/Feature/AUsers.feature:39[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                             [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"correct911@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m201[0m[32m code is received[0m                                       [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
+
+@tag
+Scenario Outline: UpdateOneUser                               [90m# src/test/resources/Feature/AUsers.feature:50[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m""[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received and data is updated[0m      [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
+
+@tag
+Scenario Outline: UpdateOneUser                                                    [90m# src/test/resources/Feature/AUsers.feature:51[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                                     [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"corrects936@gmail.com"[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m200[0m[32m code is received and data is updated[0m                           [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
+
+@tag
+Scenario: Get One User, thats the just created user [90m# src/test/resources/Feature/AUsers.feature:53[0m
   [32mGiven [0m[32mget all users endpoint[0m                      [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
   [32mWhen [0m[32mnavigate to the getOne User endpoint[0m         [90m# stepDefinition.UsersSteps.sendGetOneUser()[0m
   [32mThen [0m[32mcheck if the user data is returned[0m           [90m# stepDefinition.UsersSteps.verifyGetOneUser()[0m

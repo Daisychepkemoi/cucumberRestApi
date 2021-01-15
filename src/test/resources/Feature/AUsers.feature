@@ -25,21 +25,36 @@ Feature: Users
 	 When navigate to get all users endpoint
 	 Then check if All user data is returned with response code 
 #
-Scenario: Add User
+Scenario Outline: Add User
 	 Given get all users endpoint
-	 When pass data to the endpoint
-	 Then Validate that created user data is returned with response code 
+	 When The "<email>" and other data is passed to the endpoint
+	 Then Validate <response> code is received 
+
+
+Examples:
+	 		 |email|response|
+	 		 |correct3@gmail.com|422|
+			|inavlidmail|422|
+			||422|
+			|correct911@gmail.com|201|
+			
 #
-Scenario: UpdateOneUser
+Scenario Outline: UpdateOneUser
   	 Given get all users endpoint
-	 When user update data is passed
-	 Then validate that the user data is updated
-# 
+	 When The "<email>" and other update data is passed to the endpoint
+	 Then Validate <response> code is received and data is updated
+
+	Examples:
+	 		 |email|response|
+	 		#  |correct1@gmail.com|200| //endpooint thrwoing internal server error if email alrady exists.
+			||422|
+			|corrects936@gmail.com|200|
+# # # 
 Scenario: Get One User, thats the just created user
 	 Given get all users endpoint
 	 When navigate to the getOne User endpoint
 	 Then check if the user data is returned
-#
+
 #Scenario: delete User
 #	 Given delete user endpoint
 #	 When navigate to the delete User endpoint

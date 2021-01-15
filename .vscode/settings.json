@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+ "breadcrumbs.enabled": true,
+ "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+ "explorer.confirmDelete": false,
+ "diffEditor.ignoreTrimWhitespace": false,
+"terminal.integrated.inheritEnv": false,
+"java.configuration.updateBuildConfiguration": "automatic"
+}

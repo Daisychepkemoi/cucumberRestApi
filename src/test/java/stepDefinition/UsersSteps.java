@@ -44,43 +44,46 @@ public class UsersSteps {
 //		UsersR createUser = new UsersR("jack", "jacky@test.com", "Male", "Active") ; 
 		
 	}
-	@When("pass data to the endpoint")
-	public void sendAddUser() {
+	@When("The {string} and other data is passed to the endpoint")
+	public void sendAddUser(String mails) {
 		int min = 1;
 		int max = 1000;
 		rand = ThreadLocalRandom.current().nextInt(min, max + 1);
-		email = "smiley"+rand+"@test.com";
-		UsersR createUser = new UsersR("jack",email, "Male", "Active") ; 
+		email = mails;
+		UsersR createUser = new UsersR("jack",mails, "Male", "Active") ; 
 		IRestResponse<Users> restResponse =  endUserEndPoints.createUser(createUser);
 		System.out.println("HELLOO"  + restResponse);
 		
 		response = restResponse.getResponse();
-	}
-	@Then("Validate that created user data is returned with response code") 
-	public void verifyAddUser() {
+		System.out.println("this is the response Body"+response.asString());
+	} // extracting string and integer REGEX \"([^\"]*)\"$  (-?\\d+)
+
+	@Then("Validate {int} code is received") 
+	public void verifyAddUser(int codee) {
 		JsonPath jEvaluator = response.jsonPath();
-		Assert.assertEquals(jEvaluator.get("code"),201);
-		Assert.assertEquals(jEvaluator.get("data.email"),email);
+		Assert.assertEquals(jEvaluator.get("code"),codee);
+		// Assert.assertEquals(jEvaluator.get("data.email"),email);
 	}
-//	@Given(" update user endpoint")
+	// @Given(" update user endpoint")
 	public void setUpdateUser() {
 		UsersR createUser = new UsersR("jack", "jacky@test.com", "Male", "Active") ; 
 		
 	}
-	@When("user update data is passed")
-	public void sendUpdateUser() {
-		UsersR updateUser = new UsersR("Jackie", email, "Male", "Active");
+	@When("The {string} and other update data is passed to the endpoint")
+	public void sendUpdateUser(String mail) {
+		UsersR updateUser = new UsersR("Jackie", mail, "Male", "Active");
 		IRestResponse<Users> restResponse = endUserEndPoints.updateUser(updateUser);
 		response = restResponse.getResponse();
+		System.out.println("UpdateResponse"+response.asString());
 		
 	}
-	@Then("validate that the user data is updated") 
-	public void verifyUpdateUser() {
+	@Then("Validate {int} code is received and data is updated") 
+	public void verifyUpdateUser(int code) {
 		JsonPath jevaluator = response.jsonPath();
-		Assert.assertEquals(jevaluator.get("code"),200);
-		Assert.assertEquals(jevaluator.get("data.name"),"Jackie");
+		Assert.assertEquals(jevaluator.get("code"),code);
+		// Assert.assertEquals(jevaluator.get("data.name"),"Jackie");
 	}
-//	@Given("get On user endpoint")
+	@Given("get On user endpoint")
 	public void setGetOneUser() {
 		response=endUserEndPoints.getOneUser();
 		

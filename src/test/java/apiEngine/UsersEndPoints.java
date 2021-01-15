@@ -22,10 +22,11 @@ public class UsersEndPoints {
 		return request.get(Routes.users());
 	}
 	public  IRestResponse<Users> createUser(UsersR createUser) {
-	    Response response = request.body(createUser).post(Routes.users());
+		Response response = request.body(createUser).post(Routes.users());
+		// System.out.println("we are here now");
 	    JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
-	    System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
+	    // System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
 	    if(code == 201 ) {
 	    USER_ID  =jsonPathEvaluator.get("data.id");
 	    System.out.println("Hey    "+jsonPathEvaluator.get("data"));
@@ -40,9 +41,12 @@ public class UsersEndPoints {
 		return request.get(Routes.oneUser(USER_ID));
 	}
 	public IRestResponse<Users> updateUser(UsersR updateUser){
+		System.out.println("We are here Now");
 		Response response = request.body(updateUser).patch(Routes.oneUser(USER_ID));
+		System.out.println("An now here" + response.asString());
 	    JsonPath jsonPathEvaluator = response.jsonPath();
-	    int code = jsonPathEvaluator.get("code");
+		int code = jsonPathEvaluator.get("code");
+		System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
 	    if(code == 201  ) {
 		    USER_ID  =jsonPathEvaluator.get("data.id");
 		    userData =jsonPathEvaluator.get("data");
