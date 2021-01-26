@@ -48,9 +48,12 @@ public class CommentsSteps {
 	public void verifyAddComment(int responsecode) {
 		JsonPath eval = response.jsonPath();
 		int code  = eval.get("code");
-		// int postID  = eval.get("data.post_id");
 		Assert.assertEquals(code,responsecode);
-		// Assert.assertEquals(postID,PostsEndPoints.POST_ID);
+		if(code == 201){
+			int postID  = eval.get("data.post_id");
+			Assert.assertEquals(postID,PostsEndPoints.POST_ID);
+		}
+		
 	}
 	
 	@When("navigate to get Comments per post endpoint")
