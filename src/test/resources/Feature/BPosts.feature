@@ -30,10 +30,17 @@ Scenario: Get Posts Per User
 	 When navigate to get posts per user endpoint
 	 Then check if get posts per user data is returned
 
-Scenario: Update posts
+Scenario Outline: Update Posts
 	 Given get all posts endpoint
-	 When post update data is passed
-	 Then validate that the post data is updated
+	 When The post "<title>", "<body>" and other data is passed to the update post endpoint
+	 Then Validate that this <response> code is received 
+
+Examples:
+	 		 |title|body|response|
+			||This is a body|200|
+			|This is a title||200|
+			|||200|
+			|This is a title|This is a body|200 |
  
  Scenario: View One Post
 	 Given get all posts endpoint

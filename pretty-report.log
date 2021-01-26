@@ -26,7 +26,7 @@ Scenario Outline: Add User                             [90m# src/test/resources
 @tag
 Scenario Outline: Add User                                                   [90m# src/test/resources/Feature/AUsers.feature:39[0m
   [32mGiven [0m[32mget all users endpoint[0m                                               [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32mThe [0m[32m[1m"correct93s31@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"correct3u1G9@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
   [32mThen [0m[32mValidate [0m[32m[1m201[0m[32m code is received[0m                                         [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
 
 @tag
@@ -38,7 +38,7 @@ Scenario Outline: UpdateOneUser                               [90m# src/test/re
 @tag
 Scenario Outline: UpdateOneUser                                                      [90m# src/test/resources/Feature/AUsers.feature:51[0m
   [32mGiven [0m[32mget all users endpoint[0m                                                       [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32mThe [0m[32m[1m"corrects3w836@gmail.com"[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"corrects5G93h@gmail.com"[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
   [32mThen [0m[32mValidate [0m[32m[1m200[0m[32m code is received and data is updated[0m                             [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
 
 @tag
@@ -84,13 +84,31 @@ Scenario: Get Posts Per User                        [90m# src/test/resources/Fe
   [32mThen [0m[32mcheck if get posts per user data is returned[0m [90m# stepDefinition.BPostsSteps.verifyGetPostPerUser()[0m
 
 @tag
-Scenario: Update posts                        [90m# src/test/resources/Feature/BPosts.feature:33[0m
-  [32mGiven [0m[32mget all posts endpoint[0m                [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
-  [32mWhen [0m[32mpost update data is passed[0m             [90m# stepDefinition.BPostsSteps.sendUpdatePost()[0m
-  [32mThen [0m[32mvalidate that the post data is updated[0m [90m# stepDefinition.BPostsSteps.verifyUpdateUser()[0m
+Scenario Outline: Update Posts                                                            [90m# src/test/resources/Feature/BPosts.feature:40[0m
+  [32mGiven [0m[32mget all posts endpoint[0m                                                            [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
+  [32mWhen [0m[32mThe post [0m[32m[1m""[0m[32m, [0m[32m[1m"This is a body"[0m[32m and other data is passed to the update post endpoint[0m [90m# stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate that this [0m[32m[1m200[0m[32m code is received[0m                                            [90m# stepDefinition.BPostsSteps.verifyUpdatePost(int)[0m
 
 @tag
-Scenario: View One Post                   [90m# src/test/resources/Feature/BPosts.feature:38[0m
+Scenario Outline: Update Posts                                                             [90m# src/test/resources/Feature/BPosts.feature:41[0m
+  [32mGiven [0m[32mget all posts endpoint[0m                                                             [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
+  [32mWhen [0m[32mThe post [0m[32m[1m"This is a title"[0m[32m, [0m[32m[1m""[0m[32m and other data is passed to the update post endpoint[0m [90m# stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate that this [0m[32m[1m200[0m[32m code is received[0m                                             [90m# stepDefinition.BPostsSteps.verifyUpdatePost(int)[0m
+
+@tag
+Scenario Outline: Update Posts                                              [90m# src/test/resources/Feature/BPosts.feature:42[0m
+  [32mGiven [0m[32mget all posts endpoint[0m                                              [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
+  [32mWhen [0m[32mThe post [0m[32m[1m""[0m[32m, [0m[32m[1m""[0m[32m and other data is passed to the update post endpoint[0m [90m# stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate that this [0m[32m[1m200[0m[32m code is received[0m                              [90m# stepDefinition.BPostsSteps.verifyUpdatePost(int)[0m
+
+@tag
+Scenario Outline: Update Posts                                                                           [90m# src/test/resources/Feature/BPosts.feature:43[0m
+  [32mGiven [0m[32mget all posts endpoint[0m                                                                           [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
+  [32mWhen [0m[32mThe post [0m[32m[1m"This is a title"[0m[32m, [0m[32m[1m"This is a body"[0m[32m and other data is passed to the update post endpoint[0m [90m# stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate that this [0m[32m[1m200[0m[32m code is received[0m                                                           [90m# stepDefinition.BPostsSteps.verifyUpdatePost(int)[0m
+
+@tag
+Scenario: View One Post                   [90m# src/test/resources/Feature/BPosts.feature:45[0m
   [32mGiven [0m[32mget all posts endpoint[0m            [90m# stepDefinition.BPostsSteps.setGetAllPosts()[0m
   [32mWhen [0m[32mnavigate to the onePost endpoint[0m   [90m# stepDefinition.BPostsSteps.sendGetOnePost()[0m
   [32mThen [0m[32mcheck if the post data is returned[0m [90m# stepDefinition.BPostsSteps.verifyGetOnepost()[0m

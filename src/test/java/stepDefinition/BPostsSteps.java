@@ -73,20 +73,24 @@ public class BPostsSteps {
 		Assert.assertEquals(code,200);
 		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
 	}
-	@When("post update data is passed")
-	public void sendUpdatePost() {
-		PostsR updatePost = new PostsR(apiEngine.UsersEndPoints.USER_ID, "This is the title", "This is the Body");
+	@When("The post {string}, {string} and other data is passed to the update post endpoint")
+	public void sendUpdatePost(String title,String body) {
+		PostsR updatePost = new PostsR(apiEngine.UsersEndPoints.USER_ID, title, body);
 		IRestResponse<Posts> updatepost = postsEndPoints.updatePost(updatePost);
 		Response response = updatepost.getResponse();
 		
 	}
-	@Then("validate that the post data is updated") 
-	public void verifyUpdateUser() {
+	@Then("Validate that this {int} code is received") 
+	public void verifyUpdatePost(int codes) {
 		JsonPath JEvaluator = response.jsonPath();
 		int code  = JEvaluator.get("code");
-		int user_id  = JEvaluator.get("data[0].user_id");
-		Assert.assertEquals(code,200);
-		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		System.out.print("THIS IS A CODE I GET FOR PATCH " + code + "   OFFICIAL");
+		Assert.assertEquals(code,codes);
+		if(code == codes){
+			int user_id  = JEvaluator.get("data[0].user_id");
+			Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		}
+		
 	}
 
 	@When("navigate to the onePost endpoint")
