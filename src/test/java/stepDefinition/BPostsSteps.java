@@ -25,20 +25,25 @@ public class BPostsSteps {
 		postsEndPoints = new PostsEndPoints(DataAccess.getInstance().getBaseUrl(),DataAccess.getInstance().getToken());
 	}
 	
-	@When("pass data to the Add Post endpoint")
-	public void sendAddPost() {
-		PostsR createPost = new PostsR(apiEngine.UsersEndPoints.USER_ID, "This is the title", "This is the Body");
+
+	@When("The post {string}, {string} and other data is passed to the endpoint")
+	public void sendAddPost(String title,String body) {
+		PostsR createPost = new PostsR(apiEngine.UsersEndPoints.USER_ID, title, body);
 		IRestResponse<Posts> createnewPost = postsEndPoints.createPost(createPost);
 		response =createnewPost.getResponse();
 		Assert.assertTrue(createnewPost.isSuccessful());
 	}
-	@Then("Validate that created post data is returned") 
-	public void verifyAddPost() {
+	@Then("Validate this {int} code is received") 
+	public void verifyAddPost(int codes) {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");
-		int user_id  = jEvaluator.get("data.user_id");
-		Assert.assertEquals(code,201);
-		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		
+		Assert.assertEquals(code,codes);
+		if(code == 201){
+			int user_id  = jEvaluator.get("data.user_id");
+			Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		}
+		
 		
 	}
 	@When("navigate to get all posts endpoint")

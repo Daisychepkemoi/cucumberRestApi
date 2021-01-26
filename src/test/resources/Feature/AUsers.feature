@@ -36,7 +36,7 @@ Examples:
 	 		 |correct3@gmail.com|422|
 			|inavlidmail|422|
 			||422|
-			|correct911@gmail.com|201|
+			|correct93s31@gmail.com|201|
 			
 #
 Scenario Outline: UpdateOneUser
@@ -48,7 +48,7 @@ Scenario Outline: UpdateOneUser
 	 		 |email|response|
 	 		#  |correct1@gmail.com|200| //endpooint thrwoing internal server error if email alrady exists.
 			||422|
-			|corrects936@gmail.com|200|
+			|corrects3w836@gmail.com|200|
 # # # 
 Scenario: Get One User, thats the just created user
 	 Given get all users endpoint

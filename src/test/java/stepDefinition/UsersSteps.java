@@ -39,6 +39,7 @@ public class UsersSteps {
 //		JSONObject obj = new JSONObject(response);
 //		Assert.assertTrue("response size is greater than 0",obj.length()>0);
 	}
+	
 //	@Given("add user endpoint")
 	public void setAddUser() {
 //		UsersR createUser = new UsersR("jack", "jacky@test.com", "Male", "Active") ; 
@@ -80,8 +81,12 @@ public class UsersSteps {
 	@Then("Validate {int} code is received and data is updated") 
 	public void verifyUpdateUser(int code) {
 		JsonPath jevaluator = response.jsonPath();
-		Assert.assertEquals(jevaluator.get("code"),code);
-		// Assert.assertEquals(jevaluator.get("data.name"),"Jackie");
+		int returnedCode = jevaluator.get("code");
+		Assert.assertEquals(returnedCode,code);
+		if(returnedCode == 200){
+			Assert.assertEquals(jevaluator.get("data.name"),"Jackie");
+		}
+		
 	}
 	@Given("get On user endpoint")
 	public void setGetOneUser() {

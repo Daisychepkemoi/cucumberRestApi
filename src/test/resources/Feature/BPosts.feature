@@ -7,10 +7,23 @@ Feature: Posts
 	 When navigate to get all posts endpoint
 	 Then check if All post data is returned
 
-Scenario: Add Posts
-	 Given get all posts endpoint 
-	 When pass data to the Add Post endpoint
-	 Then Validate that created post data is returned
+# Scenario: Add Posts
+# 	 Given get all posts endpoint 
+# 	 When pass data to the Add Post endpoint
+# 	 Then Validate that created post data is returned
+
+Scenario Outline: Add Posts
+	 Given get all posts endpoint
+	 When The post "<title>", "<body>" and other data is passed to the endpoint
+	 Then Validate this <response> code is received 
+
+
+Examples:
+	 		 |title|body|response|
+			||This is a body|422|
+			|This is a title||422|
+			|||422|
+			|This is a title|This is a body|201 |
 	 
 Scenario: Get Posts Per User
 	 Given get all posts endpoint
