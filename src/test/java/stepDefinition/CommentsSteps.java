@@ -35,21 +35,22 @@ public class CommentsSteps {
 		int code  = jEvaluator.get("code");
 		Assert.assertEquals(code, 200);
 	}
-	@When("pass data to the createComment endpoint")
-	public void sendAddComment() {
+	@When("The comment {string}, {string},{string} and other data is passed to the endpoint")
+	public void sendAddComment(String name,String email,String body) {
 		System.out.println("Hii hapa ni userdata, twaitumia kuextract jina::" + apiEngine.UsersEndPoints.userData.asString());
 		JsonPath jEvaluator = apiEngine.UsersEndPoints.userData.jsonPath();
-		CommentsR createComment = new CommentsR(PostsEndPoints.POST_ID,jEvaluator.get("data.name").toString(), " This is the comments body", jEvaluator.get("data.email").toString());
+		// CommentsR createComment = new CommentsR(PostsEndPoints.POST_ID,jEvaluator.get("data.name").toString(), " This is the comments body", jEvaluator.get("data.email").toString());
+		CommentsR createComment = new CommentsR(PostsEndPoints.POST_ID,name, body,email);
 		IRestResponse<Comments> createNewComment = commentsEndPoints.createComment(createComment);
 		response =createNewComment.getResponse();
 	}
-	@Then("Validate that created comment data is returned") 
-	public void verifyAddComment() {
+	@Then("Validate this endpoints {int} code is received") 
+	public void verifyAddComment(int responsecode) {
 		JsonPath eval = response.jsonPath();
 		int code  = eval.get("code");
-		int postID  = eval.get("data.post_id");
-		Assert.assertEquals(code,201);
-		Assert.assertEquals(postID,PostsEndPoints.POST_ID);
+		// int postID  = eval.get("data.post_id");
+		Assert.assertEquals(code,responsecode);
+		// Assert.assertEquals(postID,PostsEndPoints.POST_ID);
 	}
 	
 	@When("navigate to get Comments per post endpoint")
