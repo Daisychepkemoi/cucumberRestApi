@@ -34,21 +34,22 @@ public class TodosSteps {
 		int code  = jEvaluator.get("code");
 		Assert.assertEquals(code,200);
 	}
-	@When("pass data to the createTodo endpoint")
-	public void sendAddodo() {
-		TodosR createTodo = new TodosR(apiEngine.UsersEndPoints.USER_ID, "this is a todo title", true);
+	@When("The todo {string} and other data is passed to the endpoint")
+	public void sendAddodo(String title) {
+		TodosR createTodo = new TodosR(apiEngine.UsersEndPoints.USER_ID,title, true);
 		IRestResponse<Todos> CreateNewTodo = todoEndPoints.createTodo(createTodo);
 		 response =CreateNewTodo.getResponse();
 		
 	}
-	@Then("Validate that created todo data is returned") 
-	public void verifyAddTodo() {
+	@Then("Validate this todos endpoints {int} code is received") 
+	public void verifyAddTodo(int codees) {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");
 		System.out.println("This is a todo:::" + response.asString());
-		int user_id  = jEvaluator.get("data.user_id");
-		Assert.assertEquals(201,code);
-		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		// int user_id  = jEvaluator.get("data.user_id");
+		// System.out.println("This is the real TODO Response"+jEvaluator.get("$"));
+		Assert.assertEquals(codees,code);
+		// Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
 	}
 	
 	@When("navigate to get Todos per user endpoint")
@@ -65,21 +66,21 @@ public class TodosSteps {
 		Assert.assertEquals(code,200);
 		Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
 	}
-	@When("todo update data is passed")
-	public void sendUpdateTodo() {
-		TodosR updateTodo = new TodosR(apiEngine.UsersEndPoints.USER_ID, "this is an updated todo title", true);
+	@When("The todos {string} and other data is passed to the endpoint")
+	public void sendUpdateTodo(String title) {
+		TodosR updateTodo = new TodosR(apiEngine.UsersEndPoints.USER_ID, title, true);
 		IRestResponse<Todos> updatenewTodo = todoEndPoints.updateTodo(updateTodo);
 		 response = updatenewTodo.getResponse();
 		
 	}
-	@Then("validate that the todo data is updated") 
-	public void VerifyUpdateTodo() {
-		JsonPath jEvaluator = response.jsonPath();
-		int code  = jEvaluator.get("code");
-		int user_id  = jEvaluator.get("data.id");
-		Assert.assertEquals(code,200);
-		Assert.assertEquals(user_id,apiEngine.TodosEndPoints.TODO_ID);
-	}
+	// @Then("validate that the todo data is updated") 
+	// public void VerifyUpdateTodo() {
+	// 	JsonPath jEvaluator = response.jsonPath();
+	// 	int code  = jEvaluator.get("code");
+	// 	int user_id  = jEvaluator.get("data.id");
+	// 	Assert.assertEquals(code,200);
+	// 	Assert.assertEquals(user_id,apiEngine.TodosEndPoints.TODO_ID);
+	// }
 
 	@When("navigate to the getOntTodo endpoint")
 	public void sendGetOneTodo() {
@@ -95,12 +96,12 @@ public class TodosSteps {
 		Assert.assertEquals(user_id,apiEngine.TodosEndPoints.TODO_ID);
 	}
 
-	@When("navigate to the delete Todo endpoint")
+	// @When("navigate to the delete Todo endpoint")
 	public void sendDeleteTodo() {
 		response = todoEndPoints.deleteTodo();
 		
 	}
-	@Then("check if the todo is successfully deleted") 
+	// @Then("check if the todo is successfully deleted") 
 	public void verifyDeleeTodoResponse() {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");

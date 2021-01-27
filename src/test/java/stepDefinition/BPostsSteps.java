@@ -77,17 +77,18 @@ public class BPostsSteps {
 	public void sendUpdatePost(String title,String body) {
 		PostsR updatePost = new PostsR(apiEngine.UsersEndPoints.USER_ID, title, body);
 		IRestResponse<Posts> updatepost = postsEndPoints.updatePost(updatePost);
-		Response response = updatepost.getResponse();
+		 response = updatepost.getResponse();
+		 System.out.println("This is update response" + response.asString());
 		
 	}
 	@Then("Validate that this {int} code is received") 
-	public void verifyUpdatePost(int codes) {
+	public void verifyUpdatePost(int codess) {
 		JsonPath JEvaluator = response.jsonPath();
 		int code  = JEvaluator.get("code");
-		System.out.print("THIS IS A CODE I GET FOR PATCH " + code + "   OFFICIAL");
-		Assert.assertEquals(code,codes);
-		if(code == codes){
-			int user_id  = JEvaluator.get("data[0].user_id");
+		
+		Assert.assertEquals(code,codess);
+		if(codess == 200){
+			int user_id  = JEvaluator.get("data.user_id");
 			Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
 		}
 		
