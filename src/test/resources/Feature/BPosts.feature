@@ -37,9 +37,9 @@ Scenario Outline: Update Posts
 
 Examples:
 	 		 |title|body|response|
-			||This is a body|200|
-			|This is a title||200|
-			|||200|
+			||This is a body|422|
+			|This is a title||422|
+			|||422|
 			|This is a title|This is a body|200 |
  
  Scenario: View One Post
