@@ -71,23 +71,24 @@ public class CommentsSteps {
 		Assert.assertEquals(code,200);
 		Assert.assertEquals(postID,PostsEndPoints.POST_ID);
 	}
-	@When("comment update data is passed")
-	public void sendUpdateComment() {
+	@When("The comments {string}, {string},{string} and other data is passed to the endpoint")
+	public void sendUpdateComment(String name, String email,String body) {
 		JsonPath jEvaluator = apiEngine.CommentsEndPoints.commentData.jsonPath();
-		CommentsR updateComment = new CommentsR(PostsEndPoints.POST_ID,jEvaluator.get("data.name").toString(), " This is the updated comments body", jEvaluator.get("data.email").toString());
+		// CommentsR updateComment = new CommentsR(PostsEndPoints.POST_ID,jEvaluator.get("data.name").toString(), " This is the updated comments body", jEvaluator.get("data.email").toString());
+		CommentsR updateComment = new CommentsR(PostsEndPoints.POST_ID,name, body, email);
 		IRestResponse<Comments> updatepost = commentsEndPoints.updateComment(updateComment);
 		Response response = updatepost.getResponse();
 		
 	}
-	@Then("validate that the comment data is updated") 
-	public void verifyUpdateComment() {
-		JsonPath eval = response.jsonPath();
-		System.out.println("THIS is AN UPdated Comment" + response.asString());
-		int code  = eval.get("code");
-		int commentID  = eval.get("data[0].id");
-		Assert.assertEquals(code,200);
-		Assert.assertEquals(commentID,apiEngine.CommentsEndPoints.COMMENT_ID);
-	}
+	// @Then("Validate this endpoints {int} code is received") 
+	// public void verifyUpdateComment(int codess) {
+	// 	JsonPath eval = response.jsonPath();
+	// 	System.out.println("THIS is AN UPdated Comment" + response.asString());
+	// 	int code  = eval.get("code");
+	// 	// int commentID  = eval.get("data[0].id");
+	// 	Assert.assertEquals(code,codess);
+	// 	// Assert.assertEquals(commentID,apiEngine.CommentsEndPoints.COMMENT_ID);
+	// }
 
 	@When("navigate to the getOneComment endpoint")
 	public void sendGetOneComment() {

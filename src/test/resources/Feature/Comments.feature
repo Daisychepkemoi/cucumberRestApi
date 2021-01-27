@@ -30,10 +30,23 @@ Scenario: Get Comments Per Post
 	 When navigate to get Comments per post endpoint
 	 Then check if get Comments per post data is returned
 
-Scenario: Update Comment
+# Scenario: Update Comment
+# 	 Given get all Comments endpoint
+# 	 When comment update data is passed
+# 	 Then validate that the comment data is updated
+
+Scenario Outline: Update Comment
 	 Given get all Comments endpoint
-	 When comment update data is passed
-	 Then validate that the comment data is updated
+	 When The comments "<name>", "<email>","body" and other data is passed to the endpoint
+	 Then Validate this endpoints <response> code is received 
+
+Examples:
+	 		 |name|email|body|response|
+			||Jackie.com|This is a body|200|
+			||||200|
+			|jackie|||200|
+			|jackie|mail.com||200|
+			|Jackie|correctcomyG9th@gmail.com|This is a body|200 |
  
 Scenario: View One Comment
 	 Given get all Comments endpoint

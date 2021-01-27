@@ -24,10 +24,10 @@ Scenario Outline: Add User                             [90m# src/test/resources
   [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received[0m                   [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
 
 @tag
-Scenario Outline: Add User                                                   [90m# src/test/resources/Feature/AUsers.feature:39[0m
-  [32mGiven [0m[32mget all users endpoint[0m                                               [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32mThe [0m[32m[1m"correctriGg9@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
-  [32mThen [0m[32mValidate [0m[32m[1m201[0m[32m code is received[0m                                         [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
+Scenario Outline: Add User                                                      [90m# src/test/resources/Feature/AUsers.feature:39[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                                  [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"correctrcmeGgt9@gmail.com"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendAddUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m201[0m[32m code is received[0m                                            [90m# stepDefinition.UsersSteps.verifyAddUser(int)[0m
 
 @tag
 Scenario Outline: UpdateOneUser                               [90m# src/test/resources/Feature/AUsers.feature:50[0m
@@ -36,10 +36,10 @@ Scenario Outline: UpdateOneUser                               [90m# src/test/re
   [32mThen [0m[32mValidate [0m[32m[1m422[0m[32m code is received and data is updated[0m      [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
 
 @tag
-Scenario Outline: UpdateOneUser                                                     [90m# src/test/resources/Feature/AUsers.feature:51[0m
-  [32mGiven [0m[32mget all users endpoint[0m                                                      [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
-  [32mWhen [0m[32mThe [0m[32m[1m"correctyyG9h@gmail.com"[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
-  [32mThen [0m[32mValidate [0m[32m[1m200[0m[32m code is received and data is updated[0m                            [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
+Scenario Outline: UpdateOneUser                                                        [90m# src/test/resources/Feature/AUsers.feature:51[0m
+  [32mGiven [0m[32mget all users endpoint[0m                                                         [90m# stepDefinition.UsersSteps.setGetUsersEndPoint()[0m
+  [32mWhen [0m[32mThe [0m[32m[1m"correctcomyG9th@gmail.com"[0m[32m and other update data is passed to the endpoint[0m [90m# stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)[0m
+  [32mThen [0m[32mValidate [0m[32m[1m200[0m[32m code is received and data is updated[0m                               [90m# stepDefinition.UsersSteps.verifyUpdateUser(int)[0m
 
 @tag
 Scenario: Get One User, thats the just created user [90m# src/test/resources/Feature/AUsers.feature:53[0m
@@ -156,13 +156,37 @@ Scenario: Get Comments Per Post                        [90m# src/test/resources
   [32mThen [0m[32mcheck if get Comments per post data is returned[0m [90m# stepDefinition.CommentsSteps.verifyCommentsPerPost()[0m
 
 @tag
-Scenario: Update Comment                         [90m# src/test/resources/Feature/Comments.feature:33[0m
-  [32mGiven [0m[32mget all Comments endpoint[0m                [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
-  [32mWhen [0m[32mcomment update data is passed[0m             [90m# stepDefinition.CommentsSteps.sendUpdateComment()[0m
-  [32mThen [0m[32mvalidate that the comment data is updated[0m [90m# stepDefinition.CommentsSteps.verifyUpdateComment()[0m
+Scenario Outline: Update Comment                                                     [90m# src/test/resources/Feature/Comments.feature:45[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                                                    [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mThe comments [0m[32m[1m""[0m[32m, [0m[32m[1m"Jackie.com"[0m[32m,[0m[32m[1m"body"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String,java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate this endpoints [0m[32m[1m200[0m[32m code is received[0m                                  [90m# stepDefinition.CommentsSteps.verifyAddComment(int)[0m
 
 @tag
-Scenario: View One Comment                    [90m# src/test/resources/Feature/Comments.feature:38[0m
+Scenario Outline: Update Comment                                           [90m# src/test/resources/Feature/Comments.feature:46[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                                          [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mThe comments [0m[32m[1m""[0m[32m, [0m[32m[1m""[0m[32m,[0m[32m[1m"body"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String,java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate this endpoints [0m[32m[1m200[0m[32m code is received[0m                        [90m# stepDefinition.CommentsSteps.verifyAddComment(int)[0m
+
+@tag
+Scenario Outline: Update Comment                                                 [90m# src/test/resources/Feature/Comments.feature:47[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                                                [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mThe comments [0m[32m[1m"jackie"[0m[32m, [0m[32m[1m""[0m[32m,[0m[32m[1m"body"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String,java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate this endpoints [0m[32m[1m200[0m[32m code is received[0m                              [90m# stepDefinition.CommentsSteps.verifyAddComment(int)[0m
+
+@tag
+Scenario Outline: Update Comment                                                         [90m# src/test/resources/Feature/Comments.feature:48[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                                                        [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mThe comments [0m[32m[1m"jackie"[0m[32m, [0m[32m[1m"mail.com"[0m[32m,[0m[32m[1m"body"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String,java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate this endpoints [0m[32m[1m200[0m[32m code is received[0m                                      [90m# stepDefinition.CommentsSteps.verifyAddComment(int)[0m
+
+@tag
+Scenario Outline: Update Comment                                                                          [90m# src/test/resources/Feature/Comments.feature:49[0m
+  [32mGiven [0m[32mget all Comments endpoint[0m                                                                         [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
+  [32mWhen [0m[32mThe comments [0m[32m[1m"Jackie"[0m[32m, [0m[32m[1m"correctcomyG9th@gmail.com"[0m[32m,[0m[32m[1m"body"[0m[32m and other data is passed to the endpoint[0m [90m# stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String,java.lang.String,java.lang.String)[0m
+  [32mThen [0m[32mValidate this endpoints [0m[32m[1m200[0m[32m code is received[0m                                                       [90m# stepDefinition.CommentsSteps.verifyAddComment(int)[0m
+
+@tag
+Scenario: View One Comment                    [90m# src/test/resources/Feature/Comments.feature:51[0m
   [32mGiven [0m[32mget all Comments endpoint[0m             [90m# stepDefinition.CommentsSteps.setGetAllComments()[0m
   [32mWhen [0m[32mnavigate to the getOneComment endpoint[0m [90m# stepDefinition.CommentsSteps.sendGetOneComment()[0m
   [32mThen [0m[32mcheck if the comment data is returned[0m  [90m# stepDefinition.CommentsSteps.verifyGetOneComment()[0m
