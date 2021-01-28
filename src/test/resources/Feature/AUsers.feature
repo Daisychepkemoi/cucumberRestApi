@@ -32,11 +32,10 @@ Scenario Outline: Add User
 
 
 Examples:
-	 		 |email|response|
-	 		 |correct3@gmail.com|422|
-			|inavlidmail|422|
+	 		|email|response|
+	 		|correct3@gmail.com|422|
 			||422|
-			|correctrcmaiGgf081@gmail.com|201|
+			|email16@gmail.com|201|
 			
 #
 Scenario Outline: UpdateOneUser
@@ -48,7 +47,7 @@ Scenario Outline: UpdateOneUser
 	 		 |email|response|
 	 		#  |correct1@gmail.com|200| //endpooint thrwoing internal server error if email alrady exists.
 			||422|
-			|Correctmailaof801@gmail.com|200|
+			|gmail15@gmail.com|200|
 # # # 
 Scenario: Get One User, thats the just created user
 	 Given get all users endpoint

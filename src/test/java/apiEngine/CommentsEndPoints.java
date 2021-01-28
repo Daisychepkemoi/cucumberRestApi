@@ -13,6 +13,7 @@ public class CommentsEndPoints {
 	public static int COMMENT_ID;
 	public static Response commentData;
 	public static RequestSpecification request;
+	
 	public CommentsEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
 		request = RestAssured.given().log().all();

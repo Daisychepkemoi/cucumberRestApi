@@ -9,7 +9,6 @@ import model.Posts;
 public class PostsEndPoints {
 	
 	
-//	public EndPoints endPoints;
 	public static int POST_ID;
 	public static Response postData;
 	public static RequestSpecification request;

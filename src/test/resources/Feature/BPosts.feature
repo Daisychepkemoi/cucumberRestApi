@@ -7,11 +7,6 @@ Feature: Posts
 	 When navigate to get all posts endpoint
 	 Then check if All post data is returned
 
-# Scenario: Add Posts
-# 	 Given get all posts endpoint 
-# 	 When pass data to the Add Post endpoint
-# 	 Then Validate that created post data is returned
-
 Scenario Outline: Add Posts
 	 Given get all posts endpoint
 	 When The post "<title>", "<body>" and other data is passed to the endpoint
@@ -36,7 +31,7 @@ Scenario Outline: Update Posts
 	 Then Validate that this <response> code is received 
 
 Examples:
-	 		 |title|body|response|
+	 		|title|body|response|
 			||This is a body|422|
 			|This is a title||422|
 			|||422|

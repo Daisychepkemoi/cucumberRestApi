@@ -45,11 +45,12 @@ public class TodosSteps {
 	public void verifyAddTodo(int codees) {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");
-		System.out.println("This is a todo:::" + response.asString());
-		// int user_id  = jEvaluator.get("data.user_id");
-		// System.out.println("This is the real TODO Response"+jEvaluator.get("$"));
 		Assert.assertEquals(codees,code);
-		// Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		if(code == 201 || code == 200){
+			int user_id  = jEvaluator.get("data.user_id");
+			Assert.assertEquals(user_id,apiEngine.UsersEndPoints.USER_ID);
+		}
+		
 	}
 	
 	@When("navigate to get Todos per user endpoint")
@@ -96,12 +97,12 @@ public class TodosSteps {
 		Assert.assertEquals(user_id,apiEngine.TodosEndPoints.TODO_ID);
 	}
 
-	// @When("navigate to the delete Todo endpoint")
+	@When("navigate to the delete Todo endpoint")
 	public void sendDeleteTodo() {
 		response = todoEndPoints.deleteTodo();
 		
 	}
-	// @Then("check if the todo is successfully deleted") 
+	@Then("check if the todo is successfully deleted") 
 	public void verifyDeleeTodoResponse() {
 		JsonPath jEvaluator = response.jsonPath();
 		int code  = jEvaluator.get("code");

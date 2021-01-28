@@ -9,7 +9,7 @@ import pojos.UsersR;
 public class UsersEndPoints {
 	public static int USER_ID;
 	public static Response userData;
-
+	public static String EMAIL;
 	public static RequestSpecification request;
 	public UsersEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
@@ -23,14 +23,12 @@ public class UsersEndPoints {
 	}
 	public  IRestResponse<Users> createUser(UsersR createUser) {
 		Response response = request.body(createUser).post(Routes.users());
-		// System.out.println("we are here now");
 	    JsonPath jsonPathEvaluator = response.jsonPath();
 	    int code = jsonPathEvaluator.get("code");
-	    // System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
 	    if(code == 201 ) {
 	    USER_ID  =jsonPathEvaluator.get("data.id");
-	    System.out.println("Hey    "+jsonPathEvaluator.get("data"));
-	    userData =response;
+		userData =response;
+		EMAIL = jsonPathEvaluator.get("data.email");
 	    }
 	    else {
 	    }
@@ -41,21 +39,20 @@ public class UsersEndPoints {
 		return request.get(Routes.oneUser(USER_ID));
 	}
 	public IRestResponse<Users> updateUser(UsersR updateUser){
-		System.out.println("We are here Now");
 		Response response = request.body(updateUser).patch(Routes.oneUser(USER_ID));
-		System.out.println("An now here" + response.asString());
 	    JsonPath jsonPathEvaluator = response.jsonPath();
-		int code = jsonPathEvaluator.get("code");
-		System.out.println("Hey DATA IS HERE   "+jsonPathEvaluator.get("$"));
-	    if(code == 201  ) {
+		int ResponseCode = jsonPathEvaluator.get("code");
+	    if(ResponseCode == 200  ) {
 		    USER_ID  =jsonPathEvaluator.get("data.id");
-		    userData =jsonPathEvaluator.get("data");
+			userData =response;
+			EMAIL = jsonPathEvaluator.get("data.email");
 		    }
 		    else {
-		    }
+			}
 		return new RestResponse<Users>(Users.class, response,userData);
 	}
 	public Response deleteUser() {
 		return request.delete(Routes.oneUser(USER_ID));
+		
 	}
 }
