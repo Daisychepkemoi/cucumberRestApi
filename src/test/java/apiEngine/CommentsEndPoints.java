@@ -15,7 +15,7 @@ public class CommentsEndPoints {
 
 	public CommentsEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
-		request = RestAssured.given().log().all();
+		request = RestAssured.given();//.log().all()
 		request.header("Content-Type", "Application/json").header("Authorization", token);
 
 	}

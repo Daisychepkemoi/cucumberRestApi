@@ -8,8 +8,8 @@ import reportgenerate.GenerateNewReports;
 @CucumberOptions( 
 				plugin ={
 						"html:html_reports.html" ,
-						"json:src/Reportss/json-reports.json" ,
-						"junit:src/Reportss/cucumber-reports.xml",
+						"json:src/target/json-reports.json" ,
+						"junit:src/target/cucumber-reports.xml",
 						// "rerun:report_output/rerun.txt",
 						},
 				 features = "src/test/resources/Feature",

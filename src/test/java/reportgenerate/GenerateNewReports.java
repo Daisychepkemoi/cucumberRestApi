@@ -10,10 +10,9 @@ import net.masterthought.cucumber.sorting.SortingMethod;
 public class GenerateNewReports {
  
     public static ReportBuilder generateNewReport()  {
-        File reportOutputDirectory = new File("Reportss/");
+        File reportOutputDirectory = new File("target/");
         List<String> jsonFiles = new ArrayList<String>();
-        jsonFiles.add("src/Reportss/json-reports.json");
-
+        jsonFiles.add("src/target/json-reports.json");
         String buildNumber = "1";
         String projectName = "CucumberProject";
         Configuration configuration = new Configuration(reportOutputDirectory, projectName);
