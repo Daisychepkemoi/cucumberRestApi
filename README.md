@@ -14,3 +14,4 @@ Steps
 5. To view reports go to your projects folder/target/cucumber-html-reports
 
 Sample Report :
+![image](https://user-images.githubusercontent.com/28442760/106382374-41031300-63d0-11eb-9325-af8325884d4b.png)
