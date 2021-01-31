@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="34" time="48.727">
+    <testcase classname="Users" name="Get All Users" time="4.821">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When navigate to get all users endpoint.....................................passed
+Then check if All user data is returned with response code..................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="Add User" time="1.993">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When The "correct3@gmail.com" and other data is passed to the endpoint......passed
+Then Validate 422 code is received..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="Add User 2" time="1.21">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When The "" and other data is passed to the endpoint........................passed
+Then Validate 422 code is received..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="Add User 3" time="1.284">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When The "email19@gmail.com" and other data is passed to the endpoint.......passed
+Then Validate 201 code is received..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="UpdateOneUser" time="1.117">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When The "" and other update data is passed to the endpoint.................passed
+Then Validate 422 code is received and data is updated......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="UpdateOneUser_2" time="1.61">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When The "gmail18@gmail.com" and other update data is passed to the endpoint.passed
+Then Validate 200 code is received and data is updated......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Users" name="Get One User, thats the just created user" time="1.188">
+        <system-out>
+            <![CDATA[Given get all users endpoint................................................passed
+When navigate to the getOne User endpoint...................................passed
+Then check if the user data is returned.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Get All Posts" time="1.422">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When navigate to get all posts endpoint.....................................passed
+Then check if All post data is returned.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Add Posts" time="1.3">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "", "This is a body" and other data is passed to the endpoint.passed
+Then Validate this 422 code is received.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Add Posts 2" time="0.988">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "This is a title", "" and other data is passed to the endpoint.passed
+Then Validate this 422 code is received.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Add Posts 3" time="1.399">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "", "" and other data is passed to the endpoint...............passed
+Then Validate this 422 code is received.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Add Posts 4" time="1.14">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "This is a title", "This is a body" and other data is passed to the endpoint.passed
+Then Validate this 201 code is received.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Get Posts Per User" time="1.23">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When navigate to get posts per user endpoint................................passed
+Then check if get posts per user data is returned...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Update Posts" time="1.17">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "", "This is a body" and other data is passed to the update post endpoint.passed
+Then Validate that this 422 code is received................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Update Posts 2" time="1.293">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "This is a title", "" and other data is passed to the update post endpoint.passed
+Then Validate that this 422 code is received................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Update Posts 3" time="1.238">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "", "" and other data is passed to the update post endpoint...passed
+Then Validate that this 422 code is received................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="Update Posts 4" time="1.12">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When The post "This is a title", "This is a body" and other data is passed to the update post endpoint.passed
+Then Validate that this 200 code is received................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Posts" name="View One Post" time="0.992">
+        <system-out>
+            <![CDATA[Given get all posts endpoint................................................passed
+When navigate to the onePost endpoint.......................................passed
+Then check if the post data is returned.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Get All Comments" time="1.307">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When navigate to get all Comments endpoint..................................passed
+Then check if All comment data is returned..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Create Comment" time="1.573">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comment "" config and other data is passed to the endpoint.........passed
+Then Validate this endpoints 422 code is received...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Create Comment 2" time="1.371">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comment "This is a body" config and other data is passed to the endpoint.passed
+Then Validate this endpoints 201 code is received...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Get Comments Per Post" time="1.111">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When navigate to get Comments per post endpoint.............................passed
+Then check if get Comments per post data is returned........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Update Comment" time="1.521">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comments "" and other data is passed to the endpoint...............passed
+Then Validate this comments endpoints 422 code is received..................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="Update Comment 2" time="1.558">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comments "This is a body" and other data is passed to the endpoint.passed
+Then Validate this comments endpoints 200 code is received..................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="View One Comment" time="1.376">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When navigate to the getOneComment endpoint.................................passed
+Then check if the comment data is returned..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Comments" name="delete comment" time="1.2">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When navigate to the deleteComment endpoint.................................passed
+Then check if the comment is successfully deleted...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Get All Todos" time="1.325">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to get all Todos endpoint.....................................passed
+Then check if All todos data is returned....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Create TODO" time="1.143">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todo "" and other data is passed to the endpoint...................passed
+Then Validate this todos endpoints 422 code is received.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Create TODO 2" time="1.34">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todo "This is a body" and other data is passed to the endpoint.....passed
+Then Validate this todos endpoints 201 code is received.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="View ALL TODO per User" time="1.082">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to get Todos per user endpoint................................passed
+Then check if get Todos per user data is returned...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Update TODO" time="1.085">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todos "" and other data is passed to the endpoint..................passed
+Then Validate this todos endpoints 422 code is received.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Update TODO 2" time="1.103">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todos "This is a body" and other data is passed to the endpoint....passed
+Then Validate this todos endpoints 200 code is received.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="View One TODO" time="1.248">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to the getOntTodo endpoint....................................passed
+Then check if the todo data is returned.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Todos" name="Delete TODO" time="1.666">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to the delete Todo endpoint...................................passed
+Then check if the todo is successfully deleted..............................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
