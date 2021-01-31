@@ -1,0 +1,2131 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-31T10:16:26.436Z",
+        "line": 23,
+        "name": "Get All Users",
+        "description": "",
+        "id": "users;get-all-users",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1233885600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2561058400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "navigate to get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.sendGetUsers()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 934041800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "check if All user data is returned with response code",
+            "match": {
+              "location": "stepDefinition.UsersSteps.verifyGetUsersResponse()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:31.286Z",
+        "line": 36,
+        "name": "Add User",
+        "description": "",
+        "id": "users;add-user;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1568800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1989243800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The \"correct3@gmail.com\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"correct3@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60896400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:33.387Z",
+        "line": 37,
+        "name": "Add User",
+        "description": "",
+        "id": "users;add-user;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1993700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2692780100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54675200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:36.173Z",
+        "line": 38,
+        "name": "Add User",
+        "description": "",
+        "id": "users;add-user;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3106300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1166851800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The \"email17@gmail.com\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email17@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64747600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:37.445Z",
+        "line": 49,
+        "name": "UpdateOneUser",
+        "description": "",
+        "id": "users;updateoneuser;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 993600,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1291335600,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The \"\" and other update data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31946400,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Validate 422 code is received and data is updated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:38.804Z",
+        "line": 50,
+        "name": "UpdateOneUser",
+        "description": "",
+        "id": "users;updateoneuser;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5298900,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1202889700,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The \"gmail17@gmail.com\" and other update data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"gmail17@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55731200,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Validate 200 code is received and data is updated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:40.109Z",
+        "line": 52,
+        "name": "Get One User, thats the just created user",
+        "description": "",
+        "id": "users;get-one-user--thats-the-just-created-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5965100,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "get all users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1270658000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "navigate to the getOne User endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.sendGetOneUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25793300,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "check if the user data is returned",
+            "match": {
+              "location": "stepDefinition.UsersSteps.verifyGetOneUser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users"
+          }
+        ]
+      }
+    ],
+    "name": "Users",
+    "description": "  Users CRUD Features",
+    "id": "users",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/AUsers.feature",
+    "tags": [
+      {
+        "name": "@users",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-31T10:16:41.438Z",
+        "line": 5,
+        "name": "Get All Posts",
+        "description": "",
+        "id": "posts;get-all-posts",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3833500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1259406400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.sendGetAllPosts()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41013900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if All post data is returned",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.verifyGetAllPostsResponse()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:42.779Z",
+        "line": 18,
+        "name": "Add Posts",
+        "description": "",
+        "id": "posts;add-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1285122000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The post \"\", \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20734700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:44.107Z",
+        "line": 19,
+        "name": "Add Posts",
+        "description": "",
+        "id": "posts;add-posts;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 997700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1083836700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The post \"This is a title\", \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19893800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:45.233Z",
+        "line": 20,
+        "name": "Add Posts",
+        "description": "",
+        "id": "posts;add-posts;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1277197800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The post \"\", \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28304100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:46.565Z",
+        "line": 21,
+        "name": "Add Posts",
+        "description": "",
+        "id": "posts;add-posts;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2874900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1205569600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45957900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:47.836Z",
+        "line": 23,
+        "name": "Get Posts Per User",
+        "description": "",
+        "id": "posts;get-posts-per-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1436000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1119063000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "navigate to get posts per user endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.sendGetPostPerUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102901100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "check if get posts per user data is returned",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.verifyGetPostPerUser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:49.078Z",
+        "line": 35,
+        "name": "Update Posts",
+        "description": "",
+        "id": "posts;update-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1424100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1210706500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The post \"\", \"This is a body\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30222200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate that this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:50.339Z",
+        "line": 36,
+        "name": "Update Posts",
+        "description": "",
+        "id": "posts;update-posts;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1216400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1485475100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The post \"This is a title\", \"\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25549300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate that this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:51.869Z",
+        "line": 37,
+        "name": "Update Posts",
+        "description": "",
+        "id": "posts;update-posts;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10378100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1893318000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The post \"\", \"\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 52896500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate that this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:53.851Z",
+        "line": 38,
+        "name": "Update Posts",
+        "description": "",
+        "id": "posts;update-posts;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1615700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1659808600,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55580800,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Validate that this 200 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:55.589Z",
+        "line": 40,
+        "name": "View One Post",
+        "description": "",
+        "id": "posts;view-one-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2014000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1865750000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "navigate to the onePost endpoint",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.sendGetOnePost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39333500,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "check if the post data is returned",
+            "match": {
+              "location": "stepDefinition.BPostsSteps.verifyGetOnepost()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@posts"
+          }
+        ]
+      }
+    ],
+    "name": "Posts",
+    "description": "\tPosts CRUD features",
+    "id": "posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/BPosts.feature",
+    "tags": [
+      {
+        "name": "@posts",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-31T10:16:57.510Z",
+        "line": 5,
+        "name": "Get All Comments",
+        "description": "",
+        "id": "comments;get-all-comments",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3787500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1263517100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetAllComments()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30033500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if All comment data is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetAllComments()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:16:58.831Z",
+        "line": 22,
+        "name": "Create Comment",
+        "description": "",
+        "id": "comments;create-comment;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2173600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1408198300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The comment \"\" config and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendAddComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45738800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Validate this endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddComment(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:00.303Z",
+        "line": 23,
+        "name": "Create Comment",
+        "description": "",
+        "id": "comments;create-comment;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1467000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1166612600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The comment \"This is a body\" config and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendAddComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 79769000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Validate this endpoints 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddComment(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:01.564Z",
+        "line": 25,
+        "name": "Get Comments Per Post",
+        "description": "",
+        "id": "comments;get-comments-per-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1217600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1213777000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "navigate to get Comments per post endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendCommentsPerPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36888000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "check if get Comments per post data is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyCommentsPerPost()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:02.834Z",
+        "line": 37,
+        "name": "Update Comment",
+        "description": "",
+        "id": "comments;update-comment;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 99300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1394401400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "The comments \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25031900,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Validate this comments endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyUpdateComment(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:04.270Z",
+        "line": 38,
+        "name": "Update Comment",
+        "description": "",
+        "id": "comments;update-comment;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3736900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1546869800,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "The comments \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24301500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Validate this comments endpoints 200 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyUpdateComment(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:05.860Z",
+        "line": 40,
+        "name": "View One Comment",
+        "description": "",
+        "id": "comments;view-one-comment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 997300,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1221568900,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "navigate to the getOneComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetOneComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40351400,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "check if the comment data is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetOneComment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:07.131Z",
+        "line": 45,
+        "name": "delete comment",
+        "description": "",
+        "id": "comments;delete-comment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1261529900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "navigate to the deleteComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendDeleteComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16816800,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "check if the comment is successfully deleted",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyDeleteComment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@comments"
+          }
+        ]
+      }
+    ],
+    "name": "Comments",
+    "description": "\tComments CRUD features",
+    "id": "comments",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Comments.feature",
+    "tags": [
+      {
+        "name": "@comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-31T10:17:08.428Z",
+        "line": 5,
+        "name": "Get All Todos",
+        "description": "",
+        "id": "todos;get-all-todos",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3503400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000388400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetAllTodos()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25108100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if All todos data is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetAllTodos()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:09.476Z",
+        "line": 17,
+        "name": "Create TODO",
+        "description": "",
+        "id": "todos;create-todo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1004500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1004432000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The todo \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendAddodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22461200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this todos endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:10.515Z",
+        "line": 18,
+        "name": "Create TODO",
+        "description": "",
+        "id": "todos;create-todo;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1009000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1149999600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The todo \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendAddodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43387400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Validate this todos endpoints 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:11.727Z",
+        "line": 21,
+        "name": "View ALL TODO per User",
+        "description": "",
+        "id": "todos;view-all-todo-per-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1003700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1328547600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "navigate to get Todos per user endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetTodoPerUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49616300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "check if get Todos per user data is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetTodoPerUser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:13.124Z",
+        "line": 33,
+        "name": "Update TODO",
+        "description": "",
+        "id": "todos;update-todo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3916200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 989872800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The todos \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendUpdateTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20226300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Validate this todos endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:14.149Z",
+        "line": 34,
+        "name": "Update TODO",
+        "description": "",
+        "id": "todos;update-todo;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 995500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 951189600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The todos \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendUpdateTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40685700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Validate this todos endpoints 200 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:15.159Z",
+        "line": 36,
+        "name": "View One TODO",
+        "description": "",
+        "id": "todos;view-one-todo",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1038616600,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "navigate to the getOntTodo endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetOneTodo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31362700,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "check if the todo data is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.VerifyGetOneTodo()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-01-31T10:17:16.241Z",
+        "line": 41,
+        "name": "Delete TODO",
+        "description": "",
+        "id": "todos;delete-todo",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1080241800,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "navigate to the delete Todo endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendDeleteTodo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16278900,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "check if the todo is successfully deleted",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyDeleeTodoResponse()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@todos"
+          }
+        ]
+      }
+    ],
+    "name": "Todos",
+    "description": "\tTodos CRUD features",
+    "id": "todos",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/Todos.feature",
+    "tags": [
+      {
+        "name": "@todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,4 +1,4 @@
-@tag
+@comments
 Feature: Comments
 	Comments CRUD features
 

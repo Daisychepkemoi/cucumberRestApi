@@ -1,38 +1,23 @@
-package runners;
-
-import org.junit.AfterClass;
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+package reports;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Test;
 
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.presentation.PresentationMode;
 import net.masterthought.cucumber.sorting.SortingMethod;
-@RunWith(Cucumber.class)
-@CucumberOptions( 
-				plugin ={
-						"html:html_reports.html" ,
-						"json:src/Reportss/json-reports.json" ,
-						"junit:src/Reportss/cucumber-reports.xml",
-						// "rerun:report_output/rerun.txt",
-						// "pretty:pretty-report.log", 
-						// "html:target/jsonReports/html-report.html",
-						// "json:target/jsonReports/json-report.json" ,
-						// "junit:target/jsonReports/junit-report.xml"
-						},
-				 features = "src/test/resources/Feature",
-				 glue={"stepDefinition"}
- )
-public class TestRunners {
 
-		@AfterClass
-		public static void after()  throws Exception{
-			File reportOutputDirectory = new File("Reportss/");
+
+public class LiveDemoTest {
+
+  
+    // @Test
+    public void generateNewReport() throws IOException {
+        File reportOutputDirectory = new File("Reposrtss/");
         List<String> jsonFiles = new ArrayList<String>();
         jsonFiles.add("src/Reportss/json-reports.json");
 
@@ -50,5 +35,6 @@ public class TestRunners {
 
         ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
         reportBuilder.generateReports();
-		}
+        // return new ReportBuilder(jsonFiles, configuration);
+    }
 }

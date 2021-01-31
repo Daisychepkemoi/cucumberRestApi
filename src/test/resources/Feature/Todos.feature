@@ -1,3 +1,4 @@
+@todos
 Feature: Todos
 	Todos CRUD features
 

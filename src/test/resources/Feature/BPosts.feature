@@ -1,4 +1,4 @@
-@tag
+@posts
 Feature: Posts
 	Posts CRUD features
 
