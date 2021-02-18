@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="13.139">
-    <testcase classname="Get All Posts" name="Get All Posts" time="2.931">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="11" time="13.299">
+    <testcase classname="Get All Posts" name="Get All Posts" time="3.164">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to get all posts endpoint.....................................passed
@@ -9,7 +9,7 @@ Then check if response has post in data object..............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts" time="1.359">
+    <testcase classname="Add Post" name="Add Posts" time="1.337">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the endpoint.passed
@@ -18,7 +18,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 2" time="0.966">
+    <testcase classname="Add Post" name="Add Posts 2" time="0.924">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the endpoint.passed
@@ -27,7 +27,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 3" time="0.965">
+    <testcase classname="Add Post" name="Add Posts 3" time="0.932">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the endpoint...............passed
@@ -36,7 +36,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 4" time="0.936">
+    <testcase classname="Add Post" name="Add Posts 4" time="1.026">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the endpoint.passed
@@ -45,7 +45,7 @@ Then Validate response body contains "created_at" p.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get One Post" name="View One Post" time="0.886">
+    <testcase classname="Get One Post" name="View One Post" time="0.884">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to the onePost endpoint.......................................passed
@@ -54,7 +54,7 @@ Then check if responses postID is equal to urlID............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All One Users Post" name="Get All One Users Post" time="0.92">
+    <testcase classname="Get All One Users Post" name="Get All One Users Post" time="0.889">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to get posts per user endpoint................................passed
@@ -63,7 +63,7 @@ Then check if responses UserId is equal to urlUserID........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts" time="1.1">
+    <testcase classname="Update Posts" name="Update Posts" time="0.91">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the update post endpoint.passed
@@ -72,7 +72,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 2" time="0.97">
+    <testcase classname="Update Posts" name="Update Posts 2" time="0.921">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the update post endpoint.passed
@@ -81,7 +81,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 3" time="0.936">
+    <testcase classname="Update Posts" name="Update Posts 3" time="0.965">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the update post endpoint...passed
@@ -90,7 +90,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 4" time="0.89">
+    <testcase classname="Update Posts" name="Update Posts 4" time="1.047">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the update post endpoint.passed

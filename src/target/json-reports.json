@@ -3,7 +3,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:00:28.757Z",
+        "start_timestamp": "2021-02-18T16:13:30.710Z",
         "line": 4,
         "name": "Get All Posts",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 623897300,
+              "duration": 832777800,
               "status": "passed"
             },
             "line": 5,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1732887200,
+              "duration": 1816437700,
               "status": "passed"
             },
             "line": 6,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 477235300,
+              "duration": 428191600,
               "status": "passed"
             },
             "line": 7,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 49447200,
+              "duration": 23937800,
               "status": "passed"
             },
             "line": 8,
@@ -87,7 +87,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:00:31.719Z",
+        "start_timestamp": "2021-02-18T16:13:33.906Z",
         "line": 13,
         "name": "Add Posts",
         "description": "",
@@ -97,7 +97,7 @@
         "steps": [
           {
             "result": {
-              "duration": 998100,
+              "duration": 1520700,
               "status": "passed"
             },
             "line": 5,
@@ -109,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 1299573900,
+              "duration": 1266162100,
               "status": "passed"
             },
             "line": 6,
@@ -131,7 +131,7 @@
           },
           {
             "result": {
-              "duration": 7983700,
+              "duration": 7978700,
               "status": "passed"
             },
             "line": 7,
@@ -149,7 +149,7 @@
           },
           {
             "result": {
-              "duration": 45874600,
+              "duration": 53858400,
               "status": "passed"
             },
             "line": 8,
@@ -173,7 +173,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:33.095Z",
+        "start_timestamp": "2021-02-18T16:13:35.259Z",
         "line": 14,
         "name": "Add Posts",
         "description": "",
@@ -183,7 +183,7 @@
         "steps": [
           {
             "result": {
-              "duration": 998400,
+              "duration": 984000,
               "status": "passed"
             },
             "line": 5,
@@ -195,7 +195,7 @@
           },
           {
             "result": {
-              "duration": 937512400,
+              "duration": 896457700,
               "status": "passed"
             },
             "line": 6,
@@ -217,7 +217,7 @@
           },
           {
             "result": {
-              "duration": 7978600,
+              "duration": 7979500,
               "status": "passed"
             },
             "line": 7,
@@ -235,7 +235,7 @@
           },
           {
             "result": {
-              "duration": 17950600,
+              "duration": 17952200,
               "status": "passed"
             },
             "line": 8,
@@ -259,7 +259,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:34.070Z",
+        "start_timestamp": "2021-02-18T16:13:36.192Z",
         "line": 15,
         "name": "Add Posts",
         "description": "",
@@ -269,7 +269,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997100,
+              "duration": 997900,
               "status": "passed"
             },
             "line": 5,
@@ -281,7 +281,7 @@
           },
           {
             "result": {
-              "duration": 934792500,
+              "duration": 890214900,
               "status": "passed"
             },
             "line": 6,
@@ -303,7 +303,7 @@
           },
           {
             "result": {
-              "duration": 8250800,
+              "duration": 9972100,
               "status": "passed"
             },
             "line": 7,
@@ -321,7 +321,7 @@
           },
           {
             "result": {
-              "duration": 18945400,
+              "duration": 26930000,
               "status": "passed"
             },
             "line": 8,
@@ -345,7 +345,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:35.045Z",
+        "start_timestamp": "2021-02-18T16:13:37.130Z",
         "line": 16,
         "name": "Add Posts",
         "description": "",
@@ -355,7 +355,7 @@
         "steps": [
           {
             "result": {
-              "duration": 992700,
+              "duration": 998600,
               "status": "passed"
             },
             "line": 5,
@@ -367,7 +367,7 @@
           },
           {
             "result": {
-              "duration": 906791000,
+              "duration": 997885200,
               "status": "passed"
             },
             "line": 6,
@@ -389,7 +389,7 @@
           },
           {
             "result": {
-              "duration": 8975400,
+              "duration": 8975000,
               "status": "passed"
             },
             "line": 7,
@@ -407,7 +407,7 @@
           },
           {
             "result": {
-              "duration": 17945900,
+              "duration": 18987800,
               "status": "passed"
             },
             "line": 8,
@@ -451,7 +451,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:00:35.990Z",
+        "start_timestamp": "2021-02-18T16:13:38.164Z",
         "line": 4,
         "name": "View One Post",
         "description": "",
@@ -461,7 +461,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2008400,
+              "duration": 974600,
               "status": "passed"
             },
             "line": 5,
@@ -473,7 +473,7 @@
           },
           {
             "result": {
-              "duration": 865605400,
+              "duration": 857509000,
               "status": "passed"
             },
             "line": 6,
@@ -485,7 +485,7 @@
           },
           {
             "result": {
-              "duration": 8940400,
+              "duration": 13959800,
               "status": "passed"
             },
             "line": 7,
@@ -497,7 +497,7 @@
           },
           {
             "result": {
-              "duration": 8010700,
+              "duration": 9486700,
               "status": "passed"
             },
             "line": 8,
@@ -535,7 +535,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:00:36.885Z",
+        "start_timestamp": "2021-02-18T16:13:39.058Z",
         "line": 4,
         "name": "Get All One Users Post",
         "description": "",
@@ -556,7 +556,7 @@
           },
           {
             "result": {
-              "duration": 891456500,
+              "duration": 866700000,
               "status": "passed"
             },
             "line": 6,
@@ -568,7 +568,7 @@
           },
           {
             "result": {
-              "duration": 10003100,
+              "duration": 8972700,
               "status": "passed"
             },
             "line": 7,
@@ -580,7 +580,7 @@
           },
           {
             "result": {
-              "duration": 14957200,
+              "duration": 10971100,
               "status": "passed"
             },
             "line": 8,
@@ -618,7 +618,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:00:37.813Z",
+        "start_timestamp": "2021-02-18T16:13:39.956Z",
         "line": 12,
         "name": "Update Posts",
         "description": "",
@@ -639,7 +639,7 @@
           },
           {
             "result": {
-              "duration": 1069881400,
+              "duration": 882734100,
               "status": "passed"
             },
             "line": 6,
@@ -661,7 +661,7 @@
           },
           {
             "result": {
-              "duration": 8973200,
+              "duration": 7016000,
               "status": "passed"
             },
             "line": 7,
@@ -679,7 +679,7 @@
           },
           {
             "result": {
-              "duration": 17951500,
+              "duration": 16919600,
               "status": "passed"
             },
             "line": 8,
@@ -703,7 +703,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:38.920Z",
+        "start_timestamp": "2021-02-18T16:13:40.873Z",
         "line": 13,
         "name": "Update Posts",
         "description": "",
@@ -713,7 +713,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1014700,
+              "duration": 999000,
               "status": "passed"
             },
             "line": 5,
@@ -725,7 +725,7 @@
           },
           {
             "result": {
-              "duration": 935603800,
+              "duration": 895797800,
               "status": "passed"
             },
             "line": 6,
@@ -747,7 +747,7 @@
           },
           {
             "result": {
-              "duration": 12965000,
+              "duration": 7978200,
               "status": "passed"
             },
             "line": 7,
@@ -765,7 +765,7 @@
           },
           {
             "result": {
-              "duration": 19946600,
+              "duration": 16952900,
               "status": "passed"
             },
             "line": 8,
@@ -789,7 +789,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:39.897Z",
+        "start_timestamp": "2021-02-18T16:13:41.800Z",
         "line": 14,
         "name": "Update Posts",
         "description": "",
@@ -799,7 +799,7 @@
         "steps": [
           {
             "result": {
-              "duration": 998000,
+              "duration": 1013800,
               "status": "passed"
             },
             "line": 5,
@@ -811,7 +811,7 @@
           },
           {
             "result": {
-              "duration": 907462500,
+              "duration": 923947200,
               "status": "passed"
             },
             "line": 6,
@@ -833,7 +833,7 @@
           },
           {
             "result": {
-              "duration": 11008300,
+              "duration": 20975900,
               "status": "passed"
             },
             "line": 7,
@@ -851,7 +851,7 @@
           },
           {
             "result": {
-              "duration": 15917200,
+              "duration": 18908500,
               "status": "passed"
             },
             "line": 8,
@@ -875,7 +875,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:00:40.840Z",
+        "start_timestamp": "2021-02-18T16:13:42.773Z",
         "line": 15,
         "name": "Update Posts",
         "description": "",
@@ -885,7 +885,6 @@
         "steps": [
           {
             "result": {
-              "duration": 1013700,
               "status": "passed"
             },
             "line": 5,
@@ -897,7 +896,7 @@
           },
           {
             "result": {
-              "duration": 862655100,
+              "duration": 1022582700,
               "status": "passed"
             },
             "line": 6,
@@ -919,7 +918,7 @@
           },
           {
             "result": {
-              "duration": 8967200,
+              "duration": 7977700,
               "status": "passed"
             },
             "line": 7,
@@ -937,7 +936,7 @@
           },
           {
             "result": {
-              "duration": 17951800,
+              "duration": 16972100,
               "status": "passed"
             },
             "line": 8,
