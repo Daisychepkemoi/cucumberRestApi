@@ -33,16 +33,12 @@ Scenario Outline: Update Comment
 	 Then Validate this comments endpoints <response> code is received 
 
 Examples:
-	 		|body|response|
-			||422|
-			|This is a body|200 |
+	 		|body|response||
+			||422||
+			|This is a body|200 ||
  
 Scenario: View One Comment
 	 Given get all Comments endpoint
 	 When navigate to the getOneComment endpoint
 	 Then check if the comment data is returned
 
-Scenario: delete comment
-	 Given get all Comments endpoint
-	 When navigate to the deleteComment endpoint
-	 Then check if the comment is successfully deleted
