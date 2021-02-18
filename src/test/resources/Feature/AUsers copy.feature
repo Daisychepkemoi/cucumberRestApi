@@ -18,7 +18,7 @@
 # 	 		|email|response|
 # 	 		|correct3@gmail.com|422|
 # 			||422|
-# 			|email19@gmail.com|201|
+# 			|email79@gmail.com|201|
 			
 # #
 # Scenario Outline: UpdateOneUser
@@ -30,7 +30,7 @@
 # 	 		 |email|response|
 # 	 		#  |correct1@gmail.com|200| //endpooint thrwoing internal server error if email alrady exists.
 # 			||422|
-# 			|gmail18@gmail.com|200|
+# 			|gmail78@gmail.com|200|
 # # # # 
 # Scenario: Get One User, thats the just created user
 # 	 Given get all users endpoint

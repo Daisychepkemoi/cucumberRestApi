@@ -14,6 +14,7 @@ import reportgenerate.GenerateNewReports;
 						},
 				 features = "src/test/resources/Feature",
 				 glue={"stepDefinition"}
+				//  glue = "fr.tlasnier.cucumber"
  )
 public class TestRunners {
 		@AfterClass
