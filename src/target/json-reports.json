@@ -3,78 +3,78 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T12:00:37.224Z",
-        "line": 5,
-        "name": "Get All Users response Code",
+        "start_timestamp": "2021-02-18T16:00:28.757Z",
+        "line": 4,
+        "name": "Get All Posts",
         "description": "",
-        "id": "getallusers;get-all-users-response-code",
+        "id": "get-all-posts;get-all-posts",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 618026800,
+              "duration": 623897300,
               "status": "passed"
             },
-            "line": 6,
-            "name": "You have get All users endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1611808000,
+              "duration": 1732887200,
               "status": "passed"
             },
-            "line": 7,
-            "name": "navigate to get all users endpoint",
+            "line": 6,
+            "name": "navigate to get all posts endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.sendGetUsers()"
+              "location": "stepDefinition.PostsSteps.sendGetAllPosts()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 456022100,
+              "duration": 477235300,
               "status": "passed"
             },
-            "line": 8,
-            "name": "check response code 200 is returned",
+            "line": 7,
+            "name": "check if response code 200 is returned",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetUsersResponse()"
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 28921900,
+              "duration": 49447200,
               "status": "passed"
             },
-            "line": 9,
-            "name": "check response body contains email object",
+            "line": 8,
+            "name": "check if response has post in data object",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetAllUsersResponseBody()"
+              "location": "stepDefinition.PostsSteps.verifyGetAllPostsResponseBody()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@GetAllUsers"
+            "name": "@Posts"
           }
         ]
       }
     ],
-    "name": "GetAllUsers",
+    "name": "Get All Posts",
     "description": "",
-    "id": "getallusers",
+    "id": "get-all-posts",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/1_Get_All_Users.feature",
+    "uri": "file:src/test/resources/Feature/5_Get_All_Posts.feature",
     "tags": [
       {
-        "name": "@GetAllUsers",
+        "name": "@Posts",
         "type": "Tag",
         "location": {
           "line": 2,
@@ -87,151 +87,73 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T12:00:40.030Z",
+        "start_timestamp": "2021-02-18T16:00:31.719Z",
         "line": 13,
-        "name": "Add User",
+        "name": "Add Posts",
         "description": "",
-        "id": "add-user;add-user;;2",
+        "id": "add-post;add-posts;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2997800,
+              "duration": 998100,
               "status": "passed"
             },
-            "line": 6,
-            "name": "You have get All users endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1271531100,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "The \"correct57@gmail.com\" and other data is passed to the endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"correct57@gmail.com\"",
-                  "offset": 4
-                }
-              ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7978900,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "Validate 422 code is received",
-            "match": {
-              "arguments": [
-                {
-                  "val": "422",
-                  "offset": 9
-                }
-              ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 59850900,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "Validate response body contains \"has already been taken\" t",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"has already been taken\"",
-                  "offset": 32
-                }
-              ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@AddUser"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-02-18T12:00:41.389Z",
-        "line": 14,
-        "name": "Add User",
-        "description": "",
-        "id": "add-user;add-user;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1002000,
+              "duration": 1299573900,
               "status": "passed"
             },
             "line": 6,
-            "name": "You have get All users endpoint",
-            "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 862828800,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "The \"\" and other data is passed to the endpoint",
+            "name": "The post \"\", \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
                   "val": "\"\"",
-                  "offset": 4
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 9972800,
+              "duration": 7983700,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Validate 422 code is received",
+            "line": 7,
+            "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 9
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 25935100,
+              "duration": 45874600,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Validate response body contains \"can\u0027t be blank\" t",
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
             "match": {
               "arguments": [
                 {
@@ -239,107 +161,284 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@AddUser"
+            "name": "@Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T12:00:42.303Z",
-        "line": 15,
-        "name": "Add User",
+        "start_timestamp": "2021-02-18T16:00:33.095Z",
+        "line": 14,
+        "name": "Add Posts",
         "description": "",
-        "id": "add-user;add-user;;4",
+        "id": "add-post;add-posts;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
+              "duration": 998400,
               "status": "passed"
             },
-            "line": 6,
-            "name": "You have get All users endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 969686500,
+              "duration": 937512400,
               "status": "passed"
             },
-            "line": 7,
-            "name": "The \"emaill80@gmail.com\" and other data is passed to the endpoint",
+            "line": 6,
+            "name": "The post \"This is a title\", \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"emaill80@gmail.com\"",
-                  "offset": 4
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 28
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 9972600,
+              "duration": 7978600,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Validate 201 code is received",
+            "line": 7,
+            "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
                 {
-                  "val": "201",
-                  "offset": 9
+                  "val": "422",
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 20944000,
+              "duration": 17950600,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Validate response body contains \"email\" t",
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
             "match": {
               "arguments": [
                 {
-                  "val": "\"email\"",
+                  "val": "\"can\u0027t be blank\"",
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@AddUser"
+            "name": "@Posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:00:34.070Z",
+        "line": 15,
+        "name": "Add Posts",
+        "description": "",
+        "id": "add-post;add-posts;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 997100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 934792500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"\", \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8250800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18945400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:00:35.045Z",
+        "line": 16,
+        "name": "Add Posts",
+        "description": "",
+        "id": "add-post;add-posts;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 992700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 906791000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8975400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17945900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
           }
         ]
       }
     ],
-    "name": "Add User",
+    "name": "Add Post",
     "description": "",
-    "id": "add-user",
+    "id": "add-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/2_Add_User.feature",
+    "uri": "file:src/test/resources/Feature/6_Add_Post.feature",
     "tags": [
       {
-        "name": "@AddUser",
+        "name": "@Posts",
         "type": "Tag",
         "location": {
           "line": 2,
@@ -352,11 +451,95 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T12:00:43.315Z",
+        "start_timestamp": "2021-02-18T16:00:35.990Z",
         "line": 4,
-        "name": "Get One User, thats the just created user",
+        "name": "View One Post",
         "description": "",
-        "id": "get-one-user;get-one-user--thats-the-just-created-user",
+        "id": "get-one-post;view-one-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2008400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 865605400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to the onePost endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.sendGetOnePost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8940400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8010700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if responses postID is equal to urlID",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyGetOnepost()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      }
+    ],
+    "name": "Get One Post",
+    "description": "",
+    "id": "get-one-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/7_Get_One_Post.feature",
+    "tags": [
+      {
+        "name": "@Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-18T16:00:36.885Z",
+        "line": 4,
+        "name": "Get All One Users Post",
+        "description": "",
+        "id": "get-all-one-users-post;get-all-one-users-post",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -365,64 +548,427 @@
               "status": "passed"
             },
             "line": 5,
-            "name": "You have get All users endpoint",
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 963714300,
+              "duration": 891456500,
               "status": "passed"
             },
             "line": 6,
-            "name": "navigate to the getOne User endpoint",
+            "name": "navigate to get posts per user endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.sendGetOneUser()"
+              "location": "stepDefinition.PostsSteps.sendGetPostPerUser()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 25925600,
+              "duration": 10003100,
               "status": "passed"
             },
             "line": 7,
-            "name": "check response code 200 is returned",
+            "name": "check if response code 200 is returned",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetUsersResponse()"
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 11968100,
+              "duration": 14957200,
               "status": "passed"
             },
             "line": 8,
-            "name": "check response body contains email just created",
+            "name": "check if responses UserId is equal to urlUserID",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetOneUserResponseMsg()"
+              "location": "stepDefinition.PostsSteps.verifyGetPostPerUser()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@getOneUser"
+            "name": "@Posts"
           }
         ]
       }
     ],
-    "name": "Get One User",
+    "name": "Get All One Users Post",
     "description": "",
-    "id": "get-one-user",
+    "id": "get-all-one-users-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/3_GetOneUser.feature",
+    "uri": "file:src/test/resources/Feature/8_Get_All_One_Users_Posts.feature",
     "tags": [
       {
-        "name": "@getOneUser",
+        "name": "@Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-18T16:00:37.813Z",
+        "line": 12,
+        "name": "Update Posts",
+        "description": "",
+        "id": "update-posts;update-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1069881400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"\", \"This is a body\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8973200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17951500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:00:38.920Z",
+        "line": 13,
+        "name": "Update Posts",
+        "description": "",
+        "id": "update-posts;update-posts;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1014700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 935603800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"This is a title\", \"\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12965000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19946600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:00:39.897Z",
+        "line": 14,
+        "name": "Update Posts",
+        "description": "",
+        "id": "update-posts;update-posts;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 998000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 907462500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"\", \"\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11008300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15917200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-18T16:00:40.840Z",
+        "line": 15,
+        "name": "Update Posts",
+        "description": "",
+        "id": "update-posts;update-posts;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1013700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 862655100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the update post endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a title\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8967200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate this 200 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17951800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Posts"
+          }
+        ]
+      }
+    ],
+    "name": "Update Posts",
+    "description": "",
+    "id": "update-posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/9_Update_Post.feature",
+    "tags": [
+      {
+        "name": "@Posts",
         "type": "Tag",
         "location": {
           "line": 2,

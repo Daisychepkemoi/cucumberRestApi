@@ -6,7 +6,6 @@ import org.junit.Assert;
 import apiEngine.IRestResponse;
 import apiEngine.UsersEndPoints;
 import dataAccess.DataAccess;
-// import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,25 +28,21 @@ public class GetAllUsers {
 	}
 
 	@When("navigate to get all users endpoint")
-	public void sendGetUsers() {
+	public void sendGetAllUsers() {
 		response = endUserEndPoints.getUsers();
 	}
 
 	@Then("check response code 200 is returned")
-	public void verifyGetUsersResponse() {
+	public void verifyResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
-		System.out.println("THIS IS THE CODE" + jEvaluator.get("code"));
+		System.out.println("Get All Users Response Body" + jEvaluator.get("$"));
 		Assert.assertEquals(200,jEvaluator.get("code"));
 	}
 	@Then("check response body contains email object")
 	public void verifyGetAllUsersResponseBody(){
 		JsonPath jEvaluator = response.jsonPath();
-		System.out.println("THIS IS THE Body" + jEvaluator.get("$"));
 		Assert.assertTrue(jEvaluator.get("data").toString().contains("email"));
-
-	}
-
-	
+	}	
 	@When("The {string} and other data is passed to the endpoint")
 	public void sendAddUser(String mails) {
 		int min = 1;
@@ -64,24 +59,19 @@ public class GetAllUsers {
 		JsonPath jEvaluator = response.jsonPath();
 		Assert.assertEquals( codee,jEvaluator.get("code"));
 	}
-	@Then("Validate response body contains {string} t")
+	@Then("Validate response body contains {string} u")
 	public void verifyAddUserResponseMessage(String messageResp) {
 		JsonPath jEvaluator = response.jsonPath();
 		int code = jEvaluator.get("code");
-		// System.out.println("THIS IS THEmessage " + jEvaluator.get("data.message"));
-		// System.out.println("THIS IS THEmessage as string " + jEvaluator.get("data.message").toString());
-		if (code == 201) {
+		System.out.println("THIS IS Add User Response Body " + jEvaluator.get("$"));
+		if (code == 201 || code == 200) {
 			Assert.assertEquals( email,jEvaluator.get("data.email"));
-			// System.out.println(jEvaluator.get("$").toString());
-			// Assert.assertTrue(jEvaluator.get("$").toString().contains(messageResp));
 		}
 		else {
-			
 			Assert.assertEquals(jEvaluator.get("data[0].message").toString(),messageResp);
 		}
 
 	}
-
 
 	@When("navigate to the getOne User endpoint")
 	public void sendGetOneUser() {
@@ -94,59 +84,28 @@ public class GetAllUsers {
 		JsonPath jevaluator = response.jsonPath();
 		Assert.assertEquals(jevaluator.get("data[0].email"), email);
 	}
-	// @Given("get add user endpoint")
-	// public void setGetUsersEndPoint() {
-	// 	endUserEndPoints = new UsersEndPoints(DataAccess.getInstance().getBaseUrl(),
-	// 			DataAccess.getInstance().getToken());
+	
 
-	// }
-	// @When("The {string} and other data is passed to the endpoint")
-	// public void sendAddUser(String mails) {
-	// 	int min = 1;
-	// 	int max = 1000;
-	// 	rand = ThreadLocalRandom.current().nextInt(min, max + 1);
-	// 	email = mails;
-	// 	UsersR createUser = new UsersR("jack", mails, "Male", "Active");
-	// 	IRestResponse<Users> restResponse = endUserEndPoints.createUser(createUser);
-	// 	response = restResponse.getResponse();
-	// }
+	@When("The {string} and other update data is passed to the endpoint")
+	public void sendUpdateUser(String mail) {
+		UsersR updateUser = new UsersR("Jackie", mail, "Male", "Active");
+		IRestResponse<Users> restResponse = endUserEndPoints.updateUser(updateUser);
+		response = restResponse.getResponse();
+		email = mail;
 
-	// @Then("Validate {int} code is received")
-	// public void verifyAddUserResponseCode(int codee) {
-	// 	JsonPath jEvaluator = response.jsonPath();
-	// 	Assert.assertEquals(jEvaluator.get("code"), codee);
-	// }
-	// @Then("Validate response message contains the just added email")
-	// public void verifyAddUserResponseMessage(int codee) {
-	// 	JsonPath jEvaluator = response.jsonPath();
-	// 	// int code = jEvaluator.get("code");
-	// 	// if (code == 201) {
-	// 		Assert.assertEquals(jEvaluator.get("data.email"), email);
-	// 	// }
+	}
 
-	// }
+	@Then("Validate {int} code is received and data is updated")
+	public void verifyUpdateUser(int code) {
+		JsonPath jevaluator = response.jsonPath();
+		int returnedCode = jevaluator.get("code");
+		Assert.assertEquals(returnedCode, code);
+		if (returnedCode == 200) {
+			Assert.assertEquals(jevaluator.get("data.email"), email);
+		}
 
-	// // @When("The {string} and other update data is passed to the endpoint")
-	// // public void sendUpdateUser(String mail) {
-	// // 	UsersR updateUser = new UsersR("Jackie", mail, "Male", "Active");
-	// // 	IRestResponse<Users> restResponse = endUserEndPoints.updateUser(updateUser);
-	// // 	response = restResponse.getResponse();
-	// // 	email = mail;
+	}
 
-	// // }
-
-	// // @Then("Validate {int} code is received and data is updated")
-	// // public void verifyUpdateUser(int code) {
-	// // 	JsonPath jevaluator = response.jsonPath();
-	// // 	int returnedCode = jevaluator.get("code");
-	// // 	Assert.assertEquals(returnedCode, code);
-	// // 	if (returnedCode == 200) {
-	// // 		Assert.assertEquals(jevaluator.get("data.email"), email);
-	// // 	}
-
-	// // }
-
-	// @
 
 	// // @Given("delete user endpoint")
 	// public void setDeleteUser() {

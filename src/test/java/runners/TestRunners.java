@@ -13,7 +13,8 @@ import reportgenerate.GenerateNewReports;
 						// "rerun:report_output/rerun.txt",
 						},
 				 features = "src/test/resources/Feature",
-				 glue={"stepDefinition"}
+				 glue={"stepDefinition"},
+				 tags = ("@Posts")
 				//  glue = "fr.tlasnier.cucumber"
  )
 public class TestRunners {
