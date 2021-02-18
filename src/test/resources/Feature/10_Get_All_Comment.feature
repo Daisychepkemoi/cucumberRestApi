@@ -1,16 +1,16 @@
-# @comments
-# Feature: Comments
-# 	Comments CRUD features
+@Comments
+Feature: Comments
+	Comments CRUD features
 
-#  Scenario: Get All Comments
+ Scenario: Get All Comments
+	 Given get all Comments endpoint
+	 When navigate to get all Comments endpoint
+	 Then check if All comment data is returned
+
+# Scenario: Create Comment
 # 	 Given get all Comments endpoint
-# 	 When navigate to get all Comments endpoint
-# 	 Then check if All comment data is returned
-
-# # Scenario: Create Comment
-# # 	 Given get all Comments endpoint
-# # 	 When pass data to the createComment endpoint
-# # 	 Then Validate that created comment data is returned
+# 	 When pass data to the createComment endpoint
+# 	 Then Validate that created comment data is returned
 
 # Scenario Outline: Create Comment
 # 	 Given get all Comments endpoint
@@ -45,4 +45,4 @@
 # Scenario: delete comment
 # 	 Given get all Comments endpoint
 # 	 When navigate to the deleteComment endpoint
-# 	 Then check if the comment is successfully deleted
+# 	 Then check if the comment is successfully deleted 
