@@ -14,7 +14,7 @@ import reportgenerate.GenerateNewReports;
 						},
 				 features = "src/test/resources/Feature",
 				 glue={"stepDefinition"},
-				 tags = ("@Posts")
+				 tags = ("@Comments")
 				//  glue = "fr.tlasnier.cucumber"
  )
 public class TestRunners {
