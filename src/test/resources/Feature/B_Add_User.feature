@@ -1,5 +1,5 @@
 #Author: dchepkemoi408@gmail.com
-@Users
+@1_Users
 Feature: Add User
 
 Scenario Outline: Add User
@@ -12,5 +12,5 @@ Examples:
 	 		|email|response|variable|
 	 		|correct57@gmail.com|422|has already been taken|
 			||422|can't be blank|
-			|emaill15@gmail.com|201|email|
+			|emaill33@gmail.com|201|email|
 

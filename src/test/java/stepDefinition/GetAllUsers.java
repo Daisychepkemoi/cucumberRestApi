@@ -31,7 +31,6 @@ public class GetAllUsers {
 	public void sendGetAllUsers() {
 		response = endUserEndPoints.getUsers();
 	}
-
 	@Then("check response code 200 is returned")
 	public void verifyResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();

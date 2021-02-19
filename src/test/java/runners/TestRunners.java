@@ -13,10 +13,10 @@ import reportgenerate.GenerateNewReports;
 						// "rerun:report_output/rerun.txt",
 						},
 				 features = "src/test/resources/Feature",
-				 glue={"stepDefinition"},
-				 tags = ("@Posts")
-				//  glue = "fr.tlasnier.cucumber"
- )
+				 glue={"stepDefinition"}
+				//  tags = ("@Users")
+				 
+						 )
 public class TestRunners {
 		@AfterClass
 		public static void after()  throws Exception{

@@ -8,7 +8,7 @@ import model.Users;
 import pojos.UsersR;
 
 public class UsersEndPoints {
-	public static int USER_ID = 21;
+	public static int USER_ID;
 	public static Response userData;
 	public static String EMAIL;
 	public static RequestSpecification request;

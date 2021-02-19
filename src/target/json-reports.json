@@ -3,78 +3,78 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:13:30.710Z",
-        "line": 4,
-        "name": "Get All Posts",
+        "start_timestamp": "2021-02-19T11:26:20.329Z",
+        "line": 5,
+        "name": "Get All Users response Code",
         "description": "",
-        "id": "get-all-posts;get-all-posts",
+        "id": "getallusers;get-all-users-response-code",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 832777800,
+              "duration": 907477300,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user has posts Endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1816437700,
+              "duration": 2028064200,
               "status": "passed"
             },
-            "line": 6,
-            "name": "navigate to get all posts endpoint",
+            "line": 7,
+            "name": "navigate to get all users endpoint",
             "match": {
-              "location": "stepDefinition.PostsSteps.sendGetAllPosts()"
+              "location": "stepDefinition.GetAllUsers.sendGetAllUsers()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 428191600,
+              "duration": 810193200,
               "status": "passed"
             },
-            "line": 7,
-            "name": "check if response code 200 is returned",
+            "line": 8,
+            "name": "check response code 200 is returned",
             "match": {
-              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+              "location": "stepDefinition.GetAllUsers.verifyResponseCode200()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 23937800,
+              "duration": 31914800,
               "status": "passed"
             },
-            "line": 8,
-            "name": "check if response has post in data object",
+            "line": 9,
+            "name": "check response body contains email object",
             "match": {
-              "location": "stepDefinition.PostsSteps.verifyGetAllPostsResponseBody()"
+              "location": "stepDefinition.GetAllUsers.verifyGetAllUsersResponseBody()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@1_Users"
           }
         ]
       }
     ],
-    "name": "Get All Posts",
+    "name": "GetAllUsers",
     "description": "",
-    "id": "get-all-posts",
+    "id": "getallusers",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/5_Get_All_Posts.feature",
+    "uri": "file:src/test/resources/Feature/A_Get_All_Users.feature",
     "tags": [
       {
-        "name": "@Posts",
+        "name": "@1_Users",
         "type": "Tag",
         "location": {
           "line": 2,
@@ -87,17 +87,550 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:13:33.906Z",
+        "start_timestamp": "2021-02-19T11:26:24.218Z",
         "line": 13,
-        "name": "Add Posts",
+        "name": "Add User",
         "description": "",
-        "id": "add-post;add-posts;;2",
+        "id": "add-user;add-user;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1520700,
+              "duration": 996700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1347734000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"correct57@gmail.com\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"correct57@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22843100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60839000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"has already been taken\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"has already been taken\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-19T11:26:25.667Z",
+        "line": 14,
+        "name": "Add User",
+        "description": "",
+        "id": "add-user;add-user;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 975557400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8977200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20942700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"can\u0027t be blank\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-19T11:26:26.685Z",
+        "line": 15,
+        "name": "Add User",
+        "description": "",
+        "id": "add-user;add-user;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 996000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 955497600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"emaill33@gmail.com\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emaill33@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17173300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25932400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"email\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      }
+    ],
+    "name": "Add User",
+    "description": "",
+    "id": "add-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/B_Add_User.feature",
+    "tags": [
+      {
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:27.699Z",
+        "line": 4,
+        "name": "Get One User, thats the just created user",
+        "description": "",
+        "id": "get-one-user;get-one-user--thats-the-just-created-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1993400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 965417800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to the getOne User endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.sendGetOneUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8976900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17951100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check response body contains email just created",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.verifyGetOneUserResponseMsg()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      }
+    ],
+    "name": "Get One User",
+    "description": "",
+    "id": "get-one-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/C_Get_One_User.feature",
+    "tags": [
+      {
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:28.704Z",
+        "line": 14,
+        "name": "UpdateOneUser",
+        "description": "",
+        "id": "update-user;updateoneuser;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 997400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 989377900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"\" and other update data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.sendUpdateUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7977400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate 422 code is received and data is updated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyUpdateUser(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20944200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"can\u0027t be blank\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-19T11:26:29.734Z",
+        "line": 15,
+        "name": "UpdateOneUser",
+        "description": "",
+        "id": "update-user;updateoneuser;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 999000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 904588000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The \"emaill33@gmail.com\" and other update data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"emaill33@gmail.com\"",
+                  "offset": 4
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.sendUpdateUser(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16954700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate 200 code is received and data is updated",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyUpdateUser(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17952200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"email\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      }
+    ],
+    "name": "Update User",
+    "description": "",
+    "id": "update-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/D_Update_User.feature",
+    "tags": [
+      {
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:30.686Z",
+        "line": 4,
+        "name": "Get All Posts",
+        "description": "",
+        "id": "get-all-posts;get-all-posts",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 997600,
               "status": "passed"
             },
             "line": 5,
@@ -109,7 +642,91 @@
           },
           {
             "result": {
-              "duration": 1266162100,
+              "duration": 911569400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to get all posts endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.sendGetAllPosts()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15952500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13963400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if response has post in data object",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyGetAllPostsResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@2_Posts"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Posts",
+    "description": "",
+    "id": "get-all-posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/E_Get_All_Posts.feature",
+    "tags": [
+      {
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:31.640Z",
+        "line": 13,
+        "name": "Add Posts",
+        "description": "",
+        "id": "add-post;add-posts;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 955200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 971403700,
               "status": "passed"
             },
             "line": 6,
@@ -131,7 +748,7 @@
           },
           {
             "result": {
-              "duration": 7978700,
+              "duration": 7977700,
               "status": "passed"
             },
             "line": 7,
@@ -149,7 +766,7 @@
           },
           {
             "result": {
-              "duration": 53858400,
+              "duration": 17950100,
               "status": "passed"
             },
             "line": 8,
@@ -168,12 +785,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:35.259Z",
+        "start_timestamp": "2021-02-19T11:26:32.651Z",
         "line": 14,
         "name": "Add Posts",
         "description": "",
@@ -183,7 +800,6 @@
         "steps": [
           {
             "result": {
-              "duration": 984000,
               "status": "passed"
             },
             "line": 5,
@@ -195,7 +811,7 @@
           },
           {
             "result": {
-              "duration": 896457700,
+              "duration": 933318800,
               "status": "passed"
             },
             "line": 6,
@@ -217,7 +833,7 @@
           },
           {
             "result": {
-              "duration": 7979500,
+              "duration": 15097400,
               "status": "passed"
             },
             "line": 7,
@@ -235,7 +851,7 @@
           },
           {
             "result": {
-              "duration": 17952200,
+              "duration": 14958200,
               "status": "passed"
             },
             "line": 8,
@@ -254,12 +870,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:36.192Z",
+        "start_timestamp": "2021-02-19T11:26:33.624Z",
         "line": 15,
         "name": "Add Posts",
         "description": "",
@@ -269,7 +885,6 @@
         "steps": [
           {
             "result": {
-              "duration": 997900,
               "status": "passed"
             },
             "line": 5,
@@ -281,7 +896,7 @@
           },
           {
             "result": {
-              "duration": 890214900,
+              "duration": 899652800,
               "status": "passed"
             },
             "line": 6,
@@ -303,7 +918,7 @@
           },
           {
             "result": {
-              "duration": 9972100,
+              "duration": 7977800,
               "status": "passed"
             },
             "line": 7,
@@ -321,7 +936,7 @@
           },
           {
             "result": {
-              "duration": 26930000,
+              "duration": 38896100,
               "status": "passed"
             },
             "line": 8,
@@ -340,12 +955,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:37.130Z",
+        "start_timestamp": "2021-02-19T11:26:34.577Z",
         "line": 16,
         "name": "Add Posts",
         "description": "",
@@ -355,7 +970,7 @@
         "steps": [
           {
             "result": {
-              "duration": 998600,
+              "duration": 997700,
               "status": "passed"
             },
             "line": 5,
@@ -367,7 +982,7 @@
           },
           {
             "result": {
-              "duration": 997885200,
+              "duration": 934933200,
               "status": "passed"
             },
             "line": 6,
@@ -389,7 +1004,7 @@
           },
           {
             "result": {
-              "duration": 8975000,
+              "duration": 7517500,
               "status": "passed"
             },
             "line": 7,
@@ -407,7 +1022,7 @@
           },
           {
             "result": {
-              "duration": 18987800,
+              "duration": 11702200,
               "status": "passed"
             },
             "line": 8,
@@ -426,7 +1041,7 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       }
@@ -435,10 +1050,10 @@
     "description": "",
     "id": "add-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/6_Add_Post.feature",
+    "uri": "file:src/test/resources/Feature/F_Add_Post.feature",
     "tags": [
       {
-        "name": "@Posts",
+        "name": "@2_Posts",
         "type": "Tag",
         "location": {
           "line": 2,
@@ -451,91 +1066,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:13:38.164Z",
-        "line": 4,
-        "name": "View One Post",
-        "description": "",
-        "id": "get-one-post;view-one-post",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 974600,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user has posts Endpoint",
-            "match": {
-              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 857509000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "navigate to the onePost endpoint",
-            "match": {
-              "location": "stepDefinition.PostsSteps.sendGetOnePost()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 13959800,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "check if response code 200 is returned",
-            "match": {
-              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 9486700,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "check if responses postID is equal to urlID",
-            "match": {
-              "location": "stepDefinition.PostsSteps.verifyGetOnepost()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Posts"
-          }
-        ]
-      }
-    ],
-    "name": "Get One Post",
-    "description": "",
-    "id": "get-one-post",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/7_Get_One_Post.feature",
-    "tags": [
-      {
-        "name": "@Posts",
-        "type": "Tag",
-        "location": {
-          "line": 2,
-          "column": 1
-        }
-      }
-    ]
-  },
-  {
-    "line": 3,
-    "elements": [
-      {
-        "start_timestamp": "2021-02-18T16:13:39.058Z",
+        "start_timestamp": "2021-02-19T11:26:35.548Z",
         "line": 4,
         "name": "Get All One Users Post",
         "description": "",
@@ -556,7 +1087,7 @@
           },
           {
             "result": {
-              "duration": 866700000,
+              "duration": 1089377600,
               "status": "passed"
             },
             "line": 6,
@@ -568,7 +1099,7 @@
           },
           {
             "result": {
-              "duration": 8972700,
+              "duration": 6980400,
               "status": "passed"
             },
             "line": 7,
@@ -580,7 +1111,7 @@
           },
           {
             "result": {
-              "duration": 10971100,
+              "duration": 6983400,
               "status": "passed"
             },
             "line": 8,
@@ -593,7 +1124,7 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       }
@@ -602,10 +1133,10 @@
     "description": "",
     "id": "get-all-one-users-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/8_Get_All_One_Users_Posts.feature",
+    "uri": "file:src/test/resources/Feature/G_Get_All_One_Users_Posts.feature",
     "tags": [
       {
-        "name": "@Posts",
+        "name": "@2_Posts",
         "type": "Tag",
         "location": {
           "line": 2,
@@ -618,7 +1149,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-18T16:13:39.956Z",
+        "start_timestamp": "2021-02-19T11:26:36.657Z",
         "line": 12,
         "name": "Update Posts",
         "description": "",
@@ -639,7 +1170,7 @@
           },
           {
             "result": {
-              "duration": 882734100,
+              "duration": 1495002700,
               "status": "passed"
             },
             "line": 6,
@@ -661,7 +1192,7 @@
           },
           {
             "result": {
-              "duration": 7016000,
+              "duration": 7979300,
               "status": "passed"
             },
             "line": 7,
@@ -679,7 +1210,7 @@
           },
           {
             "result": {
-              "duration": 16919600,
+              "duration": 15958700,
               "status": "passed"
             },
             "line": 8,
@@ -698,12 +1229,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:40.873Z",
+        "start_timestamp": "2021-02-19T11:26:38.181Z",
         "line": 13,
         "name": "Update Posts",
         "description": "",
@@ -713,7 +1244,6 @@
         "steps": [
           {
             "result": {
-              "duration": 999000,
               "status": "passed"
             },
             "line": 5,
@@ -725,7 +1255,7 @@
           },
           {
             "result": {
-              "duration": 895797800,
+              "duration": 966420900,
               "status": "passed"
             },
             "line": 6,
@@ -747,7 +1277,7 @@
           },
           {
             "result": {
-              "duration": 7978200,
+              "duration": 6976600,
               "status": "passed"
             },
             "line": 7,
@@ -765,7 +1295,7 @@
           },
           {
             "result": {
-              "duration": 16952900,
+              "duration": 13962600,
               "status": "passed"
             },
             "line": 8,
@@ -784,12 +1314,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:41.800Z",
+        "start_timestamp": "2021-02-19T11:26:39.177Z",
         "line": 14,
         "name": "Update Posts",
         "description": "",
@@ -799,7 +1329,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1013800,
+              "duration": 3003100,
               "status": "passed"
             },
             "line": 5,
@@ -811,7 +1341,7 @@
           },
           {
             "result": {
-              "duration": 923947200,
+              "duration": 894651300,
               "status": "passed"
             },
             "line": 6,
@@ -833,7 +1363,7 @@
           },
           {
             "result": {
-              "duration": 20975900,
+              "duration": 8976600,
               "status": "passed"
             },
             "line": 7,
@@ -851,7 +1381,7 @@
           },
           {
             "result": {
-              "duration": 18908500,
+              "duration": 15958400,
               "status": "passed"
             },
             "line": 8,
@@ -870,12 +1400,12 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-02-18T16:13:42.773Z",
+        "start_timestamp": "2021-02-19T11:26:40.105Z",
         "line": 15,
         "name": "Update Posts",
         "description": "",
@@ -896,7 +1426,7 @@
           },
           {
             "result": {
-              "duration": 1022582700,
+              "duration": 887625300,
               "status": "passed"
             },
             "line": 6,
@@ -918,7 +1448,7 @@
           },
           {
             "result": {
-              "duration": 7977700,
+              "duration": 5985200,
               "status": "passed"
             },
             "line": 7,
@@ -936,7 +1466,7 @@
           },
           {
             "result": {
-              "duration": 16972100,
+              "duration": 12967100,
               "status": "passed"
             },
             "line": 8,
@@ -955,7 +1485,7 @@
         ],
         "tags": [
           {
-            "name": "@Posts"
+            "name": "@2_Posts"
           }
         ]
       }
@@ -964,13 +1494,799 @@
     "description": "",
     "id": "update-posts",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/9_Update_Post.feature",
+    "uri": "file:src/test/resources/Feature/H_Update_Post.feature",
     "tags": [
       {
-        "name": "@Posts",
+        "name": "@2_Posts",
         "type": "Tag",
         "location": {
           "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:41.018Z",
+        "line": 4,
+        "name": "View One Post",
+        "description": "",
+        "id": "get-one-post;view-one-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 997800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user has posts Endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 921534100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to the onePost endpoint",
+            "match": {
+              "location": "stepDefinition.PostsSteps.sendGetOnePost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7979400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23936500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if responses postID is equal to urlID",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyGetOnepost()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@2_Posts"
+          }
+        ]
+      }
+    ],
+    "name": "Get One Post",
+    "description": "",
+    "id": "get-one-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/I_Get_One_Post.feature",
+    "tags": [
+      {
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:41.978Z",
+        "line": 11,
+        "name": "Add Comment",
+        "description": "",
+        "id": "add-comment;add-comment;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16954000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1449267900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The comment \"\" config and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendAddComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19756300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate 422 code is received for comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30919000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-19T11:26:43.505Z",
+        "line": 12,
+        "name": "Add Comment",
+        "description": "",
+        "id": "add-comment;add-comment;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1018500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 955556700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The comment \"This is a body\" config and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendAddComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10971300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate 201 code is received for comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23936400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"created_at\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Add Comment",
+    "description": "",
+    "id": "add-comment",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/J_Add_Comments.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:44.528Z",
+        "line": 4,
+        "name": "Get All Comments",
+        "description": "",
+        "id": "get-all-comments;get-all-comments",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1984900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1013750400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigate to get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetAllComments()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20642700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if comments response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17952900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check response body contains comment object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetAllCommentsResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Comments",
+    "description": "",
+    "id": "get-all-comments",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/K_Get_All_Comment.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:45.597Z",
+        "line": 3,
+        "name": "Get All Comments Per Post",
+        "description": "",
+        "id": "get-all-comments-per-post;get-all-comments-per-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2008700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1006294300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to get Comments per post endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendCommentsPerPost()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9973500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if comments response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12971500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains post_ID object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyCommentsPerPostResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Comments Per Post",
+    "description": "",
+    "id": "get-all-comments-per-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/L_Get_Comments_Per_Post.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:46.639Z",
+        "line": 12,
+        "name": "Update Comment",
+        "description": "",
+        "id": "update-comment;update-comment;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 989860800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The comments \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9973800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate 422 code is received for comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21940800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-19T11:26:47.673Z",
+        "line": 13,
+        "name": "Update Comment",
+        "description": "",
+        "id": "update-comment;update-comment;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1995400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 910563800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The comments \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.sendUpdateComment(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10970600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate 200 code is received for comments",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25932000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Update Comment",
+    "description": "",
+    "id": "update-comment",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/M_Update_Comment.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:48.631Z",
+        "line": 3,
+        "name": "View One Comment",
+        "description": "",
+        "id": "get-all-comments-per-post;view-one-comment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 996900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 876655000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the getOneComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetOneComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10970900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if comments response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8976100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains commentID object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetOneCommentResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Comments Per Post",
+    "description": "",
+    "id": "get-all-comments-per-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/N_Get_One_Comments.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-19T11:26:49.539Z",
+        "line": 3,
+        "name": "Delete comment",
+        "description": "",
+        "id": "delete-comment;delete-comment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 997700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1452989300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the deleteComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendDeleteComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8977200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if comments response code 204 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyDeleteCommentResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if the comment is successfully deleted",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyDeleteComment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Delete Comment",
+    "description": "",
+    "id": "delete-comment",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/O_Delete_Comment.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
           "column": 1
         }
       }

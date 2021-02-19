@@ -1,5 +1,5 @@
 #Author :dchepkemoi408@gmail.com 
-@Posts
+@2_Posts
 Feature: Get One Post
  Scenario: View One Post
 	 Given user has posts Endpoint

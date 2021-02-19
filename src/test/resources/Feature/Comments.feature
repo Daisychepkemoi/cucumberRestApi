@@ -45,4 +45,4 @@
 # Scenario: delete comment
 # 	 Given get all Comments endpoint
 # 	 When navigate to the deleteComment endpoint
-# 	 Then check if the comment is successfully deleted
+# 	 Then check if the comment is successfully deleted 

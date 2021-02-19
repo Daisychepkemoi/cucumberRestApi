@@ -9,7 +9,7 @@ import model.Posts;
 
 public class PostsEndPoints {
 
-	public static int POST_ID;
+	public static int POST_ID ;
 	public static Response postData;
 	public static RequestSpecification request;
 	public static String base_url;
