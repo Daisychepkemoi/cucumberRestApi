@@ -3,7 +3,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:20.329Z",
+        "start_timestamp": "2021-02-20T08:23:25.238Z",
         "line": 5,
         "name": "Get All Users response Code",
         "description": "",
@@ -13,49 +13,49 @@
         "steps": [
           {
             "result": {
-              "duration": 907477300,
+              "duration": 1326435500,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2028064200,
+              "duration": 2196547100,
               "status": "passed"
             },
             "line": 7,
             "name": "navigate to get all users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.sendGetAllUsers()"
+              "location": "stepDefinition.UsersSteps.sendGetAllUsers()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 810193200,
+              "duration": 868060000,
               "status": "passed"
             },
             "line": 8,
             "name": "check response code 200 is returned",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyResponseCode200()"
+              "location": "stepDefinition.UsersSteps.verifyResponseCode200()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 31914800,
+              "duration": 34913400,
               "status": "passed"
             },
             "line": 9,
             "name": "check response body contains email object",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetAllUsersResponseBody()"
+              "location": "stepDefinition.UsersSteps.verifyGetAllUsersResponseBody()"
             },
             "keyword": "Then "
           }
@@ -71,7 +71,7 @@
     "description": "",
     "id": "getallusers",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/A_Get_All_Users.feature",
+    "uri": "file:src/test/resources/Feature/01_Get_All_Users.feature",
     "tags": [
       {
         "name": "@1_Users",
@@ -87,7 +87,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:24.218Z",
+        "start_timestamp": "2021-02-20T08:23:29.789Z",
         "line": 13,
         "name": "Add User",
         "description": "",
@@ -97,19 +97,19 @@
         "steps": [
           {
             "result": {
-              "duration": 996700,
+              "duration": 1043600,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1347734000,
+              "duration": 1591224500,
               "status": "passed"
             },
             "line": 7,
@@ -121,13 +121,13 @@
                   "offset": 4
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 22843100,
+              "duration": 42272300,
               "status": "passed"
             },
             "line": 8,
@@ -139,13 +139,13 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 60839000,
+              "duration": 152965400,
               "status": "passed"
             },
             "line": 9,
@@ -157,7 +157,7 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -169,7 +169,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:25.667Z",
+        "start_timestamp": "2021-02-20T08:23:31.619Z",
         "line": 14,
         "name": "Add User",
         "description": "",
@@ -179,18 +179,19 @@
         "steps": [
           {
             "result": {
+              "duration": 997000,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 975557400,
+              "duration": 759446900,
               "status": "passed"
             },
             "line": 7,
@@ -202,13 +203,13 @@
                   "offset": 4
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 8977200,
+              "duration": 38565400,
               "status": "passed"
             },
             "line": 8,
@@ -220,13 +221,13 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 20942700,
+              "duration": 78508400,
               "status": "passed"
             },
             "line": 9,
@@ -238,7 +239,7 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -250,7 +251,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:26.685Z",
+        "start_timestamp": "2021-02-20T08:23:32.540Z",
         "line": 15,
         "name": "Add User",
         "description": "",
@@ -260,37 +261,37 @@
         "steps": [
           {
             "result": {
-              "duration": 996000,
+              "duration": 3541700,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 955497600,
+              "duration": 1191623200,
               "status": "passed"
             },
             "line": 7,
-            "name": "The \"emaill33@gmail.com\" and other data is passed to the endpoint",
+            "name": "The \"emaill43@gmail.com\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"emaill33@gmail.com\"",
+                  "val": "\"emaill43@gmail.com\"",
                   "offset": 4
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendAddUser(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.sendAddUser(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 17173300,
+              "duration": 30836400,
               "status": "passed"
             },
             "line": 8,
@@ -302,13 +303,13 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseCode(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 25932400,
+              "duration": 51257700,
               "status": "passed"
             },
             "line": 9,
@@ -320,7 +321,7 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -336,7 +337,7 @@
     "description": "",
     "id": "add-user",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/B_Add_User.feature",
+    "uri": "file:src/test/resources/Feature/02_Add_User.feature",
     "tags": [
       {
         "name": "@1_Users",
@@ -352,7 +353,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:27.699Z",
+        "start_timestamp": "2021-02-20T08:23:33.842Z",
         "line": 4,
         "name": "Get One User, thats the just created user",
         "description": "",
@@ -362,49 +363,49 @@
         "steps": [
           {
             "result": {
-              "duration": 1993400,
+              "duration": 2163700,
               "status": "passed"
             },
             "line": 5,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 965417800,
+              "duration": 771496300,
               "status": "passed"
             },
             "line": 6,
             "name": "navigate to the getOne User endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.sendGetOneUser()"
+              "location": "stepDefinition.UsersSteps.sendGetOneUser()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 8976900,
+              "duration": 31222200,
               "status": "passed"
             },
             "line": 7,
             "name": "check response code 200 is returned",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyResponseCode200()"
+              "location": "stepDefinition.UsersSteps.verifyResponseCode200()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 17951100,
+              "duration": 62576700,
               "status": "passed"
             },
             "line": 8,
             "name": "check response body contains email just created",
             "match": {
-              "location": "stepDefinition.GetAllUsers.verifyGetOneUserResponseMsg()"
+              "location": "stepDefinition.UsersSteps.verifyGetOneUserResponseMsg()"
             },
             "keyword": "Then "
           }
@@ -420,7 +421,7 @@
     "description": "",
     "id": "get-one-user",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/C_Get_One_User.feature",
+    "uri": "file:src/test/resources/Feature/03_Get_One_User.feature",
     "tags": [
       {
         "name": "@1_Users",
@@ -436,7 +437,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:28.704Z",
+        "start_timestamp": "2021-02-20T08:23:34.756Z",
         "line": 14,
         "name": "UpdateOneUser",
         "description": "",
@@ -446,19 +447,19 @@
         "steps": [
           {
             "result": {
-              "duration": 997400,
+              "duration": 1005000,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 989377900,
+              "duration": 1262026300,
               "status": "passed"
             },
             "line": 7,
@@ -470,13 +471,13 @@
                   "offset": 4
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendUpdateUser(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 7977400,
+              "duration": 47767300,
               "status": "passed"
             },
             "line": 8,
@@ -488,13 +489,13 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyUpdateUser(int)"
+              "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 20944200,
+              "duration": 69882200,
               "status": "passed"
             },
             "line": 9,
@@ -506,7 +507,7 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -518,7 +519,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:29.734Z",
+        "start_timestamp": "2021-02-20T08:23:36.182Z",
         "line": 15,
         "name": "UpdateOneUser",
         "description": "",
@@ -528,37 +529,37 @@
         "steps": [
           {
             "result": {
-              "duration": 999000,
+              "duration": 2820800,
               "status": "passed"
             },
             "line": 6,
             "name": "You have get All users endpoint",
             "match": {
-              "location": "stepDefinition.GetAllUsers.setGetUsersEndPoint()"
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 904588000,
+              "duration": 970212900,
               "status": "passed"
             },
             "line": 7,
-            "name": "The \"emaill33@gmail.com\" and other update data is passed to the endpoint",
+            "name": "The \"emaill43@gmail.com\" and other update data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"emaill33@gmail.com\"",
+                  "val": "\"emaill43@gmail.com\"",
                   "offset": 4
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.sendUpdateUser(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.sendUpdateUser(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 16954700,
+              "duration": 55376600,
               "status": "passed"
             },
             "line": 8,
@@ -570,13 +571,13 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyUpdateUser(int)"
+              "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 17952200,
+              "duration": 63900900,
               "status": "passed"
             },
             "line": 9,
@@ -588,7 +589,7 @@
                   "offset": 32
                 }
               ],
-              "location": "stepDefinition.GetAllUsers.verifyAddUserResponseMessage(java.lang.String)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -604,7 +605,7 @@
     "description": "",
     "id": "update-user",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/D_Update_User.feature",
+    "uri": "file:src/test/resources/Feature/04_Update_User.feature",
     "tags": [
       {
         "name": "@1_Users",
@@ -620,7 +621,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:30.686Z",
+        "start_timestamp": "2021-02-20T08:23:37.308Z",
         "line": 4,
         "name": "Get All Posts",
         "description": "",
@@ -630,7 +631,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997600,
+              "duration": 4848800,
               "status": "passed"
             },
             "line": 5,
@@ -642,7 +643,7 @@
           },
           {
             "result": {
-              "duration": 911569400,
+              "duration": 843005400,
               "status": "passed"
             },
             "line": 6,
@@ -654,7 +655,7 @@
           },
           {
             "result": {
-              "duration": 15952500,
+              "duration": 49446000,
               "status": "passed"
             },
             "line": 7,
@@ -666,7 +667,7 @@
           },
           {
             "result": {
-              "duration": 13963400,
+              "duration": 65080100,
               "status": "passed"
             },
             "line": 8,
@@ -688,7 +689,7 @@
     "description": "",
     "id": "get-all-posts",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/E_Get_All_Posts.feature",
+    "uri": "file:src/test/resources/Feature/05_Get_All_Posts.feature",
     "tags": [
       {
         "name": "@2_Posts",
@@ -704,7 +705,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:31.640Z",
+        "start_timestamp": "2021-02-20T08:23:38.321Z",
         "line": 13,
         "name": "Add Posts",
         "description": "",
@@ -714,7 +715,7 @@
         "steps": [
           {
             "result": {
-              "duration": 955200,
+              "duration": 6631700,
               "status": "passed"
             },
             "line": 5,
@@ -726,7 +727,7 @@
           },
           {
             "result": {
-              "duration": 971403700,
+              "duration": 803396200,
               "status": "passed"
             },
             "line": 6,
@@ -748,7 +749,7 @@
           },
           {
             "result": {
-              "duration": 7977700,
+              "duration": 28949100,
               "status": "passed"
             },
             "line": 7,
@@ -766,7 +767,7 @@
           },
           {
             "result": {
-              "duration": 17950100,
+              "duration": 59225000,
               "status": "passed"
             },
             "line": 8,
@@ -790,7 +791,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:32.651Z",
+        "start_timestamp": "2021-02-20T08:23:39.269Z",
         "line": 14,
         "name": "Add Posts",
         "description": "",
@@ -800,6 +801,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1206100,
               "status": "passed"
             },
             "line": 5,
@@ -811,7 +813,7 @@
           },
           {
             "result": {
-              "duration": 933318800,
+              "duration": 778453100,
               "status": "passed"
             },
             "line": 6,
@@ -833,7 +835,7 @@
           },
           {
             "result": {
-              "duration": 15097400,
+              "duration": 31606400,
               "status": "passed"
             },
             "line": 7,
@@ -851,7 +853,7 @@
           },
           {
             "result": {
-              "duration": 14958200,
+              "duration": 48196700,
               "status": "passed"
             },
             "line": 8,
@@ -875,7 +877,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:33.624Z",
+        "start_timestamp": "2021-02-20T08:23:40.152Z",
         "line": 15,
         "name": "Add Posts",
         "description": "",
@@ -896,7 +898,7 @@
           },
           {
             "result": {
-              "duration": 899652800,
+              "duration": 892173600,
               "status": "passed"
             },
             "line": 6,
@@ -918,7 +920,7 @@
           },
           {
             "result": {
-              "duration": 7977800,
+              "duration": 20817500,
               "status": "passed"
             },
             "line": 7,
@@ -936,7 +938,7 @@
           },
           {
             "result": {
-              "duration": 38896100,
+              "duration": 39610600,
               "status": "passed"
             },
             "line": 8,
@@ -960,7 +962,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:34.577Z",
+        "start_timestamp": "2021-02-20T08:23:41.128Z",
         "line": 16,
         "name": "Add Posts",
         "description": "",
@@ -970,7 +972,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997700,
+              "duration": 3247200,
               "status": "passed"
             },
             "line": 5,
@@ -982,7 +984,7 @@
           },
           {
             "result": {
-              "duration": 934933200,
+              "duration": 1112558500,
               "status": "passed"
             },
             "line": 6,
@@ -1004,7 +1006,7 @@
           },
           {
             "result": {
-              "duration": 7517500,
+              "duration": 25580300,
               "status": "passed"
             },
             "line": 7,
@@ -1022,7 +1024,7 @@
           },
           {
             "result": {
-              "duration": 11702200,
+              "duration": 46989500,
               "status": "passed"
             },
             "line": 8,
@@ -1050,7 +1052,7 @@
     "description": "",
     "id": "add-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/F_Add_Post.feature",
+    "uri": "file:src/test/resources/Feature/06_Add_Post.feature",
     "tags": [
       {
         "name": "@2_Posts",
@@ -1066,7 +1068,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:35.548Z",
+        "start_timestamp": "2021-02-20T08:23:42.335Z",
         "line": 4,
         "name": "Get All One Users Post",
         "description": "",
@@ -1076,6 +1078,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1518500,
               "status": "passed"
             },
             "line": 5,
@@ -1087,7 +1090,7 @@
           },
           {
             "result": {
-              "duration": 1089377600,
+              "duration": 718000000,
               "status": "passed"
             },
             "line": 6,
@@ -1099,7 +1102,7 @@
           },
           {
             "result": {
-              "duration": 6980400,
+              "duration": 19984000,
               "status": "passed"
             },
             "line": 7,
@@ -1111,7 +1114,7 @@
           },
           {
             "result": {
-              "duration": 6983400,
+              "duration": 27814700,
               "status": "passed"
             },
             "line": 8,
@@ -1133,7 +1136,7 @@
     "description": "",
     "id": "get-all-one-users-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/G_Get_All_One_Users_Posts.feature",
+    "uri": "file:src/test/resources/Feature/07_Get_All_One_Users_Posts.feature",
     "tags": [
       {
         "name": "@2_Posts",
@@ -1149,7 +1152,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:36.657Z",
+        "start_timestamp": "2021-02-20T08:23:43.130Z",
         "line": 12,
         "name": "Update Posts",
         "description": "",
@@ -1159,6 +1162,7 @@
         "steps": [
           {
             "result": {
+              "duration": 996700,
               "status": "passed"
             },
             "line": 5,
@@ -1170,7 +1174,7 @@
           },
           {
             "result": {
-              "duration": 1495002700,
+              "duration": 2358850800,
               "status": "passed"
             },
             "line": 6,
@@ -1192,7 +1196,7 @@
           },
           {
             "result": {
-              "duration": 7979300,
+              "duration": 22599000,
               "status": "passed"
             },
             "line": 7,
@@ -1210,7 +1214,7 @@
           },
           {
             "result": {
-              "duration": 15958700,
+              "duration": 57363200,
               "status": "passed"
             },
             "line": 8,
@@ -1234,7 +1238,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:38.181Z",
+        "start_timestamp": "2021-02-20T08:23:45.600Z",
         "line": 13,
         "name": "Update Posts",
         "description": "",
@@ -1244,6 +1248,7 @@
         "steps": [
           {
             "result": {
+              "duration": 1272700,
               "status": "passed"
             },
             "line": 5,
@@ -1255,7 +1260,7 @@
           },
           {
             "result": {
-              "duration": 966420900,
+              "duration": 882431500,
               "status": "passed"
             },
             "line": 6,
@@ -1277,7 +1282,7 @@
           },
           {
             "result": {
-              "duration": 6976600,
+              "duration": 24371500,
               "status": "passed"
             },
             "line": 7,
@@ -1295,7 +1300,7 @@
           },
           {
             "result": {
-              "duration": 13962600,
+              "duration": 58272600,
               "status": "passed"
             },
             "line": 8,
@@ -1319,7 +1324,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:39.177Z",
+        "start_timestamp": "2021-02-20T08:23:46.603Z",
         "line": 14,
         "name": "Update Posts",
         "description": "",
@@ -1329,7 +1334,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3003100,
+              "duration": 11332400,
               "status": "passed"
             },
             "line": 5,
@@ -1341,7 +1346,7 @@
           },
           {
             "result": {
-              "duration": 894651300,
+              "duration": 878388600,
               "status": "passed"
             },
             "line": 6,
@@ -1363,7 +1368,7 @@
           },
           {
             "result": {
-              "duration": 8976600,
+              "duration": 22449400,
               "status": "passed"
             },
             "line": 7,
@@ -1381,7 +1386,7 @@
           },
           {
             "result": {
-              "duration": 15958400,
+              "duration": 61920100,
               "status": "passed"
             },
             "line": 8,
@@ -1405,7 +1410,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:40.105Z",
+        "start_timestamp": "2021-02-20T08:23:47.605Z",
         "line": 15,
         "name": "Update Posts",
         "description": "",
@@ -1415,6 +1420,7 @@
         "steps": [
           {
             "result": {
+              "duration": 2857200,
               "status": "passed"
             },
             "line": 5,
@@ -1426,7 +1432,7 @@
           },
           {
             "result": {
-              "duration": 887625300,
+              "duration": 763393100,
               "status": "passed"
             },
             "line": 6,
@@ -1448,7 +1454,7 @@
           },
           {
             "result": {
-              "duration": 5985200,
+              "duration": 28187500,
               "status": "passed"
             },
             "line": 7,
@@ -1466,7 +1472,7 @@
           },
           {
             "result": {
-              "duration": 12967100,
+              "duration": 43823700,
               "status": "passed"
             },
             "line": 8,
@@ -1494,7 +1500,7 @@
     "description": "",
     "id": "update-posts",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/H_Update_Post.feature",
+    "uri": "file:src/test/resources/Feature/08_Update_Post.feature",
     "tags": [
       {
         "name": "@2_Posts",
@@ -1510,7 +1516,7 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:41.018Z",
+        "start_timestamp": "2021-02-20T08:23:48.463Z",
         "line": 4,
         "name": "View One Post",
         "description": "",
@@ -1520,7 +1526,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997800,
+              "duration": 1643700,
               "status": "passed"
             },
             "line": 5,
@@ -1532,7 +1538,7 @@
           },
           {
             "result": {
-              "duration": 921534100,
+              "duration": 999029600,
               "status": "passed"
             },
             "line": 6,
@@ -1544,7 +1550,7 @@
           },
           {
             "result": {
-              "duration": 7979400,
+              "duration": 12586500,
               "status": "passed"
             },
             "line": 7,
@@ -1556,7 +1562,7 @@
           },
           {
             "result": {
-              "duration": 23936500,
+              "duration": 56725300,
               "status": "passed"
             },
             "line": 8,
@@ -1578,7 +1584,7 @@
     "description": "",
     "id": "get-one-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/I_Get_One_Post.feature",
+    "uri": "file:src/test/resources/Feature/09_Get_One_Post.feature",
     "tags": [
       {
         "name": "@2_Posts",
@@ -1594,7 +1600,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:41.978Z",
+        "start_timestamp": "2021-02-20T08:23:49.546Z",
         "line": 11,
         "name": "Add Comment",
         "description": "",
@@ -1604,7 +1610,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16954000,
+              "duration": 2381700,
               "status": "passed"
             },
             "line": 4,
@@ -1616,7 +1622,7 @@
           },
           {
             "result": {
-              "duration": 1449267900,
+              "duration": 949458600,
               "status": "passed"
             },
             "line": 5,
@@ -1634,7 +1640,7 @@
           },
           {
             "result": {
-              "duration": 19756300,
+              "duration": 7405700,
               "status": "passed"
             },
             "line": 6,
@@ -1652,7 +1658,7 @@
           },
           {
             "result": {
-              "duration": 30919000,
+              "duration": 28578600,
               "status": "passed"
             },
             "line": 7,
@@ -1676,7 +1682,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:43.505Z",
+        "start_timestamp": "2021-02-20T08:23:50.551Z",
         "line": 12,
         "name": "Add Comment",
         "description": "",
@@ -1686,7 +1692,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1018500,
+              "duration": 1404500,
               "status": "passed"
             },
             "line": 4,
@@ -1698,7 +1704,7 @@
           },
           {
             "result": {
-              "duration": 955556700,
+              "duration": 964526800,
               "status": "passed"
             },
             "line": 5,
@@ -1716,7 +1722,7 @@
           },
           {
             "result": {
-              "duration": 10971300,
+              "duration": 30510900,
               "status": "passed"
             },
             "line": 6,
@@ -1734,7 +1740,7 @@
           },
           {
             "result": {
-              "duration": 23936400,
+              "duration": 67921100,
               "status": "passed"
             },
             "line": 7,
@@ -1762,7 +1768,7 @@
     "description": "",
     "id": "add-comment",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/J_Add_Comments.feature",
+    "uri": "file:src/test/resources/Feature/10_Add_Comments.feature",
     "tags": [
       {
         "name": "@3_Comments",
@@ -1778,7 +1784,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:44.528Z",
+        "start_timestamp": "2021-02-20T08:23:51.644Z",
         "line": 4,
         "name": "Get All Comments",
         "description": "",
@@ -1788,7 +1794,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1984900,
+              "duration": 997300,
               "status": "passed"
             },
             "line": 5,
@@ -1800,7 +1806,7 @@
           },
           {
             "result": {
-              "duration": 1013750400,
+              "duration": 787550800,
               "status": "passed"
             },
             "line": 6,
@@ -1812,7 +1818,7 @@
           },
           {
             "result": {
-              "duration": 20642700,
+              "duration": 39269200,
               "status": "passed"
             },
             "line": 7,
@@ -1824,7 +1830,7 @@
           },
           {
             "result": {
-              "duration": 17952900,
+              "duration": 36144500,
               "status": "passed"
             },
             "line": 8,
@@ -1846,7 +1852,7 @@
     "description": "",
     "id": "get-all-comments",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/K_Get_All_Comment.feature",
+    "uri": "file:src/test/resources/Feature/11_Get_All_Comment.feature",
     "tags": [
       {
         "name": "@3_Comments",
@@ -1862,7 +1868,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:45.597Z",
+        "start_timestamp": "2021-02-20T08:23:52.530Z",
         "line": 3,
         "name": "Get All Comments Per Post",
         "description": "",
@@ -1872,7 +1878,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2008700,
+              "duration": 1414000,
               "status": "passed"
             },
             "line": 4,
@@ -1884,7 +1890,7 @@
           },
           {
             "result": {
-              "duration": 1006294300,
+              "duration": 1026101700,
               "status": "passed"
             },
             "line": 5,
@@ -1896,7 +1902,7 @@
           },
           {
             "result": {
-              "duration": 9973500,
+              "duration": 24510400,
               "status": "passed"
             },
             "line": 6,
@@ -1908,7 +1914,7 @@
           },
           {
             "result": {
-              "duration": 12971500,
+              "duration": 26930600,
               "status": "passed"
             },
             "line": 7,
@@ -1930,7 +1936,7 @@
     "description": "",
     "id": "get-all-comments-per-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/L_Get_Comments_Per_Post.feature",
+    "uri": "file:src/test/resources/Feature/12_Get_Comments_Per_Post.feature",
     "tags": [
       {
         "name": "@3_Comments",
@@ -1946,7 +1952,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:46.639Z",
+        "start_timestamp": "2021-02-20T08:23:53.635Z",
         "line": 12,
         "name": "Update Comment",
         "description": "",
@@ -1956,6 +1962,7 @@
         "steps": [
           {
             "result": {
+              "duration": 2253300,
               "status": "passed"
             },
             "line": 5,
@@ -1967,7 +1974,7 @@
           },
           {
             "result": {
-              "duration": 989860800,
+              "duration": 840103000,
               "status": "passed"
             },
             "line": 6,
@@ -1985,7 +1992,7 @@
           },
           {
             "result": {
-              "duration": 9973800,
+              "duration": 29385700,
               "status": "passed"
             },
             "line": 7,
@@ -2003,7 +2010,7 @@
           },
           {
             "result": {
-              "duration": 21940800,
+              "duration": 61964600,
               "status": "passed"
             },
             "line": 8,
@@ -2027,7 +2034,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-02-19T11:26:47.673Z",
+        "start_timestamp": "2021-02-20T08:23:54.601Z",
         "line": 13,
         "name": "Update Comment",
         "description": "",
@@ -2037,7 +2044,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1995400,
+              "duration": 1135800,
               "status": "passed"
             },
             "line": 5,
@@ -2049,7 +2056,7 @@
           },
           {
             "result": {
-              "duration": 910563800,
+              "duration": 923098500,
               "status": "passed"
             },
             "line": 6,
@@ -2067,7 +2074,7 @@
           },
           {
             "result": {
-              "duration": 10970600,
+              "duration": 30419200,
               "status": "passed"
             },
             "line": 7,
@@ -2085,7 +2092,7 @@
           },
           {
             "result": {
-              "duration": 25932000,
+              "duration": 60543100,
               "status": "passed"
             },
             "line": 8,
@@ -2113,7 +2120,7 @@
     "description": "",
     "id": "update-comment",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/M_Update_Comment.feature",
+    "uri": "file:src/test/resources/Feature/13_Update_Comment.feature",
     "tags": [
       {
         "name": "@3_Comments",
@@ -2129,7 +2136,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:48.631Z",
+        "start_timestamp": "2021-02-20T08:23:55.645Z",
         "line": 3,
         "name": "View One Comment",
         "description": "",
@@ -2139,7 +2146,7 @@
         "steps": [
           {
             "result": {
-              "duration": 996900,
+              "duration": 5290600,
               "status": "passed"
             },
             "line": 4,
@@ -2151,7 +2158,7 @@
           },
           {
             "result": {
-              "duration": 876655000,
+              "duration": 851299200,
               "status": "passed"
             },
             "line": 5,
@@ -2163,7 +2170,7 @@
           },
           {
             "result": {
-              "duration": 10970900,
+              "duration": 10833200,
               "status": "passed"
             },
             "line": 6,
@@ -2175,7 +2182,7 @@
           },
           {
             "result": {
-              "duration": 8976100,
+              "duration": 11275200,
               "status": "passed"
             },
             "line": 7,
@@ -2197,7 +2204,7 @@
     "description": "",
     "id": "get-all-comments-per-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/N_Get_One_Comments.feature",
+    "uri": "file:src/test/resources/Feature/14_Get_One_Comments.feature",
     "tags": [
       {
         "name": "@3_Comments",
@@ -2213,7 +2220,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-02-19T11:26:49.539Z",
+        "start_timestamp": "2021-02-20T08:23:56.534Z",
         "line": 3,
         "name": "Delete comment",
         "description": "",
@@ -2223,7 +2230,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997700,
+              "duration": 856300,
               "status": "passed"
             },
             "line": 4,
@@ -2235,7 +2242,7 @@
           },
           {
             "result": {
-              "duration": 1452989300,
+              "duration": 919706000,
               "status": "passed"
             },
             "line": 5,
@@ -2247,7 +2254,7 @@
           },
           {
             "result": {
-              "duration": 8977200,
+              "duration": 22241400,
               "status": "passed"
             },
             "line": 6,
@@ -2259,6 +2266,7 @@
           },
           {
             "result": {
+              "duration": 2552100,
               "status": "passed"
             },
             "line": 7,
@@ -2280,10 +2288,711 @@
     "description": "",
     "id": "delete-comment",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/O_Delete_Comment.feature",
+    "uri": "file:src/test/resources/Feature/15_Delete_Comment.feature",
     "tags": [
       {
         "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:57.497Z",
+        "line": 3,
+        "name": "Get All Todos",
+        "description": "",
+        "id": "get-all-todos;get-all-todos",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4360200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 744340000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetAllTodos()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31446900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35545800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains todos object",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetAllTodosResponseMsg()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Todos",
+    "description": "",
+    "id": "get-all-todos",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/16_Get_All_Todos.feature",
+    "tags": [
+      {
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:58.341Z",
+        "line": 12,
+        "name": "Create Todo",
+        "description": "",
+        "id": "create-todo;create-todo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 904148000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The todo \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendAddTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21494900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate this todos endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53430800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-20T08:23:59.384Z",
+        "line": 13,
+        "name": "Create Todo",
+        "description": "",
+        "id": "create-todo;create-todo;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11135100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 804733200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The todo \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 9
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendAddTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19113100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate this todos endpoints 201 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53144800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"title\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "Create Todo",
+    "description": "",
+    "id": "create-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/17_Create_Todo.feature",
+    "tags": [
+      {
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:00.301Z",
+        "line": 3,
+        "name": "View Todos Per User",
+        "description": "",
+        "id": "view-todos-per-user;view-todos-per-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1540400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1074454400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to get one todo per user endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetTodoPerUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22659200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25197800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if todos response body contains USER_ID object",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetTodoPerUser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "View Todos Per User",
+    "description": "",
+    "id": "view-todos-per-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/18_View_All_Todo_per_User.feature",
+    "tags": [
+      {
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:01.450Z",
+        "line": 11,
+        "name": "Update Todo",
+        "description": "",
+        "id": "update-todo;update-todo;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 929054100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The todos \"\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendUpdateTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23971500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate this todos endpoints 422 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "422",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51037200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-20T08:24:02.482Z",
+        "line": 12,
+        "name": "Update Todo",
+        "description": "",
+        "id": "update-todo;update-todo;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2457100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1033585300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The todos \"This is a body\" and other data is passed to the endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This is a body\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.sendUpdateTodo(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28953400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Validate this todos endpoints 200 code is received",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52100100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"title\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "Update Todo",
+    "description": "",
+    "id": "update-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/19_Update_Todo.feature",
+    "tags": [
+      {
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:03.616Z",
+        "line": 3,
+        "name": "View One Todo",
+        "description": "",
+        "id": "view-one-todo;view-one-todo",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 997500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1104997800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the getOntTodo endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendGetOneTodo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21465100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21075000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if GETOne todos response body contains USER_ID object",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetOneTodoPerUser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "View One Todo",
+    "description": "",
+    "id": "view-one-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/20_View_One_Todo.feature",
+    "tags": [
+      {
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:04.784Z",
+        "line": 3,
+        "name": "Delete Todo",
+        "description": "",
+        "id": "delete-todo;delete-todo",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Todos endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.setGetAllTodos()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 755517200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the delete Todo endpoint",
+            "match": {
+              "location": "stepDefinition.TodosSteps.sendDeleteTodo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22482300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if todos response code 204 is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyDeleteTodoResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if todo is successfully deleted",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyDeleteTodo()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Todos"
+          }
+        ]
+      }
+    ],
+    "name": "Delete Todo",
+    "description": "",
+    "id": "delete-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/21_Delete_Todo.feature",
+    "tags": [
+      {
+        "name": "@Todos",
         "type": "Tag",
         "location": {
           "line": 1,

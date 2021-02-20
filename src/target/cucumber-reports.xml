@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="26" time="30.949">
-    <testcase classname="GetAllUsers" name="Get All Users response Code" time="3.859">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="34" time="40.981">
+    <testcase classname="GetAllUsers" name="Get All Users response Code" time="4.514">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
 When navigate to get all users endpoint.....................................passed
@@ -9,7 +9,7 @@ Then check response body contains email object..............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add User" name="Add User" time="1.438">
+    <testcase classname="Add User" name="Add User" time="1.795">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
 When The "correct57@gmail.com" and other data is passed to the endpoint.....passed
@@ -18,7 +18,7 @@ Then Validate response body contains "has already been taken" u.............pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add User" name="Add User 2" time="1.006">
+    <testcase classname="Add User" name="Add User 2" time="0.878">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
 When The "" and other data is passed to the endpoint........................passed
@@ -27,16 +27,16 @@ Then Validate response body contains "can't be blank" u.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add User" name="Add User 3" time="1.003">
+    <testcase classname="Add User" name="Add User 3" time="1.286">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
-When The "emaill33@gmail.com" and other data is passed to the endpoint......passed
+When The "emaill43@gmail.com" and other data is passed to the endpoint......passed
 Then Validate 201 code is received..........................................passed
 Then Validate response body contains "email" u..............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get One User" name="Get One User, thats the just created user" time="0.997">
+    <testcase classname="Get One User" name="Get One User, thats the just created user" time="0.87">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
 When navigate to the getOne User endpoint...................................passed
@@ -45,7 +45,7 @@ Then check response body contains email just created........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update User" name="UpdateOneUser" time="1.022">
+    <testcase classname="Update User" name="UpdateOneUser" time="1.393">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
 When The "" and other update data is passed to the endpoint.................passed
@@ -54,16 +54,16 @@ Then Validate response body contains "can't be blank" u.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update User" name="UpdateOneUser_2" time="0.941">
+    <testcase classname="Update User" name="UpdateOneUser_2" time="1.095">
         <system-out>
             <![CDATA[Given You have get All users endpoint.......................................passed
-When The "emaill33@gmail.com" and other update data is passed to the endpoint.passed
+When The "emaill43@gmail.com" and other update data is passed to the endpoint.passed
 Then Validate 200 code is received and data is updated......................passed
 Then Validate response body contains "email" u..............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All Posts" name="Get All Posts" time="0.945">
+    <testcase classname="Get All Posts" name="Get All Posts" time="0.972">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to get all posts endpoint.....................................passed
@@ -72,7 +72,7 @@ Then check if response has post in data object..............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts" time="1.003">
+    <testcase classname="Add Post" name="Add Posts" time="0.91">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the endpoint.passed
@@ -81,7 +81,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 2" time="0.964">
+    <testcase classname="Add Post" name="Add Posts 2" time="0.861">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the endpoint.passed
@@ -90,7 +90,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 3" time="0.947">
+    <testcase classname="Add Post" name="Add Posts 3" time="0.956">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the endpoint...............passed
@@ -99,7 +99,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Post" name="Add Posts 4" time="0.97">
+    <testcase classname="Add Post" name="Add Posts 4" time="1.191">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the endpoint.passed
@@ -108,7 +108,7 @@ Then Validate response body contains "created_at" p.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All One Users Post" name="Get All One Users Post" time="1.103">
+    <testcase classname="Get All One Users Post" name="Get All One Users Post" time="0.772">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to get posts per user endpoint................................passed
@@ -117,7 +117,7 @@ Then check if responses UserId is equal to urlUserID........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts" time="1.52">
+    <testcase classname="Update Posts" name="Update Posts" time="2.448">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the update post endpoint.passed
@@ -126,7 +126,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 2" time="0.988">
+    <testcase classname="Update Posts" name="Update Posts 2" time="0.969">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the update post endpoint.passed
@@ -135,7 +135,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 3" time="0.924">
+    <testcase classname="Update Posts" name="Update Posts 3" time="0.978">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the update post endpoint...passed
@@ -144,7 +144,7 @@ Then Validate response body contains "can't be blank" p.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Posts" name="Update Posts 4" time="0.907">
+    <testcase classname="Update Posts" name="Update Posts 4" time="0.841">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the update post endpoint.passed
@@ -153,7 +153,7 @@ Then Validate response body contains "created_at" p.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get One Post" name="View One Post" time="0.957">
+    <testcase classname="Get One Post" name="View One Post" time="1.072">
         <system-out>
             <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to the onePost endpoint.......................................passed
@@ -162,7 +162,7 @@ Then check if responses postID is equal to urlID............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Comment" name="Add Comment" time="1.518">
+    <testcase classname="Add Comment" name="Add Comment" time="0.992">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When The comment "" config and other data is passed to the endpoint.........passed
@@ -171,7 +171,7 @@ Then Validate response body contains "can't be blank" c.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Add Comment" name="Add Comment 2" time="0.993">
+    <testcase classname="Add Comment" name="Add Comment 2" time="1.065">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When The comment "This is a body" config and other data is passed to the endpoint.passed
@@ -180,7 +180,7 @@ Then Validate response body contains "created_at" c.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All Comments" name="Get All Comments" time="1.058">
+    <testcase classname="Get All Comments" name="Get All Comments" time="0.867">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to get all Comments endpoint..................................passed
@@ -189,7 +189,7 @@ Then check response body contains comment object............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All Comments Per Post" name="Get All Comments Per Post" time="1.035">
+    <testcase classname="Get All Comments Per Post" name="Get All Comments Per Post" time="1.087">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to get Comments per post endpoint.............................passed
@@ -198,7 +198,7 @@ Then check response body contains post_ID object............................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Comment" name="Update Comment" time="1.026">
+    <testcase classname="Update Comment" name="Update Comment" time="0.941">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When The comments "" and other data is passed to the endpoint...............passed
@@ -207,7 +207,7 @@ Then Validate response body contains "can't be blank" c.....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Update Comment" name="Update Comment 2" time="0.95">
+    <testcase classname="Update Comment" name="Update Comment 2" time="1.02">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When The comments "This is a body" and other data is passed to the endpoint.passed
@@ -216,7 +216,7 @@ Then Validate response body contains "created_at" c.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get All Comments Per Post" name="View One Comment" time="0.9">
+    <testcase classname="Get All Comments Per Post" name="View One Comment" time="0.881">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to the getOneComment endpoint.................................passed
@@ -225,12 +225,84 @@ Then check response body contains commentID object..........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Delete Comment" name="Delete comment" time="1.465">
+    <testcase classname="Delete Comment" name="Delete comment" time="0.947">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to the deleteComment endpoint.................................passed
 Then check if comments response code 204 is returned........................passed
 Then check if the comment is successfully deleted...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Get All Todos" name="Get All Todos" time="0.82">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to get all Todos endpoint.....................................passed
+Then check if todos response code 200 is returned...........................passed
+Then check response body contains todos object..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Todo" name="Create Todo" time="0.99">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todo "" and other data is passed to the endpoint...................passed
+Then Validate this todos endpoints 422 code is received.....................passed
+Then Validate response body contains "can't be blank" t.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Todo" name="Create Todo 2" time="0.895">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todo "This is a body" and other data is passed to the endpoint.....passed
+Then Validate this todos endpoints 201 code is received.....................passed
+Then Validate response body contains "title" t..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="View Todos Per User" name="View Todos Per User" time="1.128">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to get one todo per user endpoint.............................passed
+Then check if todos response code 200 is returned...........................passed
+Then check if todos response body contains USER_ID object...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Update Todo" name="Update Todo" time="1.017">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todos "" and other data is passed to the endpoint..................passed
+Then Validate this todos endpoints 422 code is received.....................passed
+Then Validate response body contains "can't be blank" t.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Update Todo" name="Update Todo 2" time="1.119">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When The todos "This is a body" and other data is passed to the endpoint....passed
+Then Validate this todos endpoints 200 code is received.....................passed
+Then Validate response body contains "title" t..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="View One Todo" name="View One Todo" time="1.153">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to the getOntTodo endpoint....................................passed
+Then check if todos response code 200 is returned...........................passed
+Then check if GETOne todos response body contains USER_ID object............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Delete Todo" name="Delete Todo" time="0.782">
+        <system-out>
+            <![CDATA[Given get all Todos endpoint................................................passed
+When navigate to the delete Todo endpoint...................................passed
+Then check if todos response code 204 is returned...........................passed
+Then check if todo is successfully deleted..................................passed
 ]]>
         </system-out>
     </testcase>
