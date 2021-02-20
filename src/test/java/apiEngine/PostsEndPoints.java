@@ -9,7 +9,7 @@ import model.Posts;
 
 public class PostsEndPoints {
 
-	public static int POST_ID;
+	public static int POST_ID ;
 	public static Response postData;
 	public static RequestSpecification request;
 	public static String base_url;
@@ -17,7 +17,7 @@ public class PostsEndPoints {
 
 	public PostsEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
-		request = RestAssured.given();//.log().all();
+		request = RestAssured.given().log().all();
 		request.header("Content-Type", "Application/json").header("Authorization", token);
 
 	}

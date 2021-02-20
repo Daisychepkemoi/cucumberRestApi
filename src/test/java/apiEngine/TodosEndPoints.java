@@ -16,7 +16,7 @@ public class TodosEndPoints {
 
 	public TodosEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
-		request = RestAssured.given();//.log().all();
+		request = RestAssured.given().log().all();
 		request.header("Content-Type", "Application/json").header("Authorization", token);
 
 	}
@@ -26,6 +26,7 @@ public class TodosEndPoints {
 	}
 
 	public Response getTodosPerUser() {
+		
 		return request.get(Routes.todosPerUser(UsersEndPoints.USER_ID));
 	}
 
@@ -42,7 +43,7 @@ public class TodosEndPoints {
 	}
 
 	public Response getCreatedTodo() {
-		return UsersEndPoints.request.get(Routes.oneTodo(TODO_ID));
+		return request.get(Routes.oneTodo(TODO_ID));
 	}
 
 	public IRestResponse<Todos> updateTodo(TodosR updateTodos) {

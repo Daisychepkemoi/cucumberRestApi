@@ -1,23 +1,23 @@
 [
   {
-    "line": 20,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-01-31T11:17:42.450Z",
-        "line": 23,
-        "name": "Get All Users",
+        "start_timestamp": "2021-02-20T08:23:25.238Z",
+        "line": 5,
+        "name": "Get All Users response Code",
         "description": "",
-        "id": "users;get-all-users",
+        "id": "getallusers;get-all-users-response-code",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1352550800,
+              "duration": 1326435500,
               "status": "passed"
             },
-            "line": 24,
-            "name": "get all users endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -25,51 +25,83 @@
           },
           {
             "result": {
-              "duration": 2844902900,
+              "duration": 2196547100,
               "status": "passed"
             },
-            "line": 25,
+            "line": 7,
             "name": "navigate to get all users endpoint",
             "match": {
-              "location": "stepDefinition.UsersSteps.sendGetUsers()"
+              "location": "stepDefinition.UsersSteps.sendGetAllUsers()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 973954000,
+              "duration": 868060000,
               "status": "passed"
             },
-            "line": 26,
-            "name": "check if All user data is returned with response code",
+            "line": 8,
+            "name": "check response code 200 is returned",
             "match": {
-              "location": "stepDefinition.UsersSteps.verifyGetUsersResponse()"
+              "location": "stepDefinition.UsersSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34913400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "check response body contains email object",
+            "match": {
+              "location": "stepDefinition.UsersSteps.verifyGetAllUsersResponseBody()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
-      },
+      }
+    ],
+    "name": "GetAllUsers",
+    "description": "",
+    "id": "getallusers",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/01_Get_All_Users.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:17:47.755Z",
-        "line": 36,
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:29.789Z",
+        "line": 13,
         "name": "Add User",
         "description": "",
-        "id": "users;add-user;;2",
+        "id": "add-user;add-user;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2712000,
+              "duration": 1043600,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all users endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -77,15 +109,15 @@
           },
           {
             "result": {
-              "duration": 1652953900,
+              "duration": 1591224500,
               "status": "passed"
             },
-            "line": 30,
-            "name": "The \"correct3@gmail.com\" and other data is passed to the endpoint",
+            "line": 7,
+            "name": "The \"correct57@gmail.com\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"correct3@gmail.com\"",
+                  "val": "\"correct57@gmail.com\"",
                   "offset": 4
                 }
               ],
@@ -95,10 +127,10 @@
           },
           {
             "result": {
-              "duration": 53342900,
+              "duration": 42272300,
               "status": "passed"
             },
-            "line": 31,
+            "line": 8,
             "name": "Validate 422 code is received",
             "match": {
               "arguments": [
@@ -107,33 +139,51 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 152965400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"has already been taken\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"has already been taken\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:17:49.513Z",
-        "line": 37,
+        "start_timestamp": "2021-02-20T08:23:31.619Z",
+        "line": 14,
         "name": "Add User",
         "description": "",
-        "id": "users;add-user;;3",
+        "id": "add-user;add-user;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1573300,
+              "duration": 997000,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all users endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -141,10 +191,10 @@
           },
           {
             "result": {
-              "duration": 1354950300,
+              "duration": 759446900,
               "status": "passed"
             },
-            "line": 30,
+            "line": 7,
             "name": "The \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -159,10 +209,10 @@
           },
           {
             "result": {
-              "duration": 55685900,
+              "duration": 38565400,
               "status": "passed"
             },
-            "line": 31,
+            "line": 8,
             "name": "Validate 422 code is received",
             "match": {
               "arguments": [
@@ -171,33 +221,51 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78508400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"can\u0027t be blank\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:17:50.961Z",
-        "line": 38,
+        "start_timestamp": "2021-02-20T08:23:32.540Z",
+        "line": 15,
         "name": "Add User",
         "description": "",
-        "id": "users;add-user;;4",
+        "id": "add-user;add-user;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 9920200,
+              "duration": 3541700,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all users endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -205,15 +273,15 @@
           },
           {
             "result": {
-              "duration": 1868120200,
+              "duration": 1191623200,
               "status": "passed"
             },
-            "line": 30,
-            "name": "The \"email19@gmail.com\" and other data is passed to the endpoint",
+            "line": 7,
+            "name": "The \"emaill43@gmail.com\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"email19@gmail.com\"",
+                  "val": "\"emaill43@gmail.com\"",
                   "offset": 4
                 }
               ],
@@ -223,11 +291,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c422\u003e but was:\u003c201\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:120)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinition.UsersSteps.verifyAddUser(UsersSteps.java:61)\r\n\tat ✽.Validate 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:31)\r\n",
-              "duration": 20377800,
-              "status": "failed"
+              "duration": 30836400,
+              "status": "passed"
             },
-            "line": 31,
+            "line": 8,
             "name": "Validate 201 code is received",
             "match": {
               "arguments": [
@@ -236,33 +303,71 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.UsersSteps.verifyAddUser(int)"
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51257700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"email\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
-      },
+      }
+    ],
+    "name": "Add User",
+    "description": "",
+    "id": "add-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/02_Add_User.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:17:52.945Z",
-        "line": 49,
-        "name": "UpdateOneUser",
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:33.842Z",
+        "line": 4,
+        "name": "Get One User, thats the just created user",
         "description": "",
-        "id": "users;updateoneuser;;2",
+        "id": "get-one-user;get-one-user--thats-the-just-created-user",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1173800,
+              "duration": 2163700,
               "status": "passed"
             },
-            "line": 42,
-            "name": "get all users endpoint",
+            "line": 5,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -270,10 +375,94 @@
           },
           {
             "result": {
-              "duration": 1089348300,
+              "duration": 771496300,
               "status": "passed"
             },
-            "line": 43,
+            "line": 6,
+            "name": "navigate to the getOne User endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.sendGetOneUser()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31222200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.UsersSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 62576700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check response body contains email just created",
+            "match": {
+              "location": "stepDefinition.UsersSteps.verifyGetOneUserResponseMsg()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@1_Users"
+          }
+        ]
+      }
+    ],
+    "name": "Get One User",
+    "description": "",
+    "id": "get-one-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/03_Get_One_User.feature",
+    "tags": [
+      {
+        "name": "@1_Users",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:34.756Z",
+        "line": 14,
+        "name": "UpdateOneUser",
+        "description": "",
+        "id": "update-user;updateoneuser;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1005000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "You have get All users endpoint",
+            "match": {
+              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1262026300,
+              "status": "passed"
+            },
+            "line": 7,
             "name": "The \"\" and other update data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -288,11 +477,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c422\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.UsersSteps.verifyUpdateUser(UsersSteps.java:81)\r\n\tat ✽.Validate 422 code is received and data is updated(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:44)\r\n",
-              "duration": 33637600,
-              "status": "failed"
+              "duration": 47767300,
+              "status": "passed"
             },
-            "line": 44,
+            "line": 8,
             "name": "Validate 422 code is received and data is updated",
             "match": {
               "arguments": [
@@ -304,30 +492,48 @@
               "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 69882200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Validate response body contains \"can\u0027t be blank\" u",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:17:54.111Z",
-        "line": 50,
+        "start_timestamp": "2021-02-20T08:23:36.182Z",
+        "line": 15,
         "name": "UpdateOneUser",
         "description": "",
-        "id": "users;updateoneuser;;3",
+        "id": "update-user;updateoneuser;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3015200,
+              "duration": 2820800,
               "status": "passed"
             },
-            "line": 42,
-            "name": "get all users endpoint",
+            "line": 6,
+            "name": "You have get All users endpoint",
             "match": {
               "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
             },
@@ -335,15 +541,15 @@
           },
           {
             "result": {
-              "duration": 1336965800,
+              "duration": 970212900,
               "status": "passed"
             },
-            "line": 43,
-            "name": "The \"gmail18@gmail.com\" and other update data is passed to the endpoint",
+            "line": 7,
+            "name": "The \"emaill43@gmail.com\" and other update data is passed to the endpoint",
             "match": {
               "arguments": [
                 {
-                  "val": "\"gmail18@gmail.com\"",
+                  "val": "\"emaill43@gmail.com\"",
                   "offset": 4
                 }
               ],
@@ -353,11 +559,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.UsersSteps.verifyUpdateUser(UsersSteps.java:81)\r\n\tat ✽.Validate 200 code is received and data is updated(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:44)\r\n",
-              "duration": 19699700,
-              "status": "failed"
+              "duration": 55376600,
+              "status": "passed"
             },
-            "line": 44,
+            "line": 8,
             "name": "Validate 200 code is received and data is updated",
             "match": {
               "arguments": [
@@ -369,166 +574,163 @@
               "location": "stepDefinition.UsersSteps.verifyUpdateUser(int)"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@users"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-01-31T11:17:55.509Z",
-        "line": 52,
-        "name": "Get One User, thats the just created user",
-        "description": "",
-        "id": "users;get-one-user--thats-the-just-created-user",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 532800,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "get all users endpoint",
-            "match": {
-              "location": "stepDefinition.UsersSteps.setGetUsersEndPoint()"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1066222500,
+              "duration": 63900900,
               "status": "passed"
             },
-            "line": 54,
-            "name": "navigate to the getOne User endpoint",
+            "line": 9,
+            "name": "Validate response body contains \"email\" u",
             "match": {
-              "location": "stepDefinition.UsersSteps.sendGetOneUser()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:120)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinition.UsersSteps.verifyGetOneUser(UsersSteps.java:103)\r\n\tat ✽.check if the user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:55)\r\n",
-              "duration": 17277700,
-              "status": "failed"
-            },
-            "line": 55,
-            "name": "check if the user data is returned",
-            "match": {
-              "location": "stepDefinition.UsersSteps.verifyGetOneUser()"
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.UsersSteps.verifyAddUserResponseMessage(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@users"
+            "name": "@1_Users"
           }
         ]
       }
     ],
-    "name": "Users",
-    "description": "  Users CRUD Features",
-    "id": "users",
+    "name": "Update User",
+    "description": "",
+    "id": "update-user",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/AUsers.feature",
+    "uri": "file:src/test/resources/Feature/04_Update_User.feature",
     "tags": [
       {
-        "name": "@users",
+        "name": "@1_Users",
         "type": "Tag",
         "location": {
-          "line": 19,
+          "line": 2,
           "column": 1
         }
       }
     ]
   },
   {
-    "line": 2,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-01-31T11:17:56.621Z",
-        "line": 5,
+        "start_timestamp": "2021-02-20T08:23:37.308Z",
+        "line": 4,
         "name": "Get All Posts",
         "description": "",
-        "id": "posts;get-all-posts",
+        "id": "get-all-posts;get-all-posts",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2089000,
+              "duration": 4848800,
               "status": "passed"
             },
-            "line": 6,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1275763300,
+              "duration": 843005400,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "navigate to get all posts endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.sendGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.sendGetAllPosts()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 69933500,
+              "duration": 49446000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 65080100,
               "status": "passed"
             },
             "line": 8,
-            "name": "check if All post data is returned",
+            "name": "check if response has post in data object",
             "match": {
-              "location": "stepDefinition.BPostsSteps.verifyGetAllPostsResponse()"
+              "location": "stepDefinition.PostsSteps.verifyGetAllPostsResponseBody()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
-      },
+      }
+    ],
+    "name": "Get All Posts",
+    "description": "",
+    "id": "get-all-posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/05_Get_All_Posts.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:17:58.010Z",
-        "line": 18,
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:38.321Z",
+        "line": 13,
         "name": "Add Posts",
         "description": "",
-        "id": "posts;add-posts;;2",
+        "id": "add-post;add-posts;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 897800,
+              "duration": 6631700,
               "status": "passed"
             },
-            "line": 11,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1865481900,
+              "duration": 803396200,
               "status": "passed"
             },
-            "line": 12,
+            "line": 6,
             "name": "The post \"\", \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -541,16 +743,16 @@
                   "offset": 13
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 32795700,
+              "duration": 28949100,
               "status": "passed"
             },
-            "line": 13,
+            "line": 7,
             "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
@@ -559,44 +761,62 @@
                   "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 59225000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:17:59.936Z",
-        "line": 19,
+        "start_timestamp": "2021-02-20T08:23:39.269Z",
+        "line": 14,
         "name": "Add Posts",
         "description": "",
-        "id": "posts;add-posts;;3",
+        "id": "add-post;add-posts;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2009700,
+              "duration": 1206100,
               "status": "passed"
             },
-            "line": 11,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1250234800,
+              "duration": 778453100,
               "status": "passed"
             },
-            "line": 12,
+            "line": 6,
             "name": "The post \"This is a title\", \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -609,16 +829,16 @@
                   "offset": 28
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 14076400,
+              "duration": 31606400,
               "status": "passed"
             },
-            "line": 13,
+            "line": 7,
             "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
@@ -627,44 +847,61 @@
                   "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48196700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:01.215Z",
-        "line": 20,
+        "start_timestamp": "2021-02-20T08:23:40.152Z",
+        "line": 15,
         "name": "Add Posts",
         "description": "",
-        "id": "posts;add-posts;;4",
+        "id": "add-post;add-posts;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 996900,
               "status": "passed"
             },
-            "line": 11,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1014372400,
+              "duration": 892173600,
               "status": "passed"
             },
-            "line": 12,
+            "line": 6,
             "name": "The post \"\", \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -677,16 +914,16 @@
                   "offset": 13
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 30311100,
+              "duration": 20817500,
               "status": "passed"
             },
-            "line": 13,
+            "line": 7,
             "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
@@ -695,44 +932,62 @@
                   "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39610600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:02.296Z",
-        "line": 21,
+        "start_timestamp": "2021-02-20T08:23:41.128Z",
+        "line": 16,
         "name": "Add Posts",
         "description": "",
-        "id": "posts;add-posts;;5",
+        "id": "add-post;add-posts;;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 997800,
+              "duration": 3247200,
               "status": "passed"
             },
-            "line": 11,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 965560100,
+              "duration": 1112558500,
               "status": "passed"
             },
-            "line": 12,
+            "line": 6,
             "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -745,17 +1000,16 @@
                   "offset": 28
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendAddPost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendAddPost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c422\u003e but was:\u003c201\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.BPostsSteps.verifyAddPost(BPostsSteps.java:40)\r\n\tat ✽.Validate this 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:13)\r\n",
-              "duration": 30839600,
-              "status": "failed"
+              "duration": 25580300,
+              "status": "passed"
             },
-            "line": 13,
+            "line": 7,
             "name": "Validate this 201 code is received",
             "match": {
               "arguments": [
@@ -764,97 +1018,166 @@
                   "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyAddPost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46989500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
-      },
+      }
+    ],
+    "name": "Add Post",
+    "description": "",
+    "id": "add-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/06_Add_Post.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:03.320Z",
-        "line": 23,
-        "name": "Get Posts Per User",
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:42.335Z",
+        "line": 4,
+        "name": "Get All One Users Post",
         "description": "",
-        "id": "posts;get-posts-per-user",
+        "id": "get-all-one-users-post;get-all-one-users-post",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1995000,
+              "duration": 1518500,
               "status": "passed"
             },
-            "line": 24,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1239121100,
+              "duration": 718000000,
               "status": "passed"
             },
-            "line": 25,
+            "line": 6,
             "name": "navigate to get posts per user endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.sendGetPostPerUser()"
+              "location": "stepDefinition.PostsSteps.sendGetPostPerUser()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.BPostsSteps.verifyGetPostPerUser(BPostsSteps.java:74)\r\n\tat ✽.check if get posts per user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:26)\r\n",
-              "duration": 198123800,
-              "status": "failed"
+              "duration": 19984000,
+              "status": "passed"
             },
-            "line": 26,
-            "name": "check if get posts per user data is returned",
+            "line": 7,
+            "name": "check if response code 200 is returned",
             "match": {
-              "location": "stepDefinition.BPostsSteps.verifyGetPostPerUser()"
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 27814700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if responses UserId is equal to urlUserID",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyGetPostPerUser()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
-      },
+      }
+    ],
+    "name": "Get All One Users Post",
+    "description": "",
+    "id": "get-all-one-users-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/07_Get_All_One_Users_Posts.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:04.779Z",
-        "line": 35,
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:43.130Z",
+        "line": 12,
         "name": "Update Posts",
         "description": "",
-        "id": "posts;update-posts;;2",
+        "id": "update-posts;update-posts;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1524300,
+              "duration": 996700,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1203709800,
+              "duration": 2358850800,
               "status": "passed"
             },
-            "line": 30,
+            "line": 6,
             "name": "The post \"\", \"This is a body\" and other data is passed to the update post endpoint",
             "match": {
               "arguments": [
@@ -867,63 +1190,80 @@
                   "offset": 13
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c422\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)\r\n\tat ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)\r\n",
-              "duration": 23613300,
-              "status": "failed"
+              "duration": 22599000,
+              "status": "passed"
             },
-            "line": 31,
-            "name": "Validate that this 422 code is received",
+            "line": 7,
+            "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 19
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 57363200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:06.035Z",
-        "line": 36,
+        "start_timestamp": "2021-02-20T08:23:45.600Z",
+        "line": 13,
         "name": "Update Posts",
         "description": "",
-        "id": "posts;update-posts;;3",
+        "id": "update-posts;update-posts;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2194500,
+              "duration": 1272700,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1187780400,
+              "duration": 882431500,
               "status": "passed"
             },
-            "line": 30,
+            "line": 6,
             "name": "The post \"This is a title\", \"\" and other data is passed to the update post endpoint",
             "match": {
               "arguments": [
@@ -936,63 +1276,80 @@
                   "offset": 28
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c422\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)\r\n\tat ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)\r\n",
-              "duration": 23333800,
-              "status": "failed"
+              "duration": 24371500,
+              "status": "passed"
             },
-            "line": 31,
-            "name": "Validate that this 422 code is received",
+            "line": 7,
+            "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 19
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 58272600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:07.270Z",
-        "line": 37,
+        "start_timestamp": "2021-02-20T08:23:46.603Z",
+        "line": 14,
         "name": "Update Posts",
         "description": "",
-        "id": "posts;update-posts;;4",
+        "id": "update-posts;update-posts;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 56948200,
+              "duration": 11332400,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1234613900,
+              "duration": 878388600,
               "status": "passed"
             },
-            "line": 30,
+            "line": 6,
             "name": "The post \"\", \"\" and other data is passed to the update post endpoint",
             "match": {
               "arguments": [
@@ -1005,62 +1362,80 @@
                   "offset": 13
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c422\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)\r\n\tat ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)\r\n",
-              "duration": 27361600,
-              "status": "failed"
+              "duration": 22449400,
+              "status": "passed"
             },
-            "line": 31,
-            "name": "Validate that this 422 code is received",
+            "line": 7,
+            "name": "Validate this 422 code is received",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 19
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61920100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:08.616Z",
-        "line": 38,
+        "start_timestamp": "2021-02-20T08:23:47.605Z",
+        "line": 15,
         "name": "Update Posts",
         "description": "",
-        "id": "posts;update-posts;;5",
+        "id": "update-posts;update-posts;;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
+              "duration": 2857200,
               "status": "passed"
             },
-            "line": 29,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1169136400,
+              "duration": 763393100,
               "status": "passed"
             },
-            "line": 30,
+            "line": 6,
             "name": "The post \"This is a title\", \"This is a body\" and other data is passed to the update post endpoint",
             "match": {
               "arguments": [
@@ -1073,101 +1448,149 @@
                   "offset": 28
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.PostsSteps.sendUpdatePost(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)\r\n\tat ✽.Validate that this 200 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)\r\n",
-              "duration": 27306900,
-              "status": "failed"
+              "duration": 28187500,
+              "status": "passed"
             },
-            "line": 31,
-            "name": "Validate that this 200 code is received",
+            "line": 7,
+            "name": "Validate this 200 code is received",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 19
+                  "offset": 14
                 }
               ],
-              "location": "stepDefinition.BPostsSteps.verifyUpdatePost(int)"
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 43823700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" p",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.PostsSteps.verifyAddPostResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
-      },
+      }
+    ],
+    "name": "Update Posts",
+    "description": "",
+    "id": "update-posts",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/08_Update_Post.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:09.838Z",
-        "line": 40,
+        "name": "@2_Posts",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:48.463Z",
+        "line": 4,
         "name": "View One Post",
         "description": "",
-        "id": "posts;view-one-post",
+        "id": "get-one-post;view-one-post",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1039200,
+              "duration": 1643700,
               "status": "passed"
             },
-            "line": 41,
-            "name": "get all posts endpoint",
+            "line": 5,
+            "name": "user has posts Endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.setGetAllPosts()"
+              "location": "stepDefinition.PostsSteps.setGetAllPosts()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1170745400,
+              "duration": 999029600,
               "status": "passed"
             },
-            "line": 42,
+            "line": 6,
             "name": "navigate to the onePost endpoint",
             "match": {
-              "location": "stepDefinition.BPostsSteps.sendGetOnePost()"
+              "location": "stepDefinition.PostsSteps.sendGetOnePost()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.BPostsSteps.verifyGetOnepost(BPostsSteps.java:111)\r\n\tat ✽.check if the post data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:43)\r\n",
-              "duration": 47857700,
-              "status": "failed"
+              "duration": 12586500,
+              "status": "passed"
             },
-            "line": 43,
-            "name": "check if the post data is returned",
+            "line": 7,
+            "name": "check if response code 200 is returned",
             "match": {
-              "location": "stepDefinition.BPostsSteps.verifyGetOnepost()"
+              "location": "stepDefinition.PostsSteps.verifyPostsResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56725300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check if responses postID is equal to urlID",
+            "match": {
+              "location": "stepDefinition.PostsSteps.verifyGetOnepost()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@posts"
+            "name": "@2_Posts"
           }
         ]
       }
     ],
-    "name": "Posts",
-    "description": "\tPosts CRUD features",
-    "id": "posts",
+    "name": "Get One Post",
+    "description": "",
+    "id": "get-one-post",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/BPosts.feature",
+    "uri": "file:src/test/resources/Feature/09_Get_One_Post.feature",
     "tags": [
       {
-        "name": "@posts",
+        "name": "@2_Posts",
         "type": "Tag",
         "location": {
-          "line": 1,
+          "line": 2,
           "column": 1
         }
       }
@@ -1177,72 +1600,20 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-01-31T11:18:11.078Z",
-        "line": 5,
-        "name": "Get All Comments",
+        "start_timestamp": "2021-02-20T08:23:49.546Z",
+        "line": 11,
+        "name": "Add Comment",
         "description": "",
-        "id": "comments;get-all-comments",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 4584300,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "get all Comments endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1146618600,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "navigate to get all Comments endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.sendGetAllComments()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 28173300,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "check if All comment data is returned",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.verifyGetAllComments()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@comments"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-01-31T11:18:12.283Z",
-        "line": 22,
-        "name": "Create Comment",
-        "description": "",
-        "id": "comments;create-comment;;2",
+        "id": "add-comment;add-comment;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 997600,
+              "duration": 2381700,
               "status": "passed"
             },
-            "line": 16,
+            "line": 4,
             "name": "get all Comments endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.setGetAllComments()"
@@ -1251,11 +1622,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.sendAddComment(CommentsSteps.java:44)\r\n\tat ✽.The comment \"\" config and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:17)\r\n",
-              "duration": 904800,
-              "status": "failed"
+              "duration": 949458600,
+              "status": "passed"
             },
-            "line": 17,
+            "line": 5,
             "name": "The comment \"\" config and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1270,44 +1640,62 @@
           },
           {
             "result": {
-              "duration": 997500,
-              "status": "skipped"
+              "duration": 7405700,
+              "status": "passed"
             },
-            "line": 18,
-            "name": "Validate this endpoints 422 code is received",
+            "line": 6,
+            "name": "Validate 422 code is received for comments",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 24
+                  "offset": 9
                 }
               ],
-              "location": "stepDefinition.CommentsSteps.verifyAddComment(int)"
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 28578600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@comments"
+            "name": "@3_Comments"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:12.308Z",
-        "line": 23,
-        "name": "Create Comment",
+        "start_timestamp": "2021-02-20T08:23:50.551Z",
+        "line": 12,
+        "name": "Add Comment",
         "description": "",
-        "id": "comments;create-comment;;3",
+        "id": "add-comment;add-comment;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 93300,
+              "duration": 1404500,
               "status": "passed"
             },
-            "line": 16,
+            "line": 4,
             "name": "get all Comments endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.setGetAllComments()"
@@ -1316,11 +1704,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.sendAddComment(CommentsSteps.java:44)\r\n\tat ✽.The comment \"This is a body\" config and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:17)\r\n",
-              "duration": 515600,
-              "status": "failed"
+              "duration": 964526800,
+              "status": "passed"
             },
-            "line": 17,
+            "line": 5,
             "name": "The comment \"This is a body\" config and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1335,43 +1722,82 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 30510900,
+              "status": "passed"
             },
-            "line": 18,
-            "name": "Validate this endpoints 201 code is received",
+            "line": 6,
+            "name": "Validate 201 code is received for comments",
             "match": {
               "arguments": [
                 {
                   "val": "201",
-                  "offset": 24
+                  "offset": 9
                 }
               ],
-              "location": "stepDefinition.CommentsSteps.verifyAddComment(int)"
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 67921100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"created_at\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@comments"
+            "name": "@3_Comments"
           }
         ]
-      },
+      }
+    ],
+    "name": "Add Comment",
+    "description": "",
+    "id": "add-comment",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/10_Add_Comments.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:12.323Z",
-        "line": 25,
-        "name": "Get Comments Per Post",
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:51.644Z",
+        "line": 4,
+        "name": "Get All Comments",
         "description": "",
-        "id": "comments;get-comments-per-post",
+        "id": "get-all-comments;get-all-comments",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1311200,
+              "duration": 997300,
               "status": "passed"
             },
-            "line": 26,
+            "line": 5,
             "name": "get all Comments endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.setGetAllComments()"
@@ -1380,10 +1806,94 @@
           },
           {
             "result": {
-              "duration": 1145618800,
+              "duration": 787550800,
               "status": "passed"
             },
-            "line": 27,
+            "line": 6,
+            "name": "navigate to get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetAllComments()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39269200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if comments response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 36144500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "check response body contains comment object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetAllCommentsResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Comments",
+    "description": "",
+    "id": "get-all-comments",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/11_Get_All_Comment.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:52.530Z",
+        "line": 3,
+        "name": "Get All Comments Per Post",
+        "description": "",
+        "id": "get-all-comments-per-post;get-all-comments-per-post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1414000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1026101700,
+              "status": "passed"
+            },
+            "line": 5,
             "name": "navigate to get Comments per post endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.sendCommentsPerPost()"
@@ -1392,38 +1902,70 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.verifyCommentsPerPost(CommentsSteps.java:75)\r\n\tat ✽.check if get Comments per post data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:28)\r\n",
-              "duration": 34242100,
-              "status": "failed"
+              "duration": 24510400,
+              "status": "passed"
             },
-            "line": 28,
-            "name": "check if get Comments per post data is returned",
+            "line": 6,
+            "name": "check if comments response code 200 is returned",
             "match": {
-              "location": "stepDefinition.CommentsSteps.verifyCommentsPerPost()"
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26930600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains post_ID object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyCommentsPerPostResponseBody()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@comments"
+            "name": "@3_Comments"
           }
         ]
-      },
+      }
+    ],
+    "name": "Get All Comments Per Post",
+    "description": "",
+    "id": "get-all-comments-per-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/12_Get_Comments_Per_Post.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:13.525Z",
-        "line": 37,
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:53.635Z",
+        "line": 12,
         "name": "Update Comment",
         "description": "",
-        "id": "comments;update-comment;;2",
+        "id": "update-comment;update-comment;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
+              "duration": 2253300,
               "status": "passed"
             },
-            "line": 31,
+            "line": 5,
             "name": "get all Comments endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.setGetAllComments()"
@@ -1432,10 +1974,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.sendUpdateComment(CommentsSteps.java:82)\r\n\tat ✽.The comments \"\" and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:32)\r\n",
-              "status": "failed"
+              "duration": 840103000,
+              "status": "passed"
             },
-            "line": 32,
+            "line": 6,
             "name": "The comments \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1450,44 +1992,62 @@
           },
           {
             "result": {
-              "duration": 325000,
-              "status": "skipped"
+              "duration": 29385700,
+              "status": "passed"
             },
-            "line": 33,
-            "name": "Validate this comments endpoints 422 code is received",
+            "line": 7,
+            "name": "Validate 422 code is received for comments",
             "match": {
               "arguments": [
                 {
                   "val": "422",
-                  "offset": 33
+                  "offset": 9
                 }
               ],
-              "location": "stepDefinition.CommentsSteps.verifyUpdateComment(int)"
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61964600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"can\u0027t be blank\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@comments"
+            "name": "@3_Comments"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:13.536Z",
-        "line": 38,
+        "start_timestamp": "2021-02-20T08:23:54.601Z",
+        "line": 13,
         "name": "Update Comment",
         "description": "",
-        "id": "comments;update-comment;;3",
+        "id": "update-comment;update-comment;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 996400,
+              "duration": 1135800,
               "status": "passed"
             },
-            "line": 31,
+            "line": 5,
             "name": "get all Comments endpoint",
             "match": {
               "location": "stepDefinition.CommentsSteps.setGetAllComments()"
@@ -1496,11 +2056,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.sendUpdateComment(CommentsSteps.java:82)\r\n\tat ✽.The comments \"This is a body\" and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:32)\r\n",
-              "duration": 500800,
-              "status": "failed"
+              "duration": 923098500,
+              "status": "passed"
             },
-            "line": 32,
+            "line": 6,
             "name": "The comments \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1515,143 +2074,56 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 30419200,
+              "status": "passed"
             },
-            "line": 33,
-            "name": "Validate this comments endpoints 200 code is received",
+            "line": 7,
+            "name": "Validate 200 code is received for comments",
             "match": {
               "arguments": [
                 {
                   "val": "200",
-                  "offset": 33
+                  "offset": 9
                 }
               ],
-              "location": "stepDefinition.CommentsSteps.verifyUpdateComment(int)"
+              "location": "stepDefinition.CommentsSteps.verifyAddPostResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60543100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Validate response body contains \"created_at\" c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"created_at\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.CommentsSteps.verifyAddCommentResponseBody(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@comments"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-01-31T11:18:13.545Z",
-        "line": 40,
-        "name": "View One Comment",
-        "description": "",
-        "id": "comments;view-one-comment",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5562400,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "get all Comments endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1250605400,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "navigate to the getOneComment endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.sendGetOneComment()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.CommentsSteps.verifyGetOneComment(CommentsSteps.java:110)\r\n\tat ✽.check if the comment data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:43)\r\n",
-              "duration": 39661900,
-              "status": "failed"
-            },
-            "line": 43,
-            "name": "check if the comment data is returned",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.verifyGetOneComment()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@comments"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-01-31T11:18:14.863Z",
-        "line": 45,
-        "name": "delete comment",
-        "description": "",
-        "id": "comments;delete-comment",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1200000,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "get all Comments endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1171728600,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "navigate to the deleteComment endpoint",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.sendDeleteComment()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c204\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.CommentsSteps.verifyDeleteComment(CommentsSteps.java:125)\r\n\tat ✽.check if the comment is successfully deleted(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:48)\r\n",
-              "duration": 17418900,
-              "status": "failed"
-            },
-            "line": 48,
-            "name": "check if the comment is successfully deleted",
-            "match": {
-              "location": "stepDefinition.CommentsSteps.verifyDeleteComment()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@comments"
+            "name": "@3_Comments"
           }
         ]
       }
     ],
-    "name": "Comments",
-    "description": "\tComments CRUD features",
-    "id": "comments",
+    "name": "Update Comment",
+    "description": "",
+    "id": "update-comment",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/Comments.feature",
+    "uri": "file:src/test/resources/Feature/13_Update_Comment.feature",
     "tags": [
       {
-        "name": "@comments",
+        "name": "@3_Comments",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -1664,20 +2136,188 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-01-31T11:18:16.074Z",
-        "line": 5,
-        "name": "Get All Todos",
+        "start_timestamp": "2021-02-20T08:23:55.645Z",
+        "line": 3,
+        "name": "View One Comment",
         "description": "",
-        "id": "todos;get-all-todos",
+        "id": "get-all-comments-per-post;view-one-comment",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 6673200,
+              "duration": 5290600,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 851299200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the getOneComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendGetOneComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10833200,
               "status": "passed"
             },
             "line": 6,
+            "name": "check if comments response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11275200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains commentID object",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyGetOneCommentResponseBody()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Get All Comments Per Post",
+    "description": "",
+    "id": "get-all-comments-per-post",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/14_Get_One_Comments.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:56.534Z",
+        "line": 3,
+        "name": "Delete comment",
+        "description": "",
+        "id": "delete-comment;delete-comment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 856300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "get all Comments endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.setGetAllComments()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 919706000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to the deleteComment endpoint",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.sendDeleteComment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22241400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "check if comments response code 204 is returned",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyDeleteCommentResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2552100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if the comment is successfully deleted",
+            "match": {
+              "location": "stepDefinition.CommentsSteps.verifyDeleteComment()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@3_Comments"
+          }
+        ]
+      }
+    ],
+    "name": "Delete Comment",
+    "description": "",
+    "id": "delete-comment",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/15_Delete_Comment.feature",
+    "tags": [
+      {
+        "name": "@3_Comments",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:57.497Z",
+        "line": 3,
+        "name": "Get All Todos",
+        "description": "",
+        "id": "get-all-todos;get-all-todos",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4360200,
+              "status": "passed"
+            },
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1686,10 +2326,10 @@
           },
           {
             "result": {
-              "duration": 1786220700,
+              "duration": 744340000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 5,
             "name": "navigate to get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.sendGetAllTodos()"
@@ -1698,38 +2338,69 @@
           },
           {
             "result": {
-              "duration": 31131500,
+              "duration": 31446900,
               "status": "passed"
             },
-            "line": 8,
-            "name": "check if All todos data is returned",
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
             "match": {
-              "location": "stepDefinition.TodosSteps.verifyGetAllTodos()"
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35545800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check response body contains todos object",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetAllTodosResponseMsg()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
-      },
+      }
+    ],
+    "name": "Get All Todos",
+    "description": "",
+    "id": "get-all-todos",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/16_Get_All_Todos.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:17.915Z",
-        "line": 17,
-        "name": "Create TODO",
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:23:58.341Z",
+        "line": 12,
+        "name": "Create Todo",
         "description": "",
-        "id": "todos;create-todo;;2",
+        "id": "create-todo;create-todo;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1404500,
               "status": "passed"
             },
-            "line": 11,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1738,10 +2409,10 @@
           },
           {
             "result": {
-              "duration": 1412158400,
+              "duration": 904148000,
               "status": "passed"
             },
-            "line": 12,
+            "line": 5,
             "name": "The todo \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1750,16 +2421,16 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.TodosSteps.sendAddodo(java.lang.String)"
+              "location": "stepDefinition.TodosSteps.sendAddTodo(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 22942700,
+              "duration": 21494900,
               "status": "passed"
             },
-            "line": 13,
+            "line": 6,
             "name": "Validate this todos endpoints 422 code is received",
             "match": {
               "arguments": [
@@ -1768,32 +2439,50 @@
                   "offset": 30
                 }
               ],
-              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53430800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:19.365Z",
-        "line": 18,
-        "name": "Create TODO",
+        "start_timestamp": "2021-02-20T08:23:59.384Z",
+        "line": 13,
+        "name": "Create Todo",
         "description": "",
-        "id": "todos;create-todo;;3",
+        "id": "create-todo;create-todo;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4227000,
+              "duration": 11135100,
               "status": "passed"
             },
-            "line": 11,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1802,10 +2491,10 @@
           },
           {
             "result": {
-              "duration": 1284632700,
+              "duration": 804733200,
               "status": "passed"
             },
-            "line": 12,
+            "line": 5,
             "name": "The todo \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1814,17 +2503,16 @@
                   "offset": 9
                 }
               ],
-              "location": "stepDefinition.TodosSteps.sendAddodo(java.lang.String)"
+              "location": "stepDefinition.TodosSteps.sendAddTodo(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c201\u003e but was:\u003c422\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)\r\n\tat ✽.Validate this todos endpoints 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:13)\r\n",
-              "duration": 27608000,
-              "status": "failed"
+              "duration": 19113100,
+              "status": "passed"
             },
-            "line": 13,
+            "line": 6,
             "name": "Validate this todos endpoints 201 code is received",
             "match": {
               "arguments": [
@@ -1833,31 +2521,70 @@
                   "offset": 30
                 }
               ],
-              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 53144800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"title\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
-      },
+      }
+    ],
+    "name": "Create Todo",
+    "description": "",
+    "id": "create-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/17_Create_Todo.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:20.703Z",
-        "line": 21,
-        "name": "View ALL TODO per User",
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:00.301Z",
+        "line": 3,
+        "name": "View Todos Per User",
         "description": "",
-        "id": "todos;view-all-todo-per-user",
+        "id": "view-todos-per-user;view-todos-per-user",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
+              "duration": 1540400,
               "status": "passed"
             },
-            "line": 22,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1866,11 +2593,11 @@
           },
           {
             "result": {
-              "duration": 2175649000,
+              "duration": 1074454400,
               "status": "passed"
             },
-            "line": 23,
-            "name": "navigate to get Todos per user endpoint",
+            "line": 5,
+            "name": "navigate to get one todo per user endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.sendGetTodoPerUser()"
             },
@@ -1878,12 +2605,23 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.TodosSteps.verifyGetTodoPerUser(TodosSteps.java:68)\r\n\tat ✽.check if get Todos per user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:24)\r\n",
-              "duration": 39021300,
-              "status": "failed"
+              "duration": 22659200,
+              "status": "passed"
             },
-            "line": 24,
-            "name": "check if get Todos per user data is returned",
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25197800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if todos response body contains USER_ID object",
             "match": {
               "location": "stepDefinition.TodosSteps.verifyGetTodoPerUser()"
             },
@@ -1892,25 +2630,45 @@
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
-      },
+      }
+    ],
+    "name": "View Todos Per User",
+    "description": "",
+    "id": "view-todos-per-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/18_View_All_Todo_per_User.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:22.936Z",
-        "line": 33,
-        "name": "Update TODO",
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:01.450Z",
+        "line": 11,
+        "name": "Update Todo",
         "description": "",
-        "id": "todos;update-todo;;2",
+        "id": "update-todo;update-todo;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2172500,
+              "duration": 999100,
               "status": "passed"
             },
-            "line": 27,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1919,10 +2677,10 @@
           },
           {
             "result": {
-              "duration": 911994200,
+              "duration": 929054100,
               "status": "passed"
             },
-            "line": 28,
+            "line": 5,
             "name": "The todos \"\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -1937,11 +2695,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c422\u003e but was:\u003c404\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)\r\n\tat ✽.Validate this todos endpoints 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:29)\r\n",
-              "duration": 20823500,
-              "status": "failed"
+              "duration": 23971500,
+              "status": "passed"
             },
-            "line": 29,
+            "line": 6,
             "name": "Validate this todos endpoints 422 code is received",
             "match": {
               "arguments": [
@@ -1950,32 +2707,50 @@
                   "offset": 30
                 }
               ],
-              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51037200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"can\u0027t be blank\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"can\u0027t be blank\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
       },
       {
-        "start_timestamp": "2021-01-31T11:18:23.889Z",
-        "line": 34,
-        "name": "Update TODO",
+        "start_timestamp": "2021-02-20T08:24:02.482Z",
+        "line": 12,
+        "name": "Update Todo",
         "description": "",
-        "id": "todos;update-todo;;3",
+        "id": "update-todo;update-todo;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1236600,
+              "duration": 2457100,
               "status": "passed"
             },
-            "line": 27,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -1984,10 +2759,10 @@
           },
           {
             "result": {
-              "duration": 1466099700,
+              "duration": 1033585300,
               "status": "passed"
             },
-            "line": 28,
+            "line": 5,
             "name": "The todos \"This is a body\" and other data is passed to the endpoint",
             "match": {
               "arguments": [
@@ -2002,11 +2777,10 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c404\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)\r\n\tat ✽.Validate this todos endpoints 200 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:29)\r\n",
-              "duration": 28229200,
-              "status": "failed"
+              "duration": 28953400,
+              "status": "passed"
             },
-            "line": 29,
+            "line": 6,
             "name": "Validate this todos endpoints 200 code is received",
             "match": {
               "arguments": [
@@ -2015,32 +2789,70 @@
                   "offset": 30
                 }
               ],
-              "location": "stepDefinition.TodosSteps.verifyAddTodo(int)"
+              "location": "stepDefinition.TodosSteps.verifyAddTodoResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52100100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate response body contains \"title\" t",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinition.TodosSteps.verifyAddTodo(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
-      },
+      }
+    ],
+    "name": "Update Todo",
+    "description": "",
+    "id": "update-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/19_Update_Todo.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:25.405Z",
-        "line": 36,
-        "name": "View One TODO",
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:03.616Z",
+        "line": 3,
+        "name": "View One Todo",
         "description": "",
-        "id": "todos;view-one-todo",
+        "id": "view-one-todo;view-one-todo",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1993500,
+              "duration": 997500,
               "status": "passed"
             },
-            "line": 37,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -2049,10 +2861,10 @@
           },
           {
             "result": {
-              "duration": 881169000,
+              "duration": 1104997800,
               "status": "passed"
             },
-            "line": 38,
+            "line": 5,
             "name": "navigate to the getOntTodo endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.sendGetOneTodo()"
@@ -2061,39 +2873,69 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.TodosSteps.VerifyGetOneTodo(TodosSteps.java:99)\r\n\tat ✽.check if the todo data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:39)\r\n",
-              "duration": 45922300,
-              "status": "failed"
+              "duration": 21465100,
+              "status": "passed"
             },
-            "line": 39,
-            "name": "check if the todo data is returned",
+            "line": 6,
+            "name": "check if todos response code 200 is returned",
             "match": {
-              "location": "stepDefinition.TodosSteps.VerifyGetOneTodo()"
+              "location": "stepDefinition.TodosSteps.verifyTodosResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21075000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if GETOne todos response body contains USER_ID object",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyGetOneTodoPerUser()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
-      },
+      }
+    ],
+    "name": "View One Todo",
+    "description": "",
+    "id": "view-one-todo",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature/20_View_One_Todo.feature",
+    "tags": [
       {
-        "start_timestamp": "2021-01-31T11:18:26.347Z",
-        "line": 41,
-        "name": "Delete TODO",
+        "name": "@Todos",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-20T08:24:04.784Z",
+        "line": 3,
+        "name": "Delete Todo",
         "description": "",
-        "id": "todos;delete-todo",
+        "id": "delete-todo;delete-todo",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1006400,
               "status": "passed"
             },
-            "line": 42,
+            "line": 4,
             "name": "get all Todos endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.setGetAllTodos()"
@@ -2102,10 +2944,10 @@
           },
           {
             "result": {
-              "duration": 859362900,
+              "duration": 755517200,
               "status": "passed"
             },
-            "line": 43,
+            "line": 5,
             "name": "navigate to the delete Todo endpoint",
             "match": {
               "location": "stepDefinition.TodosSteps.sendDeleteTodo()"
@@ -2114,33 +2956,43 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c204\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat stepDefinition.TodosSteps.verifyDeleeTodoResponse(TodosSteps.java:114)\r\n\tat ✽.check if the todo is successfully deleted(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:44)\r\n",
-              "duration": 21582000,
-              "status": "failed"
+              "duration": 22482300,
+              "status": "passed"
             },
-            "line": 44,
-            "name": "check if the todo is successfully deleted",
+            "line": 6,
+            "name": "check if todos response code 204 is returned",
             "match": {
-              "location": "stepDefinition.TodosSteps.verifyDeleeTodoResponse()"
+              "location": "stepDefinition.TodosSteps.verifyDeleteTodoResponseCode200()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "check if todo is successfully deleted",
+            "match": {
+              "location": "stepDefinition.TodosSteps.verifyDeleteTodo()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@todos"
+            "name": "@Todos"
           }
         ]
       }
     ],
-    "name": "Todos",
-    "description": "\tTodos CRUD features",
-    "id": "todos",
+    "name": "Delete Todo",
+    "description": "",
+    "id": "delete-todo",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/Todos.feature",
+    "uri": "file:src/test/resources/Feature/21_Delete_Todo.feature",
     "tags": [
       {
-        "name": "@todos",
+        "name": "@Todos",
         "type": "Tag",
         "location": {
           "line": 1,

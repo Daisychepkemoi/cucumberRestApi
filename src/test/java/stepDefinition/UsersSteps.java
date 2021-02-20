@@ -3,7 +3,6 @@ package stepDefinition;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.junit.Assert;
-
 import apiEngine.IRestResponse;
 import apiEngine.UsersEndPoints;
 import dataAccess.DataAccess;
@@ -21,8 +20,7 @@ public class UsersSteps {
 	public static int USER_ID;
 	public static int rand;
 	String email;
-
-	@Given("get all users endpoint")
+	@Given("You have get All users endpoint")
 	public void setGetUsersEndPoint() {
 		endUserEndPoints = new UsersEndPoints(DataAccess.getInstance().getBaseUrl(),
 				DataAccess.getInstance().getToken());
@@ -30,20 +28,20 @@ public class UsersSteps {
 	}
 
 	@When("navigate to get all users endpoint")
-	public void sendGetUsers() {
+	public void sendGetAllUsers() {
 		response = endUserEndPoints.getUsers();
 	}
-
-	@Then("check if All user data is returned with response code")
-	public void verifyGetUsersResponse() {
+	@Then("check response code 200 is returned")
+	public void verifyResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
-		System.out.println("THIS IS THE CODE" + jEvaluator.get("code"));
-		Assert.assertEquals(jEvaluator.get("code"), 200);
-
-		// JSONObject obj = new JSONObject(response);
-		// Assert.assertTrue("response size is greater than 0",obj.length()>0);
+		System.out.println("Get All Users Response Body" + jEvaluator.get("$"));
+		Assert.assertEquals(200,jEvaluator.get("code"));
 	}
-
+	@Then("check response body contains email object")
+	public void verifyGetAllUsersResponseBody(){
+		JsonPath jEvaluator = response.jsonPath();
+		Assert.assertTrue(jEvaluator.get("data").toString().contains("email"));
+	}	
 	@When("The {string} and other data is passed to the endpoint")
 	public void sendAddUser(String mails) {
 		int min = 1;
@@ -56,14 +54,36 @@ public class UsersSteps {
 	}
 
 	@Then("Validate {int} code is received")
-	public void verifyAddUser(int codee) {
+	public void verifyAddUserResponseCode(int codee) {
 		JsonPath jEvaluator = response.jsonPath();
-		Assert.assertEquals(jEvaluator.get("code"), codee);
-		int code = jEvaluator.get("code");
-		if (code == 201) {
-			Assert.assertEquals(jEvaluator.get("data.email"), email);
-		}
+		Assert.assertEquals( codee,jEvaluator.get("code"));
 	}
+	@Then("Validate response body contains {string} u")
+	public void verifyAddUserResponseMessage(String messageResp) {
+		JsonPath jEvaluator = response.jsonPath();
+		int code = jEvaluator.get("code");
+		System.out.println("THIS IS Add User Response Body " + jEvaluator.get("$"));
+		if (code == 201 || code == 200) {
+			Assert.assertEquals( email,jEvaluator.get("data.email"));
+		}
+		else {
+			Assert.assertEquals(jEvaluator.get("data[0].message").toString(),messageResp);
+		}
+
+	}
+
+	@When("navigate to the getOne User endpoint")
+	public void sendGetOneUser() {
+		response = endUserEndPoints.getOneUser();
+
+	}
+
+	@Then("check response body contains email just created")
+	public void verifyGetOneUserResponseMsg() {
+		JsonPath jevaluator = response.jsonPath();
+		Assert.assertEquals(jevaluator.get("data[0].email"), email);
+	}
+	
 
 	@When("The {string} and other update data is passed to the endpoint")
 	public void sendUpdateUser(String mail) {
@@ -85,40 +105,21 @@ public class UsersSteps {
 
 	}
 
-	@Given("get On user endpoint")
-	public void setGetOneUser() {
-		response = endUserEndPoints.getOneUser();
 
-	}
+	// // @Given("delete user endpoint")
+	// public void setDeleteUser() {
 
-	@When("navigate to the getOne User endpoint")
-	public void sendGetOneUser() {
-		response = endUserEndPoints.getOneUser();
+	// }
 
-	}
+	// // @When("navigate to the delete User endpoint")
+	// public void sendDeleteUser() {
+	// 	response = endUserEndPoints.deleteUser();
 
-	@Then("check if the user data is returned")
-	public void verifyGetOneUser() {
-		JsonPath jevaluator = response.jsonPath();
-		Assert.assertEquals(jevaluator.get("code"), 200);
-		// JSONObject obj = new JSONObject(response);
-		// Assert.assertTrue("response size is greater than 0",obj.length()>0);
-	}
+	// }
 
-	// @Given("delete user endpoint")
-	public void setDeleteUser() {
-
-	}
-
-	// @When("navigate to the delete User endpoint")
-	public void sendDeleteUser() {
-		response = endUserEndPoints.deleteUser();
-
-	}
-
-	// @Then("check if the user is successfully deleted")
-	public void verifyDeleteUser() {
-		JsonPath jEvaluator = response.jsonPath();
-		Assert.assertEquals(jEvaluator.get("code"), 204);
-	}
+	// // @Then("check if the user is successfully deleted")
+	// public void verifyDeleteUser() {
+	// 	JsonPath jEvaluator = response.jsonPath();
+	// 	Assert.assertEquals(jEvaluator.get("code"), 204);
+	// }
 }

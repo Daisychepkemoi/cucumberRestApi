@@ -14,7 +14,10 @@ import reportgenerate.GenerateNewReports;
 						},
 				 features = "src/test/resources/Feature",
 				 glue={"stepDefinition"}
- )
+				//  ,tags="@Todos"
+				//  tags = ("@Users")
+				 
+						 )
 public class TestRunners {
 		@AfterClass
 		public static void after()  throws Exception{

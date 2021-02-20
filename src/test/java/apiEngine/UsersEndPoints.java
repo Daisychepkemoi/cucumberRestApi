@@ -8,14 +8,14 @@ import model.Users;
 import pojos.UsersR;
 
 public class UsersEndPoints {
-	public static int USER_ID;
+	public static int USER_ID = 1371;
 	public static Response userData;
 	public static String EMAIL;
 	public static RequestSpecification request;
 
 	public UsersEndPoints(String base_Url, String token) {
 		RestAssured.baseURI = base_Url;
-		request = RestAssured.given();//.log().all();
+		request = RestAssured.given().log().all();
 		request.header("Content-Type", "Application/json").header("Authorization", token);
 
 	}

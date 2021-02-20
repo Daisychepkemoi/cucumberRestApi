@@ -1,451 +1,309 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="24" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="34" time="45.262">
-    <testcase classname="Users" name="Get All Users" time="5.265">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="34" time="40.981">
+    <testcase classname="GetAllUsers" name="Get All Users response Code" time="4.514">
         <system-out>
-            <![CDATA[Given get all users endpoint................................................passed
+            <![CDATA[Given You have get All users endpoint.......................................passed
 When navigate to get all users endpoint.....................................passed
-Then check if All user data is returned with response code..................passed
+Then check response code 200 is returned....................................passed
+Then check response body contains email object..............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Users" name="Add User" time="1.712">
+    <testcase classname="Add User" name="Add User" time="1.795">
         <system-out>
-            <![CDATA[Given get all users endpoint................................................passed
-When The "correct3@gmail.com" and other data is passed to the endpoint......passed
+            <![CDATA[Given You have get All users endpoint.......................................passed
+When The "correct57@gmail.com" and other data is passed to the endpoint.....passed
 Then Validate 422 code is received..........................................passed
+Then Validate response body contains "has already been taken" u.............passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Users" name="Add User 2" time="1.42">
+    <testcase classname="Add User" name="Add User 2" time="0.878">
         <system-out>
-            <![CDATA[Given get all users endpoint................................................passed
+            <![CDATA[Given You have get All users endpoint.......................................passed
 When The "" and other data is passed to the endpoint........................passed
 Then Validate 422 code is received..........................................passed
+Then Validate response body contains "can't be blank" u.....................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Users" name="Add User 3" time="1.903">
-        <failure message="expected:&lt;422&gt; but was:&lt;201&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all users endpoint................................................passed
-When The "email19@gmail.com" and other data is passed to the endpoint.......passed
-Then Validate 201 code is received..........................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<422> but was:<201>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinition.UsersSteps.verifyAddUser(UsersSteps.java:61)
-	at ✽.Validate 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:31)
+    <testcase classname="Add User" name="Add User 3" time="1.286">
+        <system-out>
+            <![CDATA[Given You have get All users endpoint.......................................passed
+When The "emaill43@gmail.com" and other data is passed to the endpoint......passed
+Then Validate 201 code is received..........................................passed
+Then Validate response body contains "email" u..............................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Users" name="UpdateOneUser" time="1.128">
-        <failure message="expected:&lt;404&gt; but was:&lt;422&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all users endpoint................................................passed
-When The "" and other update data is passed to the endpoint.................passed
-Then Validate 422 code is received and data is updated......................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<422>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.UsersSteps.verifyUpdateUser(UsersSteps.java:81)
-	at ✽.Validate 422 code is received and data is updated(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:44)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Users" name="UpdateOneUser_2" time="1.37">
-        <failure message="expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all users endpoint................................................passed
-When The "gmail18@gmail.com" and other update data is passed to the endpoint.passed
-Then Validate 200 code is received and data is updated......................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<200>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.UsersSteps.verifyUpdateUser(UsersSteps.java:81)
-	at ✽.Validate 200 code is received and data is updated(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:44)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Users" name="Get One User, thats the just created user" time="1.091">
-        <failure message="expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all users endpoint................................................passed
+    <testcase classname="Get One User" name="Get One User, thats the just created user" time="0.87">
+        <system-out>
+            <![CDATA[Given You have get All users endpoint.......................................passed
 When navigate to the getOne User endpoint...................................passed
-Then check if the user data is returned.....................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<200>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepDefinition.UsersSteps.verifyGetOneUser(UsersSteps.java:103)
-	at ✽.check if the user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/AUsers.feature:55)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Posts" name="Get All Posts" time="1.363">
-        <system-out>
-            <![CDATA[Given get all posts endpoint................................................passed
-When navigate to get all posts endpoint.....................................passed
-Then check if All post data is returned.....................................passed
+Then check response code 200 is returned....................................passed
+Then check response body contains email just created........................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Posts" name="Add Posts" time="1.9">
+    <testcase classname="Update User" name="UpdateOneUser" time="1.393">
         <system-out>
-            <![CDATA[Given get all posts endpoint................................................passed
+            <![CDATA[Given You have get All users endpoint.......................................passed
+When The "" and other update data is passed to the endpoint.................passed
+Then Validate 422 code is received and data is updated......................passed
+Then Validate response body contains "can't be blank" u.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Update User" name="UpdateOneUser_2" time="1.095">
+        <system-out>
+            <![CDATA[Given You have get All users endpoint.......................................passed
+When The "emaill43@gmail.com" and other update data is passed to the endpoint.passed
+Then Validate 200 code is received and data is updated......................passed
+Then Validate response body contains "email" u..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Get All Posts" name="Get All Posts" time="0.972">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
+When navigate to get all posts endpoint.....................................passed
+Then check if response code 200 is returned.................................passed
+Then check if response has post in data object..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Post" name="Add Posts" time="0.91">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the endpoint.passed
 Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Posts" name="Add Posts 2" time="1.268">
+    <testcase classname="Add Post" name="Add Posts 2" time="0.861">
         <system-out>
-            <![CDATA[Given get all posts endpoint................................................passed
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the endpoint.passed
 Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Posts" name="Add Posts 3" time="1.046">
+    <testcase classname="Add Post" name="Add Posts 3" time="0.956">
         <system-out>
-            <![CDATA[Given get all posts endpoint................................................passed
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the endpoint...............passed
 Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Posts" name="Add Posts 4" time="0.998">
-        <failure message="expected:&lt;422&gt; but was:&lt;201&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Add Post" name="Add Posts 4" time="1.191">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the endpoint.passed
-Then Validate this 201 code is received.....................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<422> but was:<201>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.BPostsSteps.verifyAddPost(BPostsSteps.java:40)
-	at ✽.Validate this 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:13)
+Then Validate this 201 code is received.....................................passed
+Then Validate response body contains "created_at" p.........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="Get Posts Per User" time="1.442">
-        <failure message="" type="java.lang.NullPointerException">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Get All One Users Post" name="Get All One Users Post" time="0.772">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to get posts per user endpoint................................passed
-Then check if get posts per user data is returned...........................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.BPostsSteps.verifyGetPostPerUser(BPostsSteps.java:74)
-	at ✽.check if get posts per user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:26)
+Then check if response code 200 is returned.................................passed
+Then check if responses UserId is equal to urlUserID........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="Update Posts" time="1.231">
-        <failure message="expected:&lt;404&gt; but was:&lt;422&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Update Posts" name="Update Posts" time="2.448">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "This is a body" and other data is passed to the update post endpoint.passed
-Then Validate that this 422 code is received................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<422>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)
-	at ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)
+Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="Update Posts 2" time="1.215">
-        <failure message="expected:&lt;404&gt; but was:&lt;422&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Update Posts" name="Update Posts 2" time="0.969">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "" and other data is passed to the update post endpoint.passed
-Then Validate that this 422 code is received................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<422>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)
-	at ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)
+Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="Update Posts 3" time="1.322">
-        <failure message="expected:&lt;404&gt; but was:&lt;422&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Update Posts" name="Update Posts 3" time="0.978">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "", "" and other data is passed to the update post endpoint...passed
-Then Validate that this 422 code is received................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<422>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)
-	at ✽.Validate that this 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)
+Then Validate this 422 code is received.....................................passed
+Then Validate response body contains "can't be blank" p.....................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="Update Posts 4" time="1.197">
-        <failure message="expected:&lt;404&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Update Posts" name="Update Posts 4" time="0.841">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When The post "This is a title", "This is a body" and other data is passed to the update post endpoint.passed
-Then Validate that this 200 code is received................................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<200>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.BPostsSteps.verifyUpdatePost(BPostsSteps.java:93)
-	at ✽.Validate that this 200 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:31)
+Then Validate this 200 code is received.....................................passed
+Then Validate response body contains "created_at" p.........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Posts" name="View One Post" time="1.224">
-        <failure message="" type="java.lang.NullPointerException">
-            <![CDATA[Given get all posts endpoint................................................passed
+    <testcase classname="Get One Post" name="View One Post" time="1.072">
+        <system-out>
+            <![CDATA[Given user has posts Endpoint...............................................passed
 When navigate to the onePost endpoint.......................................passed
-Then check if the post data is returned.....................................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.BPostsSteps.verifyGetOnepost(BPostsSteps.java:111)
-	at ✽.check if the post data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/BPosts.feature:43)
+Then check if response code 200 is returned.................................passed
+Then check if responses postID is equal to urlID............................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Comments" name="Get All Comments" time="1.192">
+    <testcase classname="Add Comment" name="Add Comment" time="0.992">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comment "" config and other data is passed to the endpoint.........passed
+Then Validate 422 code is received for comments.............................passed
+Then Validate response body contains "can't be blank" c.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Comment" name="Add Comment 2" time="1.065">
+        <system-out>
+            <![CDATA[Given get all Comments endpoint.............................................passed
+When The comment "This is a body" config and other data is passed to the endpoint.passed
+Then Validate 201 code is received for comments.............................passed
+Then Validate response body contains "created_at" c.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Get All Comments" name="Get All Comments" time="0.867">
         <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to get all Comments endpoint..................................passed
-Then check if All comment data is returned..................................passed
+Then check if comments response code 200 is returned........................passed
+Then check response body contains comment object............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Comments" name="Create Comment" time="0.004">
-        <failure message="" type="java.lang.NullPointerException">
-            <![CDATA[Given get all Comments endpoint.............................................passed
-When The comment "" config and other data is passed to the endpoint.........failed
-Then Validate this endpoints 422 code is received...........................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.sendAddComment(CommentsSteps.java:44)
-	at ✽.The comment "" config and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:17)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Comments" name="Create Comment 2" time="0.002">
-        <failure message="" type="java.lang.NullPointerException">
-            <![CDATA[Given get all Comments endpoint.............................................passed
-When The comment "This is a body" config and other data is passed to the endpoint.failed
-Then Validate this endpoints 201 code is received...........................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.sendAddComment(CommentsSteps.java:44)
-	at ✽.The comment "This is a body" config and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:17)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Comments" name="Get Comments Per Post" time="1.184">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="Get All Comments Per Post" name="Get All Comments Per Post" time="1.087">
+        <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to get Comments per post endpoint.............................passed
-Then check if get Comments per post data is returned........................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.verifyCommentsPerPost(CommentsSteps.java:75)
-	at ✽.check if get Comments per post data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:28)
+Then check if comments response code 200 is returned........................passed
+Then check response body contains post_ID object............................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Comments" name="Update Comment" time="0.003">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="Update Comment" name="Update Comment" time="0.941">
+        <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
-When The comments "" and other data is passed to the endpoint...............failed
-Then Validate this comments endpoints 422 code is received..................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.sendUpdateComment(CommentsSteps.java:82)
-	at ✽.The comments "" and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:32)
+When The comments "" and other data is passed to the endpoint...............passed
+Then Validate 422 code is received for comments.............................passed
+Then Validate response body contains "can't be blank" c.....................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Comments" name="Update Comment 2" time="0.003">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="Update Comment" name="Update Comment 2" time="1.02">
+        <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
-When The comments "This is a body" and other data is passed to the endpoint.failed
-Then Validate this comments endpoints 200 code is received..................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.sendUpdateComment(CommentsSteps.java:82)
-	at ✽.The comments "This is a body" and other data is passed to the endpoint(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:32)
+When The comments "This is a body" and other data is passed to the endpoint.passed
+Then Validate 200 code is received for comments.............................passed
+Then Validate response body contains "created_at" c.........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Comments" name="View One Comment" time="1.3">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="Get All Comments Per Post" name="View One Comment" time="0.881">
+        <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to the getOneComment endpoint.................................passed
-Then check if the comment data is returned..................................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.CommentsSteps.verifyGetOneComment(CommentsSteps.java:110)
-	at ✽.check if the comment data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:43)
+Then check if comments response code 200 is returned........................passed
+Then check response body contains commentID object..........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Comments" name="delete comment" time="1.197">
-        <failure message="expected:&lt;404&gt; but was:&lt;204&gt;" type="java.lang.AssertionError">
+    <testcase classname="Delete Comment" name="Delete comment" time="0.947">
+        <system-out>
             <![CDATA[Given get all Comments endpoint.............................................passed
 When navigate to the deleteComment endpoint.................................passed
-Then check if the comment is successfully deleted...........................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<204>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.CommentsSteps.verifyDeleteComment(CommentsSteps.java:125)
-	at ✽.check if the comment is successfully deleted(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Comments.feature:48)
+Then check if comments response code 204 is returned........................passed
+Then check if the comment is successfully deleted...........................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="Get All Todos" time="1.831">
+    <testcase classname="Get All Todos" name="Get All Todos" time="0.82">
         <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When navigate to get all Todos endpoint.....................................passed
-Then check if All todos data is returned....................................passed
+Then check if todos response code 200 is returned...........................passed
+Then check response body contains todos object..............................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Todos" name="Create TODO" time="1.438">
+    <testcase classname="Create Todo" name="Create Todo" time="0.99">
         <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When The todo "" and other data is passed to the endpoint...................passed
 Then Validate this todos endpoints 422 code is received.....................passed
+Then Validate response body contains "can't be blank" t.....................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Todos" name="Create TODO 2" time="1.32">
-        <failure message="expected:&lt;201&gt; but was:&lt;422&gt;" type="java.lang.AssertionError">
+    <testcase classname="Create Todo" name="Create Todo 2" time="0.895">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When The todo "This is a body" and other data is passed to the endpoint.....passed
-Then Validate this todos endpoints 201 code is received.....................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<201> but was:<422>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)
-	at ✽.Validate this todos endpoints 201 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:13)
+Then Validate this todos endpoints 201 code is received.....................passed
+Then Validate response body contains "title" t..............................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="View ALL TODO per User" time="2.222">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="View Todos Per User" name="View Todos Per User" time="1.128">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
-When navigate to get Todos per user endpoint................................passed
-Then check if get Todos per user data is returned...........................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.TodosSteps.verifyGetTodoPerUser(TodosSteps.java:68)
-	at ✽.check if get Todos per user data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:24)
+When navigate to get one todo per user endpoint.............................passed
+Then check if todos response code 200 is returned...........................passed
+Then check if todos response body contains USER_ID object...................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="Update TODO" time="0.939">
-        <failure message="expected:&lt;422&gt; but was:&lt;404&gt;" type="java.lang.AssertionError">
+    <testcase classname="Update Todo" name="Update Todo" time="1.017">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When The todos "" and other data is passed to the endpoint..................passed
-Then Validate this todos endpoints 422 code is received.....................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<422> but was:<404>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)
-	at ✽.Validate this todos endpoints 422 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:29)
+Then Validate this todos endpoints 422 code is received.....................passed
+Then Validate response body contains "can't be blank" t.....................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="Update TODO 2" time="1.499">
-        <failure message="expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError">
+    <testcase classname="Update Todo" name="Update Todo 2" time="1.119">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When The todos "This is a body" and other data is passed to the endpoint....passed
-Then Validate this todos endpoints 200 code is received.....................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<200> but was:<404>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.TodosSteps.verifyAddTodo(TodosSteps.java:50)
-	at ✽.Validate this todos endpoints 200 code is received(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:29)
+Then Validate this todos endpoints 200 code is received.....................passed
+Then Validate response body contains "title" t..............................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="View One TODO" time="0.933">
-        <failure message="" type="java.lang.NullPointerException">
+    <testcase classname="View One Todo" name="View One Todo" time="1.153">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When navigate to the getOntTodo endpoint....................................passed
-Then check if the todo data is returned.....................................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinition.TodosSteps.VerifyGetOneTodo(TodosSteps.java:99)
-	at ✽.check if the todo data is returned(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:39)
+Then check if todos response code 200 is returned...........................passed
+Then check if GETOne todos response body contains USER_ID object............passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Todos" name="Delete TODO" time="0.885">
-        <failure message="expected:&lt;404&gt; but was:&lt;204&gt;" type="java.lang.AssertionError">
+    <testcase classname="Delete Todo" name="Delete Todo" time="0.782">
+        <system-out>
             <![CDATA[Given get all Todos endpoint................................................passed
 When navigate to the delete Todo endpoint...................................passed
-Then check if the todo is successfully deleted..............................failed
-
-StackTrace:
-java.lang.AssertionError: expected:<404> but was:<204>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at stepDefinition.TodosSteps.verifyDeleeTodoResponse(TodosSteps.java:114)
-	at ✽.check if the todo is successfully deleted(file:///C:/Users/dchepkemoi/Downloads/projects/cucumberRestApi/src/test/resources/Feature/Todos.feature:44)
+Then check if todos response code 204 is returned...........................passed
+Then check if todo is successfully deleted..................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
