@@ -1,6 +1,18 @@
 package apiEngine;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.UncheckedIOException;
+import java.nio.file.*;
+
+import dataAccess.DataAccess;
+// import com.google.common.io.Files;
+// import cucumber.deps.com.thoughtworks.xstream.io.path.Path;
 import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -8,16 +20,32 @@ import model.Users;
 import pojos.UsersR;
 
 public class UsersEndPoints {
-	public static int USER_ID = 1371;
+	public static int USER_ID;
 	public static Response userData;
 	public static String EMAIL;
 	public static RequestSpecification request;
 
 	public UsersEndPoints(String base_Url, String token) {
-		RestAssured.baseURI = base_Url;
-		request = RestAssured.given().log().all();
-		request.header("Content-Type", "Application/json").header("Authorization", token);
-
+		String fileLocation = DataAccess.getInstance().getLogLocation();
+		Path pathe = Paths.get(fileLocation);
+		try{
+			 Files.deleteIfExists(pathe);
+		}
+		catch(IOException e){
+			System.out.print(e);
+		}
+		
+		try {
+			 
+  
+            FileOutputStream outStr = new FileOutputStream(fileLocation, true);
+			PrintStream log = new PrintStream(outStr);
+			RestAssured.baseURI = base_Url;
+			request = RestAssured.given().filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
+			request.header("Content-Type", "Application/json").header("Authorization", token);
+		} catch(FileNotFoundException fnfe) { 
+            System.out.println(fnfe.getMessage());
+        } 
 	}
 
 	public Response getUsers() {
@@ -34,7 +62,6 @@ public class UsersEndPoints {
 			EMAIL = jsonPathEvaluator.get("data.email");
 		} else {
 		}
-
 		return new RestResponse<Users>(Users.class, response, userData);
 	}
 

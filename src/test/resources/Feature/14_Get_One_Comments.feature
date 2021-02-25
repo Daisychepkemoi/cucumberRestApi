@@ -1,4 +1,4 @@
-@3_Comments
+@Comments
 Feature: Get All Comments Per Post
 Scenario: View One Comment
 	 Given get all Comments endpoint

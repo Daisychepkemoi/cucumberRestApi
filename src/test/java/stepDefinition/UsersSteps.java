@@ -3,12 +3,16 @@ package stepDefinition;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.junit.Assert;
+import org.junit.Rule;
+
 import apiEngine.IRestResponse;
 import apiEngine.UsersEndPoints;
 import dataAccess.DataAccess;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.config.LogConfig;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import model.Users;
@@ -20,11 +24,12 @@ public class UsersSteps {
 	public static int USER_ID;
 	public static int rand;
 	String email;
+	
 	@Given("You have get All users endpoint")
 	public void setGetUsersEndPoint() {
 		endUserEndPoints = new UsersEndPoints(DataAccess.getInstance().getBaseUrl(),
 				DataAccess.getInstance().getToken());
-
+		
 	}
 
 	@When("navigate to get all users endpoint")
@@ -35,7 +40,8 @@ public class UsersSteps {
 	public void verifyResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
 		System.out.println("Get All Users Response Body" + jEvaluator.get("$"));
-		Assert.assertEquals(200,jEvaluator.get("code"));
+		int code = jEvaluator.get("code");
+		Assert.assertEquals(200,code);
 	}
 	@Then("check response body contains email object")
 	public void verifyGetAllUsersResponseBody(){
@@ -56,7 +62,8 @@ public class UsersSteps {
 	@Then("Validate {int} code is received")
 	public void verifyAddUserResponseCode(int codee) {
 		JsonPath jEvaluator = response.jsonPath();
-		Assert.assertEquals( codee,jEvaluator.get("code"));
+		int code = jEvaluator.get("code");
+		Assert.assertEquals( codee,code);
 	}
 	@Then("Validate response body contains {string} u")
 	public void verifyAddUserResponseMessage(String messageResp) {
@@ -75,7 +82,6 @@ public class UsersSteps {
 	@When("navigate to the getOne User endpoint")
 	public void sendGetOneUser() {
 		response = endUserEndPoints.getOneUser();
-
 	}
 
 	@Then("check response body contains email just created")

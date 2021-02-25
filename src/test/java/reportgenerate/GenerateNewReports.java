@@ -21,6 +21,7 @@ public class GenerateNewReports {
         configuration.setSortingMethod(SortingMethod.NATURAL);
         configuration.addPresentationModes(PresentationMode.EXPAND_ALL_STEPS);
         configuration.addPresentationModes(PresentationMode.PARALLEL_TESTING);
+        // configuration.getDirectorySuffix()
         return new ReportBuilder(jsonFiles, configuration);
         }
 }

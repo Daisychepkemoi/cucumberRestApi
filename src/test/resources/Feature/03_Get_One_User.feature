@@ -1,5 +1,5 @@
 #Author: dchepkemoi408@gmail.com
-@1_Users
+@Users
 Feature: Get One User
 Scenario: Get One User, thats the just created user
 	 Given You have get All users endpoint

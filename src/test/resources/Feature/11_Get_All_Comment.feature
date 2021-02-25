@@ -1,4 +1,4 @@
-@3_Comments
+@Comments
 Feature: Get All Comments
 
  Scenario: Get All Comments

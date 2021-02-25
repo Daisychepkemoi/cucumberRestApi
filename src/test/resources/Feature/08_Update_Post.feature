@@ -1,5 +1,5 @@
 # Author :dchepkemoi408@gmail.com 
-@2_Posts
+@Posts
 Feature: Update Posts
 Scenario Outline: Update Posts
 	 Given user has posts Endpoint

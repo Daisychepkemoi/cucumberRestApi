@@ -1,4 +1,4 @@
-@3_Comments
+@Comments
 Feature: Delete Comment
 Scenario: Delete comment
 	 Given get all Comments endpoint

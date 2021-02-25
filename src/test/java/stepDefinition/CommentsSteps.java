@@ -14,6 +14,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import model.Comments;
 import pojos.CommentsR;
+import reportgenerate.GenerateNewReports;
 
 public class CommentsSteps {
 	public static CommentsEndPoints commentsEndPoints;
@@ -35,7 +36,8 @@ public class CommentsSteps {
 	public void verifyResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
 		System.out.println("Get All Users Response Body" + jEvaluator.get("$"));
-		Assert.assertEquals(200,jEvaluator.get("code"));
+		int code = jEvaluator.get("code");
+		Assert.assertEquals(200,code);
 	}
 	@Then("check response body contains comment object")
 	public void verifyGetAllCommentsResponseBody() {
@@ -44,9 +46,6 @@ public class CommentsSteps {
 	}
 	@When("The comment {string} config and other data is passed to the endpoint")
 	public void sendAddComment(String body) {
-		// JsonPath jEvaluator = apiEngine.UsersEndPoints.userData.jsonPath();
-		// CommentsR createComment = new CommentsR(PostsEndPoints.POST_ID, jEvaluator.get("data[0].name").toString(), body,
-				// jEvaluator.get("data[0].email").toString());//emaill22@gmail.com
 		CommentsR createComment = new CommentsR(PostsEndPoints.POST_ID, "Jackie", body,"emaill22@gmail.com");//emaill22@gmail.com
 		IRestResponse<Comments> createNewComment = commentsEndPoints.createComment(createComment);
 		response = createNewComment.getResponse();
@@ -120,7 +119,8 @@ public class CommentsSteps {
 	public void verifyDeleteCommentResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
 		System.out.println("Get Delete Comment Response Body" + jEvaluator.get("$"));
-		Assert.assertEquals(204,jEvaluator.get("code"));
+		int code = jEvaluator.get("code");
+		Assert.assertEquals(204,code);
 	}
 	@Then("check if the comment is successfully deleted")
 	public void verifyDeleteComment() {
