@@ -1,7 +1,15 @@
 package apiEngine;
 
-import model.Comments;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+import dataAccess.DataAccess;
 import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
+import model.Comments;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -14,9 +22,17 @@ public class CommentsEndPoints {
 	public static RequestSpecification request;
 
 	public CommentsEndPoints(String base_Url, String token) {
-		RestAssured.baseURI = base_Url;
-		request = RestAssured.given().log().all();
-		request.header("Content-Type", "Application/json").header("Authorization", token);
+		try {
+			FileOutputStream outStr = new FileOutputStream(DataAccess.getInstance().getLogLocation(), true);
+			
+			PrintStream log = new PrintStream(outStr);
+			RestAssured.baseURI = base_Url;
+			request = RestAssured.given().filter(RequestLoggingFilter.logRequestTo(log))
+					.filter(ResponseLoggingFilter.logResponseTo(log));
+			request.header("Content-Type", "Application/json").header("Authorization", token);
+		} catch (FileNotFoundException fnfe) {
+			System.out.println(fnfe.getMessage());
+		}
 
 	}
 

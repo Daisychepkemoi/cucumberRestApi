@@ -123,7 +123,8 @@ public class TodosSteps {
 	public void verifyDeleteTodoResponseCode200() {
 		JsonPath jEvaluator = response.jsonPath();
 		System.out.println("Get Delete Todo Response Body" + jEvaluator.get("$"));
-		Assert.assertEquals(204,jEvaluator.get("code"));
+		int code = jEvaluator.get("code");
+		Assert.assertEquals(204,code);
 	}
 	@Then("check if todo is successfully deleted")
 	public void verifyDeleteTodo() {

@@ -1,5 +1,5 @@
 #Author :dchepkemoi408@gmail.com 
-@2_Posts
+@Posts
 Feature: Get All One Users Post
  Scenario: Get All One Users Post
 	 Given user has posts Endpoint

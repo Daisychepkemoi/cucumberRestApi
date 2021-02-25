@@ -40,7 +40,7 @@ public class DataAccess {
         if (baseUrl != null)
             return baseUrl;
         else
-            throw new RuntimeException("base_Url not specified in the Configuration.properties file.");
+            throw new RuntimeException("BaseUrl not specified in the Configuration.properties file.");
     }
 
     public String getToken() {
@@ -48,6 +48,13 @@ public class DataAccess {
         if (token != null)
             return token;
         else
-            throw new RuntimeException("user_Id not specified in the Configuration.properties file.");
+            throw new RuntimeException("token not specified in the Configuration.properties file.");
+    }
+    public String getLogLocation() {
+        String token = properties.getProperty("storeLogsHere");
+        if (token != null)
+            return token;
+        else
+            throw new RuntimeException("storeLogsHere not specified in the Configuration.properties file.");
     }
 }

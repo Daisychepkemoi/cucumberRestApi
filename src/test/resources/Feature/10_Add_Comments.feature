@@ -1,4 +1,4 @@
-@3_Comments
+@Comments
 Feature: Add Comment
 Scenario Outline: Add Comment
 	 Given get all Comments endpoint

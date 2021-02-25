@@ -1,4 +1,4 @@
-@3_Comments
+@Comments
 Feature: Update Comment
 
 Scenario Outline: Update Comment

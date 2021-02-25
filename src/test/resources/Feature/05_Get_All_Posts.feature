@@ -1,5 +1,5 @@
 # Author :dchepkemoi408@gmail.com 
-@2_Posts
+@Posts
 Feature: Get All Posts
  Scenario: Get All Posts
 	 Given user has posts Endpoint

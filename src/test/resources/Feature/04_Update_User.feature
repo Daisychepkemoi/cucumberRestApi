@@ -1,5 +1,5 @@
 #Author: dchepkemoi408@gmail.com
-@1_Users
+@Users
 Feature: Update User
 
 Scenario Outline: UpdateOneUser
@@ -12,7 +12,7 @@ Scenario Outline: UpdateOneUser
             |email|response|variable|
 	 		# |correct57@gmail.com|422|has already been taken|
 			||422|can't be blank|
-			|emaill43@gmail.com|200|email|
+			|emaill44@gmail.com|200|email|
 
 
 

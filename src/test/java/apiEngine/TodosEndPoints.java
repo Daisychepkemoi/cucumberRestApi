@@ -1,6 +1,18 @@
 package apiEngine;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import dataAccess.DataAccess;
 import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -15,9 +27,16 @@ public class TodosEndPoints {
 	public static RequestSpecification request;
 
 	public TodosEndPoints(String base_Url, String token) {
-		RestAssured.baseURI = base_Url;
-		request = RestAssured.given().log().all();
-		request.header("Content-Type", "Application/json").header("Authorization", token);
+
+		try {
+            FileOutputStream outStr = new FileOutputStream(DataAccess.getInstance().getLogLocation(), true);
+			PrintStream log = new PrintStream(outStr);
+			RestAssured.baseURI = base_Url;
+			request = RestAssured.given().filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log));
+			request.header("Content-Type", "Application/json").header("Authorization", token);
+		} catch(FileNotFoundException fnfe) { 
+            System.out.println(fnfe.getMessage());
+        } 
 
 	}
 

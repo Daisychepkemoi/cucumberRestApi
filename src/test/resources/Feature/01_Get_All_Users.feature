@@ -1,5 +1,5 @@
 #Author: dchepkemoi408@gmail.com
-@1_Users
+@Users
 Feature: GetAllUsers
 	
  Scenario: Get All Users response Code
